@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services – GoldAge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/services.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo"><span class="logo-icon">🌿</span><span class="logo-text">Gold<span class="logo-accent">Age</span></span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="services.html" class="nav-link active">Services</a></li>
+        <li><a href="nurses.html" class="nav-link">Nurses</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+      </ul>
+      <div class="nav-search">
+        <input type="text" placeholder="Buscar servicio..." class="search-input" />
+        <button class="search-btn">🔍</button>
+      </div>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero services-hero">
+    <div class="page-hero-content fade-in">
+      <span class="hero-badge">Nuestros Servicios</span>
+      <h1>Salud profesional<br /><em>en tu hogar</em></h1>
+      <p>Servicios médicos certificados disponibles los 7 días de la semana, diseñados para el bienestar de toda la familia.</p>
+    </div>
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#f8faf7"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- SERVICES LIST – alternating layout -->
+  <section class="services-list section">
+    <div class="container">
+
+      <!-- Service 1 -->
+      <div class="service-row scroll-reveal">
+        <div class="service-row-img">
+          <img src="https://images.unsplash.com/photo-1666214280391-8ff5bd3d6696?w=600&q=80" alt="Atención domiciliaria 24/7" />
+        </div>
+        <div class="service-row-content">
+          <span class="service-tag">24/7</span>
+          <h2>Atención Domiciliaria 24/7</h2>
+          <p>Nuestro equipo de enfermeros y médicos está disponible las 24 horas del día, los 7 días de la semana para atender cualquier necesidad médica en la comodidad de tu hogar.</p>
+          <ul class="service-detail-list">
+            <li>✅ Atención de urgencias médicas en casa</li>
+            <li>✅ Monitoreo de signos vitales</li>
+            <li>✅ Administración de medicamentos</li>
+            <li>✅ Reportes médicos diarios</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary">Agendar cita</a>
+        </div>
+      </div>
+
+      <!-- Service 2 (reversed) -->
+      <div class="service-row service-row-reverse scroll-reveal">
+        <div class="service-row-img">
+          <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80" alt="Cuidados paliativos" />
+        </div>
+        <div class="service-row-content">
+          <span class="service-tag">Especializado</span>
+          <h2>Cuidados Paliativos</h2>
+          <p>Brindamos acompañamiento integral con enfoque en el bienestar físico, emocional y espiritual del paciente y su familia durante etapas difíciles.</p>
+          <ul class="service-detail-list">
+            <li>✅ Control del dolor y síntomas</li>
+            <li>✅ Apoyo psicológico para la familia</li>
+            <li>✅ Coordinación con especialistas</li>
+            <li>✅ Atención espiritual y emocional</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary">Agendar cita</a>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-row scroll-reveal">
+        <div class="service-row-img">
+          <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?w=600&q=80" alt="Consultas generales" />
+        </div>
+        <div class="service-row-content">
+          <span class="service-tag">General</span>
+          <h2>Consultas Generales</h2>
+          <p>Diagnóstico, evaluación y tratamiento de enfermedades comunes realizadas por médicos generales certificados directamente en tu domicilio.</p>
+          <ul class="service-detail-list">
+            <li>✅ Diagnóstico y prescripción médica</li>
+            <li>✅ Toma de muestras en casa</li>
+            <li>✅ Seguimiento post-consulta</li>
+            <li>✅ Historial clínico digital</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary">Agendar cita</a>
+        </div>
+      </div>
+
+      <!-- Service 4 (reversed) -->
+      <div class="service-row service-row-reverse scroll-reveal">
+        <div class="service-row-img">
+          <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&q=80" alt="Consultas geriátricas" />
+        </div>
+        <div class="service-row-content">
+          <span class="service-tag">Geriatría</span>
+          <h2>Consultas Geriátricas</h2>
+          <p>Atención especializada para adultos mayores con evaluación integral de salud física y cognitiva, promoviendo calidad de vida y autonomía.</p>
+          <ul class="service-detail-list">
+            <li>✅ Evaluación funcional completa</li>
+            <li>✅ Manejo de enfermedades crónicas</li>
+            <li>✅ Prevención de caídas y accidentes</li>
+            <li>✅ Plan nutricional personalizado</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary">Agendar cita</a>
+        </div>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="service-row scroll-reveal">
+        <div class="service-row-img">
+          <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80" alt="Fisioterapia" />
+        </div>
+        <div class="service-row-content">
+          <span class="service-tag">Rehabilitación</span>
+          <h2>Fisioterapia a Domicilio</h2>
+          <p>Rehabilitación física personalizada para recuperación postoperatoria, enfermedades neurológicas y lesiones musculoesqueléticas.</p>
+          <ul class="service-detail-list">
+            <li>✅ Rehabilitación post-quirúrgica</li>
+            <li>✅ Terapia para Parkinson y Alzheimer</li>
+            <li>✅ Ejercicios terapéuticos guiados</li>
+            <li>✅ Evaluación de progreso mensual</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary">Agendar cita</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="services-cta scroll-reveal">
+    <div class="container">
+      <div class="scta-inner">
+        <h2>¿No encontraste lo que buscas?</h2>
+        <p>Contáctanos y diseñaremos un plan de atención personalizado para ti y tu familia.</p>
+        <a href="contact.html" class="btn btn-primary">Hablar con un especialista</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"><span class="logo-icon">🌿</span><span class="logo-text">Gold<span class="logo-accent">Age</span></span></a>
+          <p>Salud domiciliaria con corazón. Cuidamos a quienes más amas.</p>
+        </div>
+        <div class="footer-links"><h5>Navegación</h5><ul>
+          <li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li>
+          <li><a href="nurses.html">Nurses</a></li><li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul></div>
+        <div class="footer-links"><h5>Servicios</h5><ul>
+          <li><a href="services.html">Atención 24/7</a></li><li><a href="services.html">Cuidados Paliativos</a></li>
+          <li><a href="services.html">Consultas Generales</a></li><li><a href="services.html">Geriatría</a></li>
+        </ul></div>
+        <div class="footer-contact"><h5>Contacto</h5>
+          <p>📧 hola@goldage.com</p><p>📞 +503 7000-0000</p><p>📍 San Salvador, El Salvador</p>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>© 2025 GoldAge. Todos los derechos reservados.</p></div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/services.js"></script>
+</body>
+</html>

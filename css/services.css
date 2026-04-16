@@ -1,0 +1,68 @@
+/* =====================================================
+   GoldAge – services.css
+   ===================================================== */
+
+/* Page Hero */
+.page-hero {
+  min-height: 42vh; display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; padding: 120px 24px 60px;
+  position: relative; overflow: hidden;
+}
+.services-hero {
+  background: linear-gradient(135deg, #d4ede0 0%, #d0e8f5 100%);
+}
+.page-hero-content { max-width: 680px; }
+.page-hero em { font-style: normal; color: var(--mint-dark); }
+.page-hero h1 {
+  font-size: clamp(32px, 5vw, 56px); font-weight: 800;
+  line-height: 1.15; margin: 12px 0 16px;
+}
+.page-hero p { font-size: 16px; color: var(--text-light); max-width: 480px; margin: 0 auto; line-height: 1.7; }
+
+/* Service Rows */
+.services-list { background: var(--beige); }
+.service-row {
+  display: flex; align-items: center; gap: 64px;
+  margin-bottom: 80px; flex-wrap: wrap;
+}
+.service-row-reverse { flex-direction: row-reverse; }
+.service-row-img {
+  flex: 1; min-width: 280px; max-width: 520px;
+}
+.service-row-img img {
+  border-radius: var(--radius-lg);
+  aspect-ratio: 4/3; object-fit: cover;
+  box-shadow: var(--shadow-lg);
+  transition: transform 0.5s ease;
+}
+.service-row:hover .service-row-img img { transform: scale(1.02); }
+.service-row-content { flex: 1; min-width: 260px; }
+.service-row-content h2 {
+  font-size: clamp(22px, 3vw, 34px); font-weight: 800;
+  margin: 10px 0 14px; line-height: 1.2;
+}
+.service-row-content > p { font-size: 15px; color: var(--text-light); line-height: 1.75; margin-bottom: 20px; }
+.service-detail-list {
+  list-style: none; display: flex; flex-direction: column;
+  gap: 8px; margin-bottom: 28px;
+}
+.service-detail-list li { font-size: 14px; color: var(--text-light); }
+
+/* Services CTA */
+.services-cta { padding: 60px 0; background: var(--beige); }
+.scta-inner {
+  background: linear-gradient(135deg, var(--mint-dark), var(--blue-dark));
+  border-radius: var(--radius-lg); padding: 56px 48px;
+  text-align: center; color: #fff;
+}
+.scta-inner h2 { font-size: clamp(22px, 3vw, 36px); font-weight: 800; margin-bottom: 12px; }
+.scta-inner p { font-size: 16px; opacity: 0.85; margin-bottom: 28px; }
+.scta-inner .btn-primary { background: var(--yellow); color: var(--text); }
+.scta-inner .btn-primary:hover { background: var(--yellow-dark); }
+
+@media (max-width: 768px) {
+  .service-row, .service-row-reverse { flex-direction: column; gap: 28px; }
+  .service-row-img { max-width: 100%; }
+  .scta-inner { padding: 36px 24px; }
+}

@@ -1,0 +1,69 @@
+/* =====================================================
+   GoldAge – about.css
+   ===================================================== */
+
+.about-hero {
+  background: linear-gradient(135deg, #f0ebe0 0%, #d4ede0 100%);
+}
+
+/* Mission/Vision */
+.mv-section { background: var(--beige); }
+.mv-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 28px;
+}
+.mv-card {
+  background: #fff; border-radius: var(--radius-lg);
+  padding: 40px 32px; text-align: center;
+  box-shadow: var(--shadow); transition: var(--transition);
+}
+.mv-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.mv-icon { font-size: 40px; margin-bottom: 16px; }
+.mv-card h3 { font-size: 20px; font-weight: 800; margin-bottom: 12px; color: var(--mint-dark); }
+.mv-card p { font-size: 14px; color: var(--text-light); line-height: 1.75; }
+
+/* Story */
+.story-section { background: var(--beige); padding-top: 0; }
+.story-inner {
+  display: flex; gap: 64px; align-items: center; flex-wrap: wrap;
+}
+.story-img { flex: 1; min-width: 280px; max-width: 500px; }
+.story-img img { border-radius: var(--radius-lg); aspect-ratio: 4/3; object-fit: cover; box-shadow: var(--shadow-lg); }
+.story-content { flex: 1; min-width: 260px; }
+.story-content > p { font-size: 16px; color: var(--text); line-height: 1.75; }
+.story-stats {
+  display: flex; gap: 32px; margin-top: 32px;
+  padding-top: 28px; border-top: 2px solid var(--mint-light);
+  flex-wrap: wrap;
+}
+.sstats-item { display: flex; flex-direction: column; }
+.sstats-item strong { font-size: 28px; font-weight: 800; color: var(--mint-dark); }
+.sstats-item span { font-size: 13px; color: var(--text-light); font-weight: 500; }
+
+/* Values */
+.values-section {
+  background: linear-gradient(135deg, #eaf7f0 0%, #e8f4fb 100%);
+}
+.values-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  gap: 28px;
+}
+.value-item {
+  background: #fff; border-radius: var(--radius-lg);
+  padding: 32px 28px; box-shadow: var(--shadow);
+  transition: var(--transition); position: relative; overflow: hidden;
+}
+.value-item:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.value-num {
+  font-size: 60px; font-weight: 800;
+  color: var(--mint-light); position: absolute;
+  top: 10px; right: 20px; line-height: 1;
+  pointer-events: none;
+}
+.value-item h4 { font-size: 17px; font-weight: 700; margin-bottom: 10px; }
+.value-item p { font-size: 14px; color: var(--text-light); line-height: 1.7; }
+
+@media (max-width: 768px) {
+  .story-inner { flex-direction: column; }
+  .story-img { max-width: 100%; }
+}

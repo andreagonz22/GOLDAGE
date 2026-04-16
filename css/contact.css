@@ -1,0 +1,92 @@
+/* =====================================================
+   GoldAge – contact.css
+   ===================================================== */
+
+.contact-hero {
+  background: linear-gradient(135deg, #d0e8f5 0%, #d4ede0 100%);
+}
+
+/* Contact Grid */
+.contact-section { background: var(--beige); }
+.contact-grid {
+  display: grid; grid-template-columns: 1fr 1.4fr;
+  gap: 60px; align-items: start;
+}
+.contact-info h2 { font-size: clamp(24px, 3vw, 38px); font-weight: 800; margin-bottom: 14px; }
+.contact-info > p { font-size: 15px; color: var(--text-light); line-height: 1.7; margin-bottom: 32px; }
+
+.contact-cards { display: flex; flex-direction: column; gap: 16px; }
+.contact-card {
+  display: flex; align-items: flex-start; gap: 16px;
+  background: #fff; border-radius: var(--radius);
+  padding: 18px 20px; box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+.contact-card:hover { transform: translateX(4px); box-shadow: var(--shadow-lg); }
+.cc-icon { font-size: 22px; }
+.contact-card strong { font-size: 14px; font-weight: 700; display: block; margin-bottom: 2px; }
+.contact-card span { font-size: 14px; color: var(--mint-dark); font-weight: 600; display: block; }
+.contact-card small { font-size: 12px; color: var(--text-light); }
+
+/* Form */
+.contact-form-wrap {
+  background: #fff; border-radius: var(--radius-lg);
+  padding: 40px; box-shadow: var(--shadow-lg);
+}
+.form-header { margin-bottom: 28px; }
+.form-header h3 { font-size: 22px; font-weight: 800; margin-bottom: 6px; }
+.form-header p { font-size: 14px; color: var(--text-light); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 18px; }
+.form-group label { font-size: 13px; font-weight: 600; color: var(--text); }
+.form-group input,
+.form-group select,
+.form-group textarea {
+  border: 2px solid var(--mint-light); border-radius: var(--radius);
+  padding: 12px 16px; font-family: var(--font); font-size: 14px;
+  color: var(--text); outline: none; transition: var(--transition);
+  background: var(--beige);
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--mint-dark); background: #fff;
+  box-shadow: 0 0 0 3px rgba(107,184,142,0.15);
+}
+.form-group textarea { resize: vertical; }
+.submit-btn { width: 100%; justify-content: center; font-size: 16px; padding: 16px; }
+.form-success {
+  display: none; text-align: center; margin-top: 16px;
+  padding: 12px; border-radius: var(--radius);
+  background: var(--mint-light); color: var(--mint-dark);
+  font-size: 14px; font-weight: 600;
+}
+.form-success.visible { display: block; }
+
+/* FAQ */
+.faq-section { background: var(--beige); padding-top: 0; }
+.faq-list { max-width: 760px; display: flex; flex-direction: column; gap: 12px; }
+.faq-item { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+.faq-question {
+  width: 100%; display: flex; justify-content: space-between; align-items: center;
+  padding: 20px 24px; font-family: var(--font); font-size: 15px;
+  font-weight: 600; color: var(--text); background: none; border: none;
+  cursor: pointer; text-align: left; transition: var(--transition);
+}
+.faq-question:hover { color: var(--mint-dark); }
+.faq-arrow { transition: transform 0.3s; font-size: 12px; color: var(--mint-dark); }
+.faq-question.open .faq-arrow { transform: rotate(180deg); }
+.faq-answer {
+  max-height: 0; overflow: hidden; transition: max-height 0.4s ease;
+  padding: 0 24px;
+}
+.faq-answer.open { max-height: 200px; padding-bottom: 20px; }
+.faq-answer p { font-size: 14px; color: var(--text-light); line-height: 1.75; }
+
+@media (max-width: 900px) {
+  .contact-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .form-row { grid-template-columns: 1fr; }
+  .contact-form-wrap { padding: 28px 20px; }
+}
