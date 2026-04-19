@@ -1,18 +1,18 @@
 /* ---- VARIABLES ---- */
 :root {
-  --mint:      #a8d5ba;
-  --mint-light:#d4ede0;
+  --mint:     #80cbc4;
+  --mint-light: #b4ebe6;
   --mint-dark: #6bb88e;
-  --blue:      #7fb3d3;
-  --blue-light:#d0e8f5;
-  --blue-dark: #4a90b8;
+  --blue:      #547792;
+  --blue-light:#94b4c1;
+  --blue-dark: #213448;
   --beige:     #f8faf7;
   --beige-2:   #f0ebe0;
-  --yellow:    #f9c74f;
-  --yellow-dark:#e0a800;
+  --yellow:    #ffd700;
+  --yellow-dark:#efbf04;
   --text:      #2d3748;
   --text-light:#718096;
-  --white:     #ffffff;
+  --white:     ##fbf8ef;
   --radius:    16px;
   --radius-lg: 28px;
   --shadow:    0 4px 24px rgba(0,0,0,0.08);
