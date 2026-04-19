@@ -216,7 +216,6 @@ ul { list-style: none; }
 }
 .card-float-1 { bottom: 40px; left: -30px; }
 .card-float-2 { top: 40px; right: -30px; animation-delay: 2s; }
-.hero-card-float .card-icon { font-size: 22px; }
 .hero-card-float strong { display: block; font-size: 14px; font-weight: 700; }
 .hero-card-float small { font-size: 11px; color: var(--text-light); }
 .hero-wave {
