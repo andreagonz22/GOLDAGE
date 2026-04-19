@@ -1,340 +1,552 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GoldAge Where Comfort Meets Care</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
-<body>
+/* =====================================================
+   GoldAge – styles.css
+   Paleta: verde menta, azul suave, beige, amarillo
+   ===================================================== */
 
-  <!-- ===== NAVBAR ===== -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="logo">
-        <span class="logo-icon"></span>
-        <span class="logo-text">Gold<span class="logo-accent">Age</span></span>
-      </a>
+/* ---- VARIABLES ---- */
+:root {
+  --mint:      #a8d5ba;
+  --mint-light:#d4ede0;
+  --mint-dark: #6bb88e;
+  --blue:      #7fb3d3;
+  --blue-light:#d0e8f5;
+  --blue-dark: #4a90b8;
+  --beige:     #f8faf7;
+  --beige-2:   #f0ebe0;
+  --yellow:    #f9c74f;
+  --yellow-dark:#e0a800;
+  --text:      #2d3748;
+  --text-light:#718096;
+  --white:     #ffffff;
+  --radius:    16px;
+  --radius-lg: 28px;
+  --shadow:    0 4px 24px rgba(0,0,0,0.08);
+  --shadow-lg: 0 12px 40px rgba(0,0,0,0.12);
+  --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
+  --font: 'Poppins', sans-serif;
+}
 
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html" class="nav-link active">Home</a></li>
-        <li><a href="services.html" class="nav-link">Services</a></li>
-        <li><a href="nurses.html" class="nav-link">Nurses</a></li>
-        <li><a href="about.html" class="nav-link">About Us</a></li>
-        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
-      </ul>
+/* ---- RESET ---- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font);
+  color: var(--text);
+  background: var(--beige);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+img { display: block; width: 100%; object-fit: cover; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
 
-      <div class="nav-search">
-        <input type="text" placeholder="Buscar servicio..." class="search-input" />
-        <button class="search-btn"></button>
-      </div>
+/* ---- UTILITIES ---- */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.section { padding: 80px 0; }
+.section-label {
+  font-size: 13px; font-weight: 600; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--mint-dark);
+  margin-bottom: 10px;
+}
+.section-title {
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700; color: var(--text);
+  line-height: 1.2; margin-bottom: 48px;
+}
+.section-title span { color: var(--mint-dark); }
 
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
+/* ---- BUTTONS ---- */
+.btn {
+ 
+  padding: 14px 28px; border-radius: 50px;
+  font-family: var(--font); font-size: 15px; font-weight: 600;
+  cursor: pointer; border: 2px solid transparent;
+  transition: var(--transition); white-space: nowrap;
+}
+.btn-primary {
+  background: var(--mint-dark); color: #fff;
+  box-shadow: 0 4px 16px rgba(107,184,142,0.35);
+}
+.btn-primary:hover {
+  background: #5aa87e;
+  box-shadow: 0 6px 22px rgba(107,184,142,0.5);
+  transform: translateY(-2px);
+}
+.btn-outline {
+  background: transparent; color: var(--mint-dark);
+  border-color: var(--mint-dark);
+}
+.btn-outline:hover {
+  background: var(--mint-dark); color: #fff;
+  transform: translateY(-2px);
+}
+.btn-link {
+  font-size: 14px; font-weight: 600;
+  color: var(--mint-dark); transition: var(--transition);
+}
+.btn-link:hover { letter-spacing: 0.5px; }
 
-  <!-- ===== HERO ===== -->
-  <section class="hero" id="home">
-    <div class="hero-content fade-in">
-      <span class="hero-badge">✦ Atención personalizada en casa</span>
-      <h1 class="hero-title">Where comfort<br /><em>meets care</em></h1>
-      <p class="hero-desc">Profesionales certificados llegan a tu hogar para brindar atención médica de calidad con calidez humana.</p>
-      <div class="hero-actions">
-        <a href="services.html" class="btn btn-primary">Ver Servicios</a>
-        <a href="contact.html" class="btn btn-outline">Agendar Cita</a>
-      </div>
-      <div class="hero-stats">
-        <div class="hstat"><strong>+50</strong><span>Profesionales</span></div>
-        <div class="hstat-divider"></div>
-        <div class="hstat"><strong>+300</strong><span>Consultas</span></div>
-        <div class="hstat-divider"></div>
-        <div class="hstat"><strong>+10</strong><span>Farmacias</span></div>
-      </div>
-    </div>
-    <div class="hero-image fade-in-right">
-      <div class="hero-img-wrap">
-        <div class="hero-img-blob"></div>
-        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&q=80" alt="Doctora con paciente mayor" />
-        <div class="hero-card-float card-float-1">
-          <div><strong>Cuidado 24/7</strong><small>Siempre disponibles</small></div>
-        </div>
-        <div class="hero-card-float card-float-2">
-          <div><strong>4.9 / 5</strong><small>Satisfacción</small></div>
-        </div>
-      </div>
-    </div>
-    <div class="hero-wave">
-      <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,60 C360,120 1080,0 1440,60 L1440,120 L0,120 Z" fill="#f8faf7"/>
-      </svg>
-    </div>
-  </section>
+/* ---- NAVBAR FLOTANTE ---- */
+.navbar {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92%;
+  max-width: 1200px;
+  z-index: 1000;
+  transition: var(--transition);
+}
 
-  <!-- ===== FEATURES ===== -->
-  <section class="features section" id="features">
-    <div class="container">
-      <div class="section-label">¿Por qué elegirnos?</div>
-      <h2 class="section-title">Cuidado integral <span>para tu familia</span></h2>
-      <div class="features-grid">
-        <div class="feature-card scroll-reveal">
-          <div class="feature-icon" style="--icon-color: #a8d5ba;">🩺</div>
-          <h3>Servicios Médicos</h3>
-          <p>Consultas, diagnósticos y seguimiento clínico realizados por profesionales certificados en la comodidad de tu hogar.</p>
-        </div>
-        <div class="feature-card scroll-reveal" style="--delay: 0.15s">
-          <div class="feature-icon" style="--icon-color: #b3cfe8;">⏰</div>
-          <h3>Recordatorios</h3>
-          <p>Sistema inteligente de recordatorios para medicamentos, citas médicas y controles periódicos de salud.</p>
-        </div>
-        <div class="feature-card scroll-reveal" style="--delay: 0.3s">
-          <div class="feature-icon" style="--icon-color: #f5e6c8;">🏠</div>
-          <h3>Cuidado en el Hogar</h3>
-          <p>Enfermeros y cuidadores especializados disponibles para asistencia continua con atención personalizada.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+.navbar.scrolled {
+  position: fixed;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
-  <!-- ===== SERVICIOS CARDS ===== -->
-  <section class="services-preview section" id="services">
-    <div class="container">
-      <div class="section-label">Lo que ofrecemos</div>
-      <h2 class="section-title">Servicios de salud <span>en casa</span></h2>
-      <div class="services-grid">
-        <div class="service-card scroll-reveal">
-          <div class="service-img">
-            <img src="https://images.unsplash.com/photo-1666214280391-8ff5bd3d6696?w=400&q=80" alt="Atención domiciliaria" />
-          </div>
-          <div class="service-info">
-            <span class="service-tag">24/7</span>
-            <h4>Atención Domiciliaria</h4>
-            <p>Enfermeros disponibles en cualquier momento del día para urgencias o cuidados continuos.</p>
-            <a href="services.html" class="btn-link">Ver más →</a>
-          </div>
-        </div>
-        <div class="service-card scroll-reveal" style="--delay: 0.1s">
-          <div class="service-img">
-            <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&q=80" alt="Cuidados paliativos" />
-          </div>
-          <div class="service-info">
-            <span class="service-tag">Especializado</span>
-            <h4>Cuidados Paliativos</h4>
-            <p>Acompañamiento con dignidad y confort para pacientes y sus familias en momentos difíciles.</p>
-            <a href="services.html" class="btn-link">Ver más →</a>
-          </div>
-        </div>
-        <div class="service-card scroll-reveal" style="--delay: 0.2s">
-          <div class="service-img">
-            <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?w=400&q=80" alt="Consultas generales" />
-          </div>
-          <div class="service-info">
-            <span class="service-tag">General</span>
-            <h4>Consultas Generales</h4>
-            <p>Diagnóstico y tratamiento de enfermedades comunes sin salir de la comodidad de tu hogar.</p>
-            <a href="services.html" class="btn-link">Ver más →</a>
-          </div>
-        </div>
-        <div class="service-card scroll-reveal" style="--delay: 0.3s">
-          <div class="service-img">
-            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&q=80" alt="Consultas geriátricas" />
-          </div>
-          <div class="service-info">
-            <span class="service-tag">Geriatría</span>
-            <h4>Consultas Geriátricas</h4>
-            <p>Atención especializada para adultos mayores con foco en calidad de vida y bienestar integral.</p>
-            <a href="services.html" class="btn-link">Ver más →</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 28px;
+  height: 75px;
 
-  <!-- ===== STATS ===== -->
-  <section class="stats-section scroll-reveal">
-    <div class="container">
-      <div class="stats-bar">
-        <div class="stat-item">
-          <span class="stat-number" data-target="50">0</span><span class="stat-plus">+</span>
-          <p>Profesionales Verificados</p>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <span class="stat-number" data-target="300">0</span><span class="stat-plus">+</span>
-          <p>Consultas Realizadas</p>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <span class="stat-number" data-target="10">0</span><span class="stat-plus">+</span>
-          <p>Farmacias Asociadas</p>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <span class="stat-number" data-target="98">0</span><span class="stat-plus">%</span>
-          <p>Satisfacción del Cliente</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  display: flex;
+  align-items: center;
+  gap: 32px;
 
-  <!-- ===== TESTIMONIOS ===== -->
-  <section class="testimonials section">
-    <div class="container">
-      <div class="section-label">Testimonios</div>
-      <h2 class="section-title">La felicidad de los clientes <span>habla por nosotros</span></h2>
-      <div class="testimonials-grid">
-        <div class="testimonial-card scroll-reveal">
-          <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"El servicio de GoldAge ha sido una bendición para nuestra familia. Los enfermeros son increíblemente amables y profesionales. Mi mamá se siente segura y feliz."</p>
-          <div class="testimonial-author">
-            <img src="https://i.pravatar.cc/60?img=47" alt="María López" />
-            <div>
-              <strong>María López</strong>
-              <small>68 años, San Salvador</small>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card scroll-reveal featured-testimonial" style="--delay: 0.15s">
-          <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"Gracias a GoldAge, papá recibe atención médica de calidad sin el estrés de ir al hospital. El equipo es puntual, cálido y muy competente. Lo recomiendo totalmente."</p>
-          <div class="testimonial-author">
-            <img src="https://i.pravatar.cc/60?img=12" alt="Carlos Méndez" />
-            <div>
-              <strong>Carlos Méndez</strong>
-              <small>54 años, Santa Ana</small>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card scroll-reveal" style="--delay: 0.3s">
-          <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"El plan anual vale cada centavo. Tenemos recordatorios de medicamentos, visitas programadas y atención de emergencia. La tranquilidad que nos da es invaluable."</p>
-          <div class="testimonial-author">
-            <img src="https://i.pravatar.cc/60?img=32" alt="Ana Herrera" />
-            <div>
-              <strong>Ana Herrera</strong>
-              <small>71 años, San Miguel</small>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  border-radius: 22px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
 
-  <!-- ===== PLANES ===== -->
-  <section class="plans section" id="plans">
-    <div class="plans-wave-top">
-      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,40 C480,80 960,0 1440,40 L1440,0 L0,0 Z" fill="#f8faf7"/>
-      </svg>
-    </div>
-    <div class="container">
-      <div class="section-label" style="color:#a8d5ba">Planes</div>
-      <h2 class="section-title" style="color:#fff">Obtener un <span style="color:#f9c74f">plan premium</span></h2>
-      <p class="plans-subtitle">Elige el plan que mejor se adapte a las necesidades de tu familia</p>
-      <div class="plans-grid">
-        <div class="plan-card scroll-reveal">
-          <div class="plan-badge">Estándar</div>
-          <div class="plan-price">
-            <span class="price-currency">$</span>
-            <span class="price-amount">58</span>
-            <span class="price-period">/mes</span>
-          </div>
-          <ul class="plan-features">
-            <li>✅ 4 visitas al mes</li>
-            <li>✅ Recordatorios de medicamentos</li>
-            <li>✅ Consultas generales</li>
-            <li>✅ Atención de urgencias</li>
-            <li>⬜ Consultas geriátricas</li>
-            <li>⬜ Cuidados paliativos</li>
-          </ul>
-          <a href="contact.html" class="btn btn-plan">Seleccionar Plan</a>
-        </div>
-        <div class="plan-card plan-featured scroll-reveal" style="--delay: 0.2s">
-          <div class="plan-badge popular-badge">⭐ Más Popular</div>
-          <div class="plan-price">
-            <span class="price-currency">$</span>
-            <span class="price-amount">128</span>
-            <span class="price-period">/año</span>
-          </div>
-          <ul class="plan-features">
-            <li>✅ Visitas ilimitadas</li>
-            <li>✅ Recordatorios inteligentes</li>
-            <li>✅ Consultas generales</li>
-            <li>✅ Atención 24/7 urgencias</li>
-            <li>✅ Consultas geriátricas</li>
-            <li>✅ Cuidados paliativos</li>
-          </ul>
-          <a href="contact.html" class="btn btn-plan-featured">Seleccionar Plan</a>
-        </div>
-      </div>
-    </div>
-    <div class="plans-wave-bottom">
-      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,40 C480,0 960,80 1440,40 L1440,80 L0,80 Z" fill="#f8faf7"/>
-      </svg>
-    </div>
-  </section>
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* espacio entre logo y texto */
+  text-decoration: none;
+}
 
-  <!-- ===== CTA ===== -->
-  <section class="cta-section section">
-    <div class="container">
-      <div class="cta-card scroll-reveal">
-        <div class="cta-content">
-          <span class="cta-badge">Únete al equipo</span>
-          <h2>Join Our Care Team</h2>
-          <p>¿Eres enfermero, médico o cuidador? Forma parte de nuestra red de profesionales y ayuda a familias que te necesitan.</p>
-          <a href="nurses.html" class="btn btn-primary">Aplicar ahora →</a>
-        </div>
-        <div class="cta-image">
-          <img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?w=500&q=80" alt="Equipo médico" />
-        </div>
-      </div>
-    </div>
-  </section>
+.logo-img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.html" class="logo"><span class="logo-icon">🌿</span><span class="logo-text">Gold<span class="logo-accent">Age</span></span></a>
-          <p>Salud domiciliaria con corazón. Cuidamos a quienes más amas con profesionalismo y calidez.</p>
-        </div>
-        <div class="footer-links">
-          <h5>Navegación</h5>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="nurses.html">Nurses</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <h5>Servicios</h5>
-          <ul>
-            <li><a href="services.html">Atención 24/7</a></li>
-            <li><a href="services.html">Cuidados Paliativos</a></li>
-            <li><a href="services.html">Consultas Generales</a></li>
-            <li><a href="services.html">Geriatría</a></li>
-          </ul>
-        </div>
-        <div class="footer-contact">
-          <h5>Contacto</h5>
-          <p>📧 hola@goldage.com</p>
-          <p>📞 +503 7000-0000</p>
-          <p>📍 San Salvador, El Salvador</p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2025 GoldAge. Todos los derechos reservados.</p>
-      </div>
-    </div>
-  </footer>
+.logo-text {
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+.logo-accent {
+  color: var(--mint-dark);
+}
 
-  <script src="js/main.js"></script>
-</body>
-</html>
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+}
+
+.nav-link {
+  padding: 8px 14px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-light);
+  transition: var(--transition);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background: var(--mint-light);
+  color: var(--mint-dark);
+  font-weight: 600;
+}
+
+
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger span {
+  width: 24px;
+  height: 2.5px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: var(--transition);
+  display: block;
+}
+
+/* ---- HERO ---- */
+.hero {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #eaf7f0 0%, #e8f4fb 50%, #f8faf7 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 140px 24px 80px;
+  position: relative;
+  overflow: hidden;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+.hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 25px; /* 👈 NUEVO */
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -200px;
+  right: -200px;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(168,213,186,0.3) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-content {
+  flex: 1;
+  min-width: 280px;
+  max-width: 560px;
+}
+
+.hero-image {
+  flex: 1;
+  min-width: 280px;
+  max-width: 500px;
+}
+
+.hero-title em {
+  font-style: italic;
+  color: var(--mint-dark);
+}
+
+.hero-desc {
+  font-size: 17px; color: var(--text-light);
+  max-width: 420px; margin-bottom: 32px; line-height: 1.7;
+}
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 40px; }
+.hero-stats {
+  display: flex; align-items: center; gap: 24px;
+  flex-wrap: wrap;
+}
+.hstat { display: flex; flex-direction: column; }
+.hstat strong { font-size: 22px; font-weight: 800; color: var(--mint-dark); }
+.hstat span { font-size: 12px; color: var(--text-light); font-weight: 500; }
+.hstat-divider { width: 1px; height: 32px; background: var(--mint-light); }
+.hero-image { flex: 1; min-width: 280px; max-width: 500px; }
+.hero-img-wrap { position: relative; }
+.hero-img-blob {
+  position: absolute; inset: -20px;
+  background: linear-gradient(135deg, var(--mint-light), var(--blue-light));
+  border-radius: 60% 40% 55% 45% / 45% 55% 45% 55%;
+  z-index: 0;
+}
+.hero-img-wrap img {
+  position: relative; z-index: 1;
+  border-radius: var(--radius-lg);
+  aspect-ratio: 4/5; object-fit: cover;
+  box-shadow: var(--shadow-lg);
+  max-height: 520px;
+}
+.hero-card-float {
+  position: absolute; z-index: 2;
+  background: #fff; border-radius: var(--radius);
+  padding: 12px 18px; display: flex; align-items: center; gap: 12px;
+  box-shadow: var(--shadow-lg);
+  animation: float 4s ease-in-out infinite;
+}
+.card-float-1 { bottom: 40px; left: -30px; }
+.card-float-2 { top: 40px; right: -30px; animation-delay: 2s; }
+.hero-card-float .card-icon { font-size: 22px; }
+.hero-card-float strong { display: block; font-size: 14px; font-weight: 700; }
+.hero-card-float small { font-size: 11px; color: var(--text-light); }
+.hero-wave {
+  position: absolute; bottom: 0; left: 0; right: 0; z-index: 2;
+}
+.hero-wave svg { display: block; height: 80px; width: 100%; }
+
+/* ---- FEATURES ---- */
+.features { background: var(--beige); }
+.features-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 28px;
+}
+.feature-card {
+  background: #fff; border-radius: var(--radius-lg);
+  padding: 36px 28px; text-align: center;
+  box-shadow: var(--shadow); transition: var(--transition);
+}
+.feature-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.feature-icon {
+  width: 68px; height: 68px; border-radius: 50%;
+  background: var(--icon-color, var(--mint-light));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 28px; margin: 0 auto 20px;
+}
+.feature-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 10px; }
+.feature-card p { font-size: 14px; color: var(--text-light); line-height: 1.7; }
+
+/* ---- SERVICES PREVIEW ---- */
+.services-preview { background: var(--beige); }
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 24px;
+}
+.service-card {
+  background: #fff; border-radius: var(--radius-lg);
+  overflow: hidden; box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+.service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.service-img { height: 200px; overflow: hidden; }
+.service-img img { height: 100%; transition: transform 0.5s ease; }
+.service-card:hover .service-img img { transform: scale(1.06); }
+.service-info { padding: 20px 22px 24px; }
+.service-tag {
+  font-size: 11px; font-weight: 700; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--mint-dark);
+  background: var(--mint-light); padding: 3px 10px;
+  border-radius: 50px; display: inline-block; margin-bottom: 10px;
+}
+.service-info h4 { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
+.service-info p { font-size: 13px; color: var(--text-light); margin-bottom: 14px; line-height: 1.65; }
+
+/* ---- STATS ---- */
+.stats-section {
+  background: linear-gradient(135deg, var(--blue-dark), #3a7ba8);
+  padding: 60px 24px;
+}
+.stats-bar {
+  max-width: 1000px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: center;
+  gap: 0; flex-wrap: wrap;
+}
+.stat-item {
+  flex: 1; min-width: 150px; text-align: center;
+  padding: 20px;
+}
+.stat-number {
+  font-size: clamp(36px, 5vw, 54px);
+  font-weight: 800; color: #fff;
+}
+.stat-plus { font-size: 28px; font-weight: 800; color: var(--yellow); }
+.stat-item p { font-size: 13px; color: rgba(255,255,255,0.8); margin-top: 6px; font-weight: 500; }
+.stat-divider { width: 1px; height: 60px; background: rgba(255,255,255,0.2); }
+
+/* ---- TESTIMONIALS ---- */
+.testimonials { background: var(--beige); }
+.testimonials-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 24px; align-items: center;
+}
+.testimonial-card {
+  background: #fff; border-radius: var(--radius-lg);
+  padding: 32px 28px; box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+.testimonial-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.featured-testimonial {
+  background: linear-gradient(135deg, var(--mint-dark), #5aa87e);
+  color: #fff; transform: scale(1.04);
+}
+.featured-testimonial .stars { color: var(--yellow); }
+.featured-testimonial .testimonial-text { color: rgba(255,255,255,0.95); }
+.featured-testimonial strong { color: #fff; }
+.featured-testimonial small { color: rgba(255,255,255,0.75); }
+.stars { color: var(--yellow); font-size: 18px; margin-bottom: 14px; }
+.testimonial-text { font-size: 14px; color: var(--text-light); line-height: 1.75; margin-bottom: 20px; }
+.testimonial-author { display: flex; align-items: center; gap: 12px; }
+.testimonial-author img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; }
+.testimonial-author strong { font-size: 14px; display: block; }
+.testimonial-author small { font-size: 12px; color: var(--text-light); }
+
+/* ---- PLANS ---- */
+.plans {
+  background: linear-gradient(135deg, #2c6e5e 0%, #1a4f6e 100%);
+  position: relative; padding: 100px 0;
+}
+.plans-wave-top, .plans-wave-bottom { line-height: 0; }
+.plans-wave-top svg, .plans-wave-bottom svg { display: block; }
+.plans-subtitle { color: rgba(255,255,255,0.7); font-size: 16px; margin-top: -30px; margin-bottom: 48px; }
+.plans-grid {
+  display: flex; gap: 28px; justify-content: center;
+  flex-wrap: wrap;
+}
+.plan-card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(255,255,255,0.15);
+  border-radius: var(--radius-lg); padding: 40px 36px;
+  min-width: 280px; max-width: 340px; flex: 1;
+  transition: var(--transition); color: #fff;
+}
+.plan-card:hover { transform: translateY(-6px); background: rgba(255,255,255,0.14); }
+.plan-featured {
+  background: #fff; color: var(--text);
+  border-color: var(--yellow); box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+  transform: scale(1.04);
+}
+.plan-featured:hover { transform: scale(1.04) translateY(-6px); }
+.plan-badge {
+  font-size: 12px; font-weight: 700; letter-spacing: 1px;
+  text-transform: uppercase; margin-bottom: 20px;
+  color: rgba(255,255,255,0.7);
+}
+.popular-badge { color: var(--mint-dark) !important; }
+.plan-price { margin-bottom: 28px; }
+.price-currency { font-size: 24px; font-weight: 700; vertical-align: top; margin-top: 10px; display: inline-block; }
+.price-amount { font-size: 60px; font-weight: 800; line-height: 1; }
+.price-period { font-size: 16px; color: rgba(255,255,255,0.6); }
+.plan-featured .price-period { color: var(--text-light); }
+.plan-features { list-style: none; margin-bottom: 32px; display: flex; flex-direction: column; gap: 12px; }
+.plan-features li { font-size: 14px; }
+.btn-plan {
+  display: block; text-align: center;
+  padding: 14px; border-radius: 50px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  font-weight: 700; font-size: 15px;
+  border: 2px solid rgba(255,255,255,0.3);
+  transition: var(--transition); font-family: var(--font);
+  cursor: pointer;
+}
+.btn-plan:hover { background: rgba(255,255,255,0.25); }
+.btn-plan-featured {
+  display: block; text-align: center;
+  padding: 14px; border-radius: 50px;
+  background: var(--yellow); color: var(--text);
+  font-weight: 700; font-size: 15px; border: none;
+  transition: var(--transition); font-family: var(--font);
+  cursor: pointer; box-shadow: 0 4px 16px rgba(249,199,79,0.4);
+}
+.btn-plan-featured:hover {
+  background: var(--yellow-dark);
+  box-shadow: 0 6px 22px rgba(249,199,79,0.5);
+  transform: translateY(-2px);
+}
+
+/* ---- CTA ---- */
+.cta-section { background: var(--beige); }
+.cta-card {
+  background: linear-gradient(135deg, var(--mint-light), var(--blue-light));
+  border-radius: var(--radius-lg); padding: 60px;
+  display: flex; align-items: center; gap: 48px;
+  flex-wrap: wrap; overflow: hidden; position: relative;
+}
+.cta-card::before {
+  content: '';
+  position: absolute; top: -100px; right: -100px;
+  width: 300px; height: 300px; border-radius: 50%;
+  background: rgba(168,213,186,0.3);
+  pointer-events: none;
+}
+.cta-content { flex: 1; min-width: 240px; }
+.cta-badge {
+  display: inline-block;
+  background: var(--mint-dark); color: #fff;
+  font-size: 12px; font-weight: 600; letter-spacing: 1px;
+  padding: 5px 14px; border-radius: 50px; margin-bottom: 16px;
+}
+.cta-content h2 { font-size: clamp(26px, 3.5vw, 40px); font-weight: 800; margin-bottom: 14px; }
+.cta-content p { font-size: 15px; color: var(--text-light); margin-bottom: 28px; max-width: 360px; line-height: 1.7; }
+.cta-image { flex: 1; min-width: 220px; max-width: 380px; }
+.cta-image img { border-radius: var(--radius-lg); aspect-ratio: 16/10; object-fit: cover; box-shadow: var(--shadow-lg); }
+
+/* ---- FOOTER ---- */
+.footer {
+  background: var(--text); color: rgba(255,255,255,0.8);
+  padding: 60px 0 0;
+}
+.footer-grid {
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 48px; padding-bottom: 48px;
+}
+.footer-brand .logo { margin-bottom: 14px; filter: brightness(0) invert(1); }
+.footer-brand p { font-size: 14px; color: rgba(255,255,255,0.55); max-width: 240px; line-height: 1.7; }
+.footer-links h5, .footer-contact h5 {
+  font-size: 14px; font-weight: 700; color: #fff;
+  margin-bottom: 16px; letter-spacing: 0.5px;
+}
+.footer-links ul { display: flex; flex-direction: column; gap: 10px; }
+.footer-links a { font-size: 14px; color: rgba(255,255,255,0.55); transition: var(--transition); }
+.footer-links a:hover { color: var(--mint); }
+.footer-contact p { font-size: 14px; margin-bottom: 8px; color: rgba(255,255,255,0.55); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 20px 0; text-align: center;
+}
+.footer-bottom p { font-size: 13px; color: rgba(255,255,255,0.4); }
+
+/* ---- ANIMATIONS ---- */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.fade-in {
+  opacity: 0; transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+.fade-in-right {
+  opacity: 0; transform: translateX(40px);
+  animation: fadeInRight 0.9s 0.3s ease forwards;
+}
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInRight {
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Scroll reveal */
+.scroll-reveal {
+  opacity: 0; transform: translateY(40px);
+  transition: opacity 0.7s ease calc(var(--delay, 0s)),
+              transform 0.7s ease calc(var(--delay, 0s));
+}
+.scroll-reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 992px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+  .nav-links, .nav-search { display: none; }
+  .nav-links.open {
+    display: flex; flex-direction: column;
+    position: fixed; top: 70px; left: 0; right: 0;
+    background: #fff; padding: 20px; gap: 4px;
+    box-shadow: var(--shadow-lg); z-index: 999;
+  }
+  .hamburger { display: flex; }
+  .hero { flex-direction: column; text-align: center; padding: 100px 24px 80px; }
+  .hero-content { max-width: 100%; }
+  .hero-desc { max-width: 100%; }
+  .hero-actions { justify-content: center; }
+  .hero-stats { justify-content: center; }
+  .card-float-1 { left: 0; bottom: 20px; }
+  .card-float-2 { right: 0; top: 20px; }
+  .stats-bar { flex-direction: column; }
+  .stat-divider { width: 60px; height: 1px; }
+  .cta-card { padding: 36px 24px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .plans-grid { flex-direction: column; align-items: center; }
+  .plan-featured { transform: scale(1); }
+}
