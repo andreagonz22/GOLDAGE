@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,7 +23,7 @@
         <li><a href="contact.html" class="nav-link active">Contact Us</a></li>
       </ul>
       <div class="nav-search">
-        <input type="text" placeholder="Buscar servicio..." class="search-input" />
+        <input type="text" placeholder="Search service..." class="search-input" />
         <button class="search-btn">🔍</button>
       </div>
       <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
@@ -33,14 +33,8 @@
   <!-- PAGE HERO -->
   <section class="page-hero contact-hero">
     <div class="page-hero-content fade-in">
-      <span class="hero-badge">Contáctanos</span>
-      <h1>Nosotros estamos aquí<br /><em>para ti</em></h1>
-      <p>Agenda una cita, resuelve tus dudas o únete al equipo. Respondemos en menos de 2 horas.</p>
-    </div>
-    <div class="hero-wave">
-      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#f8faf7"/>
-      </svg>
+      <h1>We are here<br /><em>for you</em></h1>
+      <p>Schedule an appointment, resolve your questions, or join the team. We respond in less than 2 hours.</p>
     </div>
   </section>
 
@@ -51,24 +45,24 @@
 
         <!-- Info -->
         <div class="contact-info scroll-reveal">
-          <h2>Hablemos</h2>
-          <p>Puedes contactarnos por cualquiera de estos canales o completar el formulario y te responderemos a la brevedad.</p>
+          <h2>Let’s talk</h2>
+          <p>You can contact us through any of these channels or fill out the form and we will respond shortly.</p>
 
           <div class="contact-cards">
             <div class="contact-card">
               <div class="cc-icon">📞</div>
               <div>
-                <strong>Teléfono</strong>
+                <strong>Phone</strong>
                 <span>+503 7000-0000</span>
-                <small>Lun–Dom 6am – 10pm</small>
+                <small>Mon–Sun 6am – 10pm</small>
               </div>
             </div>
             <div class="contact-card">
               <div class="cc-icon">📧</div>
               <div>
-                <strong>Correo</strong>
+                <strong>Email</strong>
                 <span>hola@goldage.com</span>
-                <small>Respondemos en &lt;2 hrs</small>
+                <small>We reply in &lt;2 hrs</small>
               </div>
             </div>
             <div class="contact-card">
@@ -76,15 +70,15 @@
               <div>
                 <strong>WhatsApp</strong>
                 <span>+503 7000-0001</span>
-                <small>Atención inmediata</small>
+                <small>Immediate support</small>
               </div>
             </div>
             <div class="contact-card">
               <div class="cc-icon">📍</div>
               <div>
-                <strong>Oficina</strong>
+                <strong>Office</strong>
                 <span>San Salvador, El Salvador</span>
-                <small>Col. Escalón, Av. Principal</small>
+                <small>Escalón District, Main Avenue</small>
               </div>
             </div>
           </div>
@@ -93,46 +87,46 @@
         <!-- Form -->
         <div class="contact-form-wrap scroll-reveal" style="--delay:0.2s">
           <div class="form-header">
-            <h3>Agendar una cita</h3>
-            <p>Completa el formulario y un especialista te contactará.</p>
+            <h3>Schedule an appointment</h3>
+            <p>Fill out the form and a specialist will contact you.</p>
           </div>
           <div class="contact-form" id="contactForm">
             <div class="form-row">
               <div class="form-group">
-                <label>Nombre completo</label>
-                <input type="text" id="name" placeholder="María García" />
+                <label>Full name</label>
+                <input type="text" id="name" placeholder="Maria Garcia" />
               </div>
               <div class="form-group">
-                <label>Teléfono</label>
+                <label>Phone</label>
                 <input type="tel" id="phone" placeholder="+503 0000-0000" />
               </div>
             </div>
             <div class="form-group">
-              <label>Correo electrónico</label>
+              <label>Email</label>
               <input type="email" id="email" placeholder="maria@email.com" />
             </div>
             <div class="form-group">
-              <label>Servicio de interés</label>
+              <label>Service of interest</label>
               <select id="service">
-                <option value="">Seleccionar servicio...</option>
-                <option>Atención domiciliaria 24/7</option>
-                <option>Cuidados paliativos</option>
-                <option>Consultas generales</option>
-                <option>Consultas geriátricas</option>
-                <option>Fisioterapia a domicilio</option>
-                <option>Plan estándar mensual</option>
-                <option>Plan anual premium</option>
+                <option value="">Select a service...</option>
+                <option>24/7 home care</option>
+                <option>Palliative care</option>
+                <option>General consultations</option>
+                <option>Geriatric consultations</option>
+                <option>In-home physiotherapy</option>
+                <option>Standard monthly plan</option>
+                <option>Premium annual plan</option>
               </select>
             </div>
             <div class="form-group">
-              <label>Mensaje</label>
-              <textarea id="message" rows="4" placeholder="Cuéntanos más sobre las necesidades de tu familiar..."></textarea>
+              <label>Message</label>
+              <textarea id="message" rows="4" placeholder="Tell us more about your family member’s needs..."></textarea>
             </div>
             <button type="button" class="btn btn-primary submit-btn" onclick="submitForm()">
-              Enviar mensaje ✉️
+              Send message ✉️
             </button>
             <div class="form-success" id="formSuccess">
-              ✅ ¡Mensaje enviado! Te contactaremos pronto.
+              ✅ Message sent! We will contact you soon.
             </div>
           </div>
         </div>
@@ -144,39 +138,39 @@
   <!-- FAQ -->
   <section class="faq-section section">
     <div class="container">
-      <div class="section-label">Preguntas frecuentes</div>
-      <h2 class="section-title">Resolvemos tus <span>dudas</span></h2>
+      <div class="section-label">Frequently Asked Questions</div>
+      <h2 class="section-title">We answer your <span>questions</span></h2>
       <div class="faq-list">
         <div class="faq-item scroll-reveal">
           <button class="faq-question" onclick="toggleFAQ(this)">
-            ¿Cómo agendo una cita? <span class="faq-arrow">▼</span>
+            How do I schedule an appointment? <span class="faq-arrow">▼</span>
           </button>
           <div class="faq-answer">
-            <p>Puedes agendar a través de este formulario, por WhatsApp o llamando directamente. Un coordinador te asignará el profesional más adecuado y te confirmará la hora.</p>
+            <p>You can schedule through this form, via WhatsApp, or by calling directly. A coordinator will assign the most suitable professional and confirm your appointment.</p>
           </div>
         </div>
         <div class="faq-item scroll-reveal" style="--delay:0.1s">
           <button class="faq-question" onclick="toggleFAQ(this)">
-            ¿Cuánto tiempo tarda en llegar un profesional? <span class="faq-arrow">▼</span>
+            How long does it take for a professional to arrive? <span class="faq-arrow">▼</span>
           </button>
           <div class="faq-answer">
-            <p>Para citas programadas confirmamos con 12 horas de anticipación. Para urgencias, nuestro tiempo de respuesta es de 30 a 60 minutos dependiendo la zona.</p>
+            <p>For scheduled visits, we confirm 12 hours in advance. For emergencies, our response time is 30 to 60 minutes depending on the area.</p>
           </div>
         </div>
         <div class="faq-item scroll-reveal" style="--delay:0.2s">
           <button class="faq-question" onclick="toggleFAQ(this)">
-            ¿Qué incluye el plan anual? <span class="faq-arrow">▼</span>
+            What does the annual plan include? <span class="faq-arrow">▼</span>
           </button>
           <div class="faq-answer">
-            <p>El plan anual incluye visitas ilimitadas, recordatorios de medicamentos, consultas generales y geriátricas, atención de urgencias 24/7 y cuidados paliativos si se requieren.</p>
+            <p>The annual plan includes unlimited visits, medication reminders, general and geriatric consultations, 24/7 emergency care, and palliative care if needed.</p>
           </div>
         </div>
         <div class="faq-item scroll-reveal" style="--delay:0.3s">
           <button class="faq-question" onclick="toggleFAQ(this)">
-            ¿Los profesionales están verificados? <span class="faq-arrow">▼</span>
+            Are the professionals verified? <span class="faq-arrow">▼</span>
           </button>
           <div class="faq-answer">
-            <p>Sí, todos los profesionales pasan por verificación de título, antecedentes penales, entrevista psicológica y capacitación interna antes de atender pacientes.</p>
+            <p>Yes, all professionals undergo credential verification, background checks, psychological interviews, and internal training before attending patients.</p>
           </div>
         </div>
       </div>
@@ -189,22 +183,22 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="logo"><span class="logo-icon">🌿</span><span class="logo-text">Gold<span class="logo-accent">Age</span></span></a>
-          <p>Salud domiciliaria con corazón.</p>
+          <p>Home healthcare with heart.</p>
         </div>
-        <div class="footer-links"><h5>Navegación</h5><ul>
+        <div class="footer-links"><h5>Navigation</h5><ul>
           <li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li>
           <li><a href="nurses.html">Nurses</a></li><li><a href="about.html">About Us</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul></div>
-        <div class="footer-links"><h5>Servicios</h5><ul>
-          <li><a href="services.html">Atención 24/7</a></li><li><a href="services.html">Cuidados Paliativos</a></li>
-          <li><a href="services.html">Consultas Generales</a></li><li><a href="services.html">Geriatría</a></li>
+        <div class="footer-links"><h5>Services</h5><ul>
+          <li><a href="services.html">24/7 Care</a></li><li><a href="services.html">Palliative Care</a></li>
+          <li><a href="services.html">General Consultations</a></li><li><a href="services.html">Geriatrics</a></li>
         </ul></div>
-        <div class="footer-contact"><h5>Contacto</h5>
+        <div class="footer-contact"><h5>Contact</h5>
           <p>📧 hola@goldage.com</p><p>📞 +503 7000-0000</p><p>📍 San Salvador, El Salvador</p>
         </div>
       </div>
-      <div class="footer-bottom"><p>© 2025 GoldAge. Todos los derechos reservados.</p></div>
+      <div class="footer-bottom"><p>© 2025 GoldAge. All rights reserved.</p></div>
     </div>
   </footer>
 
