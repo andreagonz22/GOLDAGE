@@ -2,179 +2,213 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nurses – GoldAge</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="css/nurses.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GoldAge – Choose Professional</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="./css/styles.css"/>
+  <link rel="stylesheet" href="./css/nurses.css"/>
 </head>
+
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="logo"><span class="logo-icon">🌿</span><span class="logo-text">Gold<span class="logo-accent">Age</span></span></a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="services.html" class="nav-link">Services</a></li>
-        <li><a href="nurses.html" class="nav-link active">Nurses</a></li>
-        <li><a href="about.html" class="nav-link">About Us</a></li>
-        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
-      </ul>
-      <div class="nav-search">
-        <input type="text" placeholder="Buscar servicio..." class="search-input" />
-        <button class="search-btn">🔍</button>
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+
+    <a href="index.html" class="logo">
+      <img src="./img/logo.png" class="logo-img" alt="GoldAge Logo">
+      <span class="logo-text">
+        <span style="color: var(--blue); font-weight:800;">Gold</span>
+        <span style="color: var(--yellow); font-weight:800;">Age</span>
+      </span>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="services.html" class="nav-link">Services</a></li>
+      <li><a href="nurses.html" class="nav-link active">Nurses</a></li>
+      <li><a href="about.html" class="nav-link">About Us</a></li>
+      <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+    </ul>
+
+    <button class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+</nav>
+
+<section class="page-hero nurses-hero">
+  <div class="page-hero-content">
+    <h1>Choose your professional</h1>
+    <p>Select the best care for your family in seconds</p>
+  </div>
+</section>
+
+<section class="nurses-filters section">
+  <div class="container">
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search by name or specialty...">
+    </div>
+
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterCards('all', event)">All</button>
+      <button class="filter-btn" onclick="filterCards('medico', event)">Doctors</button>
+      <button class="filter-btn" onclick="filterCards('enfermero', event)">Nurses</button>
+      <button class="filter-btn" onclick="filterCards('cuidador', event)">Caregivers</button>
+    </div>
+
+    <div class="nurses-grid" id="grid"></div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <div class="logo">
+          <img src="./img/logo.png" class="logo-img" alt="GoldAge Logo">
+          <span class="logo-text">
+            <span class="gold">Gold</span><span class="age">Age</span>
+          </span>
+        </div>
+        <p>Care at home with trust and professionalism.</p>
       </div>
-      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
-    </div>
-  </nav>
 
-  <!-- PAGE HERO -->
-  <section class="page-hero nurses-hero">
-    <div class="page-hero-content fade-in">
-      <span class="hero-badge">Nuestro Equipo</span>
-      <h1>Profesionales que <em>cuidan con alma</em></h1>
-      <p>Conoce a los enfermeros, médicos y cuidadores certificados que hacen posible el cuidado de tu familia.</p>
-    </div>
-    <div class="hero-wave">
-      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#f8faf7"/>
-      </svg>
-    </div>
-  </section>
-
-  <!-- FILTERS -->
-  <section class="nurses-filters section">
-    <div class="container">
-      <div class="filter-bar">
-        <button class="filter-btn active" data-filter="all">Todos</button>
-        <button class="filter-btn" data-filter="enfermero">Enfermeros</button>
-        <button class="filter-btn" data-filter="medico">Médicos</button>
-        <button class="filter-btn" data-filter="geriatra">Geriatras</button>
-        <button class="filter-btn" data-filter="paliativo">Cuidados Paliativos</button>
+      <div class="footer-links">
+        <h5>Menu</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="nurses.html">Choose Professional</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </div>
 
-      <!-- Team Grid -->
-      <div class="nurses-grid">
-        <div class="nurse-card scroll-reveal" data-type="medico">
-          <div class="nurse-img"><img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&q=80" alt="Dra. Elena Morales" /></div>
-          <div class="nurse-info">
-            <span class="nurse-specialty">Medicina General</span>
-            <h3>Dra. Elena Morales</h3>
-            <p>8 años de experiencia en atención domiciliaria y medicina preventiva.</p>
-            <div class="nurse-rating">⭐ 4.9 · <span>142 consultas</span></div>
-            <a href="contact.html" class="btn btn-outline nurse-btn">Solicitar</a>
-          </div>
-        </div>
+      <div class="footer-links">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#">Home Care</a></li>
+          <li><a href="#">Medical Visits</a></li>
+          <li><a href="#">Emergency Care</a></li>
+          <li><a href="#">Geriatrics</a></li>
+        </ul>
+      </div>
 
-        <div class="nurse-card scroll-reveal" data-type="enfermero" style="--delay:0.1s">
-          <div class="nurse-img"><img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&q=80" alt="Enf. Roberto Díaz" /></div>
-          <div class="nurse-info">
-            <span class="nurse-specialty">Enfermería</span>
-            <h3>Enf. Roberto Díaz</h3>
-            <p>Especialista en cuidados post-operatorios y heridas crónicas.</p>
-            <div class="nurse-rating">⭐ 4.8 · <span>98 consultas</span></div>
-            <a href="contact.html" class="btn btn-outline nurse-btn">Solicitar</a>
-          </div>
-        </div>
+      <div class="footer-contact">
+        <h5>Contact</h5>
+        <p>+503 7000-0000</p>
+        <p>hola@goldage.com</p>
+        <p>San Salvador</p>
 
-        <div class="nurse-card scroll-reveal" data-type="geriatra" style="--delay:0.2s">
-          <div class="nurse-img"><img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&q=80" alt="Dra. Carmen Vásquez" /></div>
-          <div class="nurse-info">
-            <span class="nurse-specialty">Geriatría</span>
-            <h3>Dra. Carmen Vásquez</h3>
-            <p>12 años especializándose en el bienestar integral de adultos mayores.</p>
-            <div class="nurse-rating">⭐ 5.0 · <span>210 consultas</span></div>
-            <a href="contact.html" class="btn btn-outline nurse-btn">Solicitar</a>
-          </div>
-        </div>
+        <a href="contact.html" class="footer-btn">Book now</a>
+      </div>
 
-        <div class="nurse-card scroll-reveal" data-type="paliativo" style="--delay:0.3s">
-          <div class="nurse-img"><img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&q=80" alt="Dr. Luis Herrera" /></div>
-          <div class="nurse-info">
-            <span class="nurse-specialty">Cuidados Paliativos</span>
-            <h3>Dr. Luis Herrera</h3>
-            <p>Experto en manejo del dolor y acompañamiento emocional al paciente.</p>
-            <div class="nurse-rating">⭐ 4.9 · <span>76 consultas</span></div>
-            <a href="contact.html" class="btn btn-outline nurse-btn">Solicitar</a>
-          </div>
-        </div>
+    </div>
 
-        <div class="nurse-card scroll-reveal" data-type="enfermero" style="--delay:0.1s">
-          <div class="nurse-img"><img src="https://images.unsplash.com/photo-1607990283143-e81e7a2c9349?w=400&q=80" alt="Enf. Sandra Pérez" /></div>
-          <div class="nurse-info">
-            <span class="nurse-specialty">Enfermería</span>
-            <h3>Enf. Sandra Pérez</h3>
-            <p>Especialista en cuidados nocturnos y monitoreo de pacientes crónicos.</p>
-            <div class="nurse-rating">⭐ 4.7 · <span>115 consultas</span></div>
-            <a href="contact.html" class="btn btn-outline nurse-btn">Solicitar</a>
-          </div>
-        </div>
+    <div class="footer-bottom">
+      <p>© 2025 GoldAge. All rights reserved.</p>
+    </div>
 
-        <div class="nurse-card scroll-reveal" data-type="medico" style="--delay:0.2s">
-          <div class="nurse-img"><img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=400&q=80" alt="Dr. Marco López" /></div>
-          <div class="nurse-info">
-            <span class="nurse-specialty">Medicina Interna</span>
-            <h3>Dr. Marco López</h3>
-            <p>Subespecialidad en enfermedades cardio-metabólicas y prevención.</p>
-            <div class="nurse-rating">⭐ 4.9 · <span>188 consultas</span></div>
-            <a href="contact.html" class="btn btn-outline nurse-btn">Solicitar</a>
-          </div>
-        </div>
+  </div>
+</footer>
+
+<script>
+
+const data = [
+  {
+    name:"Karla Hernández",
+    type:"medico",
+    specialty:"General Medicine",
+    desc:"Experienced in home care and prevention.",
+    rating:"4.9 · 120 consults",
+    img:"https://tse4.mm.bing.net/th/id/OIP.SCHA7V9V9cRdPm-iT2uHcwHaHa?w=800&h=800&rs=1&pid=ImgDetMain&o=7&rm=3"
+  },
+  {
+    name:"José Martínez",
+    type:"medico",
+    specialty:"Cardiology",
+    desc:"Specialist in heart conditions.",
+    rating:"4.8 · 90 consults",
+    img:"https://cdn.pixabay.com/photo/2024/08/13/11/42/ai-generated-8965801_1280.png"
+  },
+  {
+    name:"Ana López",
+    type:"cuidador",
+    specialty:"Elder Care",
+    desc:"Daily support and assistance.",
+    rating:"4.7 · 80 consults",
+    img:"https://tse1.explicit.bing.net/th/id/OIP.RrkyXY4g-RRKCOZhHk7yOwHaE8?w=600&h=400&rs=1&pid=ImgDetMain&o=7&rm=3"
+  },
+  {
+    name:"María Pérez",
+    type:"enfermero",
+    specialty:"Intensive Care",
+    desc:"Emergency and monitoring expert.",
+    rating:"5.0 · 150 consults",
+    img:"https://tse1.mm.bing.net/th/id/OIP.eRYkd2TZGGyXvkM4_XjBxwAAAA?w=464&h=530&rs=1&pid=ImgDetMain&o=7&rm=3"
+  },
+  {
+    name:"Luis Gómez",
+    type:"medico",
+    specialty:"Pediatrics",
+    desc:"Child health specialist.",
+    rating:"4.9 · 110 consults",
+    img:"https://tse2.mm.bing.net/th/id/OIP.6d0rG3R3mjOCFouD2waAkgHaE8?w=600&h=400&rs=1&pid=ImgDetMain&o=7&rm=3"
+  }
+];
+
+const grid = document.getElementById("grid");
+
+data.forEach(p => {
+  grid.innerHTML += `
+    <div class="nurse-card" data-type="${p.type}">
+      <div class="nurse-img">
+        <img src="${p.img}" alt="${p.name}">
+      </div>
+
+      <div class="nurse-info">
+        <span class="nurse-specialty">${p.specialty}</span>
+        <h3>${p.name}</h3>
+        <p>${p.desc}</p>
+        <div class="nurse-rating">${p.rating}</div>
+        <button class="nurse-btn">Hire now</button>
       </div>
     </div>
-  </section>
+  `;
+});
 
-  <!-- JOIN CTA -->
-  <section class="join-cta scroll-reveal">
-    <div class="container">
-      <div class="join-inner">
-        <div class="join-content">
-          <span class="cta-badge">Únete al equipo</span>
-          <h2>¿Eres profesional de salud?</h2>
-          <p>Forma parte de nuestra red y ayuda a cientos de familias. Ofrecemos horarios flexibles, pagos competitivos y un ambiente de trabajo positivo.</p>
-          <div class="join-perks">
-            <div class="perk">🕐 Horarios flexibles</div>
-            <div class="perk">💰 Pagos puntuales</div>
-            <div class="perk">📱 App de gestión</div>
-            <div class="perk">🏥 Respaldo médico</div>
-          </div>
-          <a href="contact.html" class="btn btn-primary">Aplicar ahora →</a>
-        </div>
-        <div class="join-img">
-          <img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?w=500&q=80" alt="Únete al equipo" />
-        </div>
-      </div>
-    </div>
-  </section>
+function filterCards(type, e){
+  document.querySelectorAll(".filter-btn").forEach(btn => btn.classList.remove("active"));
+  e.target.classList.add("active");
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.html" class="logo"><span class="logo-icon">🌿</span><span class="logo-text">Gold<span class="logo-accent">Age</span></span></a>
-          <p>Salud domiciliaria con corazón.</p>
-        </div>
-        <div class="footer-links"><h5>Navegación</h5><ul>
-          <li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li>
-          <li><a href="nurses.html">Nurses</a></li><li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul></div>
-        <div class="footer-links"><h5>Servicios</h5><ul>
-          <li><a href="services.html">Atención 24/7</a></li><li><a href="services.html">Cuidados Paliativos</a></li>
-          <li><a href="services.html">Consultas Generales</a></li><li><a href="services.html">Geriatría</a></li>
-        </ul></div>
-        <div class="footer-contact"><h5>Contacto</h5>
-          <p>📧 hola@goldage.com</p><p>📞 +503 7000-0000</p><p>📍 San Salvador, El Salvador</p>
-        </div>
-      </div>
-      <div class="footer-bottom"><p>© 2025 GoldAge. Todos los derechos reservados.</p></div>
-    </div>
-  </footer>
+  document.querySelectorAll(".nurse-card").forEach(card => {
+    card.style.display =
+      (type === "all" || card.dataset.type === type)
+      ? "block"
+      : "none";
+  });
+}
 
-  <script src="js/main.js"></script>
-  <script src="js/nurses.js"></script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+document.querySelectorAll(".nurse-card").forEach(card=>{
+  observer.observe(card);
+});
+
+</script>
+
 </body>
 </html>
