@@ -2,82 +2,300 @@
    GoldAge – nurses.css
    ===================================================== */
 
-.nurses-hero {
-  background: linear-gradient(135deg, #e8f4fb 0%, #d4ede0 100%);
+/* ===== LOGO ===== */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-/* Filter Bar */
+.logo-img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  transition: 0.3s;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+}
+
+.logo-text .gold {
+  color: var(--blue);
+}
+
+.logo-text .age {
+  color: var(--yellow);
+}
+
+.logo:hover .logo-img {
+  transform: rotate(-5deg) scale(1.08);
+}
+
+/* ===== HERO ===== */
+.nurses-hero {
+  position: relative;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      120deg,
+      rgba(127,179,211,0.75) 0%,
+      rgba(168,213,186,0.55) 40%,
+      rgba(255,255,255,0.08) 100%
+    ),
+    url("https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=2000");
+
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.nurses-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(
+    circle at 70% 30%,
+    rgba(255,255,255,0.15),
+    transparent 60%
+  );
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+
+.page-hero-content h1 {
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.page-hero-content p {
+  opacity: 0.95;
+  font-size: 16px;
+}
+
+/* ===== SEARCH ===== */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0 10px;
+}
+
+.search-bar input {
+  width: 60%;
+  max-width: 500px;
+  padding: 14px 20px;
+
+  border-radius: 50px;
+  border: none;
+  outline: none;
+
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition);
+}
+
+.search-bar input:focus {
+  transform: scale(1.05);
+}
+
+/* ===== FILTERS ===== */
 .filter-bar {
-  display: flex; flex-wrap: wrap; gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+
+  margin-top: 20px;
   margin-bottom: 40px;
 }
+
 .filter-btn {
-  padding: 10px 22px; border-radius: 50px;
-  border: 2px solid var(--mint-light);
-  background: transparent; font-family: var(--font);
-  font-size: 14px; font-weight: 600; color: var(--text-light);
-  cursor: pointer; transition: var(--transition);
-}
-.filter-btn:hover, .filter-btn.active {
-  background: var(--mint-dark); color: #fff; border-color: var(--mint-dark);
+  padding: 10px 22px;
+  border-radius: 50px;
+  border: none;
+
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-light);
+
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
 }
 
-/* Nurses Grid */
+.filter-btn:hover {
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, var(--mint), var(--blue));
+  color: #fff;
+  box-shadow: var(--shadow-lg);
+}
+
+/* ===== GRID ===== */
 .nurses-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 28px;
+  gap: 30px;
 }
+
+/* ===== CARD ===== */
 .nurse-card {
-  background: #fff; border-radius: var(--radius-lg);
-  overflow: hidden; box-shadow: var(--shadow);
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(12px);
+
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.nurse-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nurse-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ===== IMAGE ===== */
+.nurse-img {
+  height: 230px;
+  overflow: hidden;
+}
+
+.nurse-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.nurse-card:hover img {
+  transform: scale(1.08);
+}
+
+/* ===== INFO ===== */
+.nurse-info {
+  padding: 20px;
+}
+
+.nurse-specialty {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  color: white;
+  background: linear-gradient(135deg, var(--blue), var(--mint));
+
+  padding: 4px 12px;
+  border-radius: 50px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.nurse-info h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.nurse-info p {
+  font-size: 13px;
+  color: var(--text-light);
+  margin-bottom: 10px;
+}
+
+/* ===== RATING ===== */
+.nurse-rating {
+  font-size: 13px;
+  margin-bottom: 16px;
+  color: #f5b50a;
+}
+
+/* ===== BUTTON ===== */
+.nurse-btn {
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: none;
+
+  font-weight: 600;
+  cursor: pointer;
+
+  background: linear-gradient(135deg, var(--mint), var(--blue));
+  color: white;
+
   transition: var(--transition);
 }
-.nurse-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
-.nurse-card.hidden { display: none; }
-.nurse-img { height: 220px; overflow: hidden; }
-.nurse-img img { height: 100%; transition: transform 0.5s; }
-.nurse-card:hover .nurse-img img { transform: scale(1.06); }
-.nurse-info { padding: 20px 22px 24px; }
-.nurse-specialty {
-  font-size: 11px; font-weight: 700; letter-spacing: 1px;
-  text-transform: uppercase; color: var(--blue-dark);
-  background: var(--blue-light); padding: 3px 10px;
-  border-radius: 50px; display: inline-block; margin-bottom: 8px;
-}
-.nurse-info h3 { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
-.nurse-info p { font-size: 13px; color: var(--text-light); margin-bottom: 10px; line-height: 1.6; }
-.nurse-rating { font-size: 13px; margin-bottom: 16px; }
-.nurse-rating span { color: var(--text-light); }
-.nurse-btn { padding: 10px 20px; font-size: 13px; }
 
-/* Join CTA */
-.join-cta { padding: 80px 0; background: var(--beige); }
-.join-inner {
-  display: flex; gap: 60px; align-items: center;
-  background: linear-gradient(135deg, var(--mint-light), var(--blue-light));
-  border-radius: var(--radius-lg); padding: 60px;
-  flex-wrap: wrap; overflow: hidden; position: relative;
+.nurse-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
 }
-.join-inner::after {
-  content: '';
-  position: absolute; bottom: -80px; right: -80px;
-  width: 280px; height: 280px; border-radius: 50%;
-  background: rgba(127,179,211,0.25); pointer-events: none;
-}
-.join-content { flex: 1; min-width: 260px; }
-.join-content h2 { font-size: clamp(24px, 3vw, 36px); font-weight: 800; margin: 8px 0 14px; }
-.join-content > p { font-size: 15px; color: var(--text-light); line-height: 1.7; margin-bottom: 24px; }
-.join-perks { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px; }
-.perk {
-  background: #fff; border-radius: 50px;
-  padding: 8px 16px; font-size: 13px; font-weight: 600;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-.join-img { flex: 1; min-width: 220px; max-width: 400px; position: relative; z-index: 1; }
-.join-img img { border-radius: var(--radius-lg); aspect-ratio: 4/3; object-fit: cover; box-shadow: var(--shadow-lg); }
 
-@media (max-width: 768px) {
-  .join-inner { flex-direction: column; padding: 36px 24px; }
-  .join-img { max-width: 100%; }
+/* ===== FOOTER ===== */
+.footer {
+  background: linear-gradient(135deg, var(--blue-dark), var(--blue));
+  color: white;
+  padding: 60px 0 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+.footer-links a {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--yellow);
+  padding-left: 5px;
+}
+
+.footer-btn {
+  margin-top: 15px;
+  padding: 10px 16px;
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, var(--mint), var(--yellow));
+  color: black;
+
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 13px;
 }
