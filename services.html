@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services – GoldAge</title>
+  <title>Services – GOLDAGE</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
@@ -14,21 +14,25 @@
   <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
-      <a href="index.html" class="logo"><span class="logo-icon">🌿</span><span class="logo-text">Gold<span class="logo-accent">Age</span></span></a>
+      <a href="index.html" class="logo">
+  <img src="img/logo.png" alt="GoldAge Logo" class="logo-img">
+  <span class="logo-text">Gold<span class="logo-accent">Age</span></span>
+</a>
+
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="services.html" class="nav-link active">Services</a></li>
-        <li><a href="nurses.html" class="nav-link">Nurses</a></li>
-        <li><a href="about.html" class="nav-link">About Us</a></li>
-        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
-      </ul>
-      <div class="nav-search">
-        <input type="text" placeholder="Buscar servicio..." class="search-input" />
-        <button class="search-btn">🔍</button>
-      </div>
-      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  <li><a href="index.html" class="nav-link active">Home</a></li>
+  <li><a href="services.html" class="nav-link">Services</a></li>
+  <li><a href="nurses.html" class="nav-link">Nurses</a></li>
+  <li><a href="about.html" class="nav-link">About Us</a></li>
+  <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+</ul>
+
+<button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
+
 
   <!-- PAGE HERO -->
   <section class="page-hero services-hero">
@@ -51,11 +55,11 @@
       <!-- Service 1 -->
       <div class="service-row scroll-reveal">
         <div class="service-row-img">
-          <img src="https://images.unsplash.com/photo-1666214280391-8ff5bd3d6696?w=600&q=80" alt="Atención domiciliaria 24/7" />
+          <img src="https://tusangeles.com.mx/wp-content/uploads/2024/01/enfermera-feliz-sosteniendo-mano-anciano-silla-ruedas-jardin-hogar-ancianos-2048x1365.jpg" alt="Atención domiciliaria 24/7" />
         </div>
         <div class="service-row-content">
           <span class="service-tag">24/7</span>
-          <h2>Atención Domiciliaria 24/7</h2>
+          <h2>Home Care 24/7</h2>
           <p>Nuestro equipo de enfermeros y médicos está disponible las 24 horas del día, los 7 días de la semana para atender cualquier necesidad médica en la comodidad de tu hogar.</p>
           <ul class="service-detail-list">
             <li>✅ Atención de urgencias médicas en casa</li>
@@ -70,11 +74,11 @@
       <!-- Service 2 (reversed) -->
       <div class="service-row service-row-reverse scroll-reveal">
         <div class="service-row-img">
-          <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80" alt="Cuidados paliativos" />
+          <img src="https://media.istockphoto.com/id/1650853784/photo/doctor-senior-patient-and-blood-pressure-check-with-consultation-talking-and-help-health-in.jpg?s=612x612&w=0&k=20&c=ODv-wA2E7-FNv527tZ6GuKJ9LnFP2GMSebF56GEox3o=" alt="Cuidados paliativos" />
         </div>
         <div class="service-row-content">
-          <span class="service-tag">Especializado</span>
-          <h2>Cuidados Paliativos</h2>
+          <span class="service-tag">Schedules</span>
+          <h2>Palliative care at home</h2>
           <p>Brindamos acompañamiento integral con enfoque en el bienestar físico, emocional y espiritual del paciente y su familia durante etapas difíciles.</p>
           <ul class="service-detail-list">
             <li>✅ Control del dolor y síntomas</li>
@@ -89,55 +93,17 @@
       <!-- Service 3 -->
       <div class="service-row scroll-reveal">
         <div class="service-row-img">
-          <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?w=600&q=80" alt="Consultas generales" />
+          <img src="https://www.shutterstock.com/image-photo/senior-doctor-white-medical-gown-600nw-2152462045.jpg" alt="Consultas generales" />
         </div>
         <div class="service-row-content">
           <span class="service-tag">General</span>
-          <h2>Consultas Generales</h2>
+          <h2>General medical consultations</h2>
           <p>Diagnóstico, evaluación y tratamiento de enfermedades comunes realizadas por médicos generales certificados directamente en tu domicilio.</p>
           <ul class="service-detail-list">
             <li>✅ Diagnóstico y prescripción médica</li>
             <li>✅ Toma de muestras en casa</li>
             <li>✅ Seguimiento post-consulta</li>
             <li>✅ Historial clínico digital</li>
-          </ul>
-          <a href="contact.html" class="btn btn-primary">Agendar cita</a>
-        </div>
-      </div>
-
-      <!-- Service 4 (reversed) -->
-      <div class="service-row service-row-reverse scroll-reveal">
-        <div class="service-row-img">
-          <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&q=80" alt="Consultas geriátricas" />
-        </div>
-        <div class="service-row-content">
-          <span class="service-tag">Geriatría</span>
-          <h2>Consultas Geriátricas</h2>
-          <p>Atención especializada para adultos mayores con evaluación integral de salud física y cognitiva, promoviendo calidad de vida y autonomía.</p>
-          <ul class="service-detail-list">
-            <li>✅ Evaluación funcional completa</li>
-            <li>✅ Manejo de enfermedades crónicas</li>
-            <li>✅ Prevención de caídas y accidentes</li>
-            <li>✅ Plan nutricional personalizado</li>
-          </ul>
-          <a href="contact.html" class="btn btn-primary">Agendar cita</a>
-        </div>
-      </div>
-
-      <!-- Service 5 -->
-      <div class="service-row scroll-reveal">
-        <div class="service-row-img">
-          <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80" alt="Fisioterapia" />
-        </div>
-        <div class="service-row-content">
-          <span class="service-tag">Rehabilitación</span>
-          <h2>Fisioterapia a Domicilio</h2>
-          <p>Rehabilitación física personalizada para recuperación postoperatoria, enfermedades neurológicas y lesiones musculoesqueléticas.</p>
-          <ul class="service-detail-list">
-            <li>✅ Rehabilitación post-quirúrgica</li>
-            <li>✅ Terapia para Parkinson y Alzheimer</li>
-            <li>✅ Ejercicios terapéuticos guiados</li>
-            <li>✅ Evaluación de progreso mensual</li>
           </ul>
           <a href="contact.html" class="btn btn-primary">Agendar cita</a>
         </div>
