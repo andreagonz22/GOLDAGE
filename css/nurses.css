@@ -71,6 +71,16 @@ body {
 
 /* ===== NAVBAR IGUAL AL HOME ===== */
 /* ===== NAVBAR PIXEL PERFECT (HOME COPY) ===== */
+.navbar,
+.nav-links,
+.nav-link {
+     font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.2px; /* esto es clave */
+  font-family: 'Poppins', sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 .navbar {
   position: fixed;
@@ -126,6 +136,7 @@ body {
 }
 
 /* HOVER + ACTIVE */
+
 .nav-link:hover,
 .nav-link.active {
   background: #80cbc4;
