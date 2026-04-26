@@ -68,97 +68,107 @@ body {
     color: #ffd700;
 }
 
-/* ===== MENÚ (estilo solicitado anteriormente) ===== */
+/* ===== NAVBAR IGUAL AL HOME ===== */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(168, 213, 186, 0.2);
-    transition: 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: linear-gradient(135deg, #eaf7f0 0%, #e8f4fb 50%, #f8faf7 100%);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(168,213,186,0.2);
+  transition: 0.3s;
 }
 
 .navbar.scrolled {
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
 }
 
 .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 24px;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
 }
 
 .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    margin-left: auto;
-    list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
 }
 
 .nav-link {
-    padding: 8px 14px;
-    border-radius: 50px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #718096;
-    text-decoration: none;
-    transition: 0.3s;
+  padding: 8px 14px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #718096;
+  transition: 0.3s;
 }
 
 .nav-link:hover,
 .nav-link.active {
-    background: #4ce7da;
-    color: #80cbc4;
-    font-weight: 600;
+  background: #80cbc4;
+  color: #ffffff;
+  font-weight: 600;
 }
 
 .hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .hamburger span {
-    width: 24px;
-    height: 2.5px;
-    background: #2d3748;
-    border-radius: 2px;
+  width: 24px;
+  height: 2.5px;
+  background: #2d3748;
+  border-radius: 2px;
 }
 
-/* RESPONSIVE MENÚ */
+/* RESPONSIVE */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    .nav-links.open {
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        top: 70px;
-        left: 0;
-        right: 0;
-        background: #fff;
-        padding: 20px;
-        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
-        gap: 16px;
-        align-items: center;
-    }
-    .hamburger {
-        display: flex;
-    }
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 20px;
+    gap: 4px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+/* FIX MENU SIN ROMPER DISEÑO */
+.nav-links {
+  list-style: none;
 }
 
+.nav-links li {
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+}
 /* ===== HERO ===== */
 .nurses-hero {
     position: relative;
