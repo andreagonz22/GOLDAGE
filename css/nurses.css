@@ -20,6 +20,7 @@
     --radius-md: 16px;
     --radius-lg: 24px;
     --transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    --font: 'Poppins', sans-serif;
 }
 
 body {
@@ -65,51 +66,76 @@ body {
 
 /* AGE con acento amarillo */
 .logo-accent {
-    color: #ffd700;
+    color: #efbf04;
 }
 
 /* ===== NAVBAR IGUAL AL HOME ===== */
+/* ===== NAVBAR PIXEL PERFECT (HOME COPY) ===== */
+.navbar,
+.nav-links,
+.nav-link {
+     font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.2px; /* esto es clave */
+  font-family: 'Poppins', sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
+
   background: linear-gradient(135deg, #eaf7f0 0%, #e8f4fb 50%, #f8faf7 100%);
   backdrop-filter: blur(12px);
+
   border-bottom: 1px solid rgba(168,213,186,0.2);
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .navbar.scrolled {
   box-shadow: 0 4px 24px rgba(0,0,0,0.08);
 }
 
+/* CONTENEDOR */
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
   height: 70px;
+
   display: flex;
   align-items: center;
   gap: 32px;
 }
 
+/* LINKS */
 .nav-links {
   display: flex;
   align-items: center;
   gap: 4px;
   margin-left: auto;
+  list-style: none;
 }
 
+/* LINK */
 .nav-link {
   padding: 8px 14px;
   border-radius: 50px;
+
   font-size: 14px;
   font-weight: 500;
   color: #718096;
-  transition: 0.3s;
+
+  text-decoration: none;
+
+  transition: all 0.3s ease;
 }
+
+/* HOVER + ACTIVE */
 
 .nav-link:hover,
 .nav-link.active {
@@ -118,6 +144,32 @@ body {
   font-weight: 600;
 }
 
+/* ===== LOGO ===== */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #213448;
+}
+
+.logo-accent {
+  color: #ffd700;
+}
+
+/* ===== HAMBURGER ===== */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -134,8 +186,9 @@ body {
   border-radius: 2px;
 }
 
-/* RESPONSIVE */
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
+
   .nav-links {
     display: none;
   }
@@ -143,13 +196,16 @@ body {
   .nav-links.open {
     display: flex;
     flex-direction: column;
+
     position: fixed;
     top: 70px;
     left: 0;
     right: 0;
-    background: #fff;
+
+    background: #ffffff;
     padding: 20px;
     gap: 4px;
+
     box-shadow: 0 12px 40px rgba(0,0,0,0.12);
   }
 
@@ -603,52 +659,57 @@ padding: 60px 0 20px;
 
 }
 
-/* ===== RESPONSIVE GENERAL ===== */
+/* ---- ANIMATIONS ---- */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.fade-in {
+  opacity: 0; transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+.fade-in-right {
+  opacity: 0; transform: translateX(40px);
+  animation: fadeInRight 0.9s 0.3s ease forwards;
+}
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInRight {
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Scroll reveal */
+.scroll-reveal {
+  opacity: 0; transform: translateY(40px);
+  transition: opacity 0.7s ease calc(var(--delay, 0s)),
+              transform 0.7s ease calc(var(--delay, 0s));
+}
+.scroll-reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ---- RESPONSIVE ---- */
 @media (max-width: 992px) {
-    .container {
-        padding: 0 28px;
-    }
-    .page-hero-content h1 {
-        font-size: 42px;
-    }
-    .nurses-grid {
-        gap: 28px;
-    }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
 }
-
 @media (max-width: 768px) {
-    .container {
-        padding: 0 20px;
-    }
-    .page-hero-content h1 {
-        font-size: 34px;
-    }
-    .filter-btn {
-        padding: 8px 18px;
-        font-size: 13px;
-    }
-    .nurses-grid {
-        grid-template-columns: 1fr;
-        gap: 32px;
-    }
-    .footer-grid {
-        gap: 32px;
-    }
-}
-
-@media (max-width: 480px) {
-    .search-bar input {
-        width: 90%;
-        padding: 14px 22px;
-    }
-    .nurse-info h3 {
-        font-size: 20px;
-    }
-    .page-hero-content h1 {
-        font-size: 28px;
-    }
-}
-
-.nurse-card, .filter-btn, .nurse-btn {
-    will-change: transform;
+  .nav-links, .nav-search { display: none; }
+  .nav-links.open {
+    display: flex; flex-direction: column;
+    position: fixed; top: 70px; left: 0; right: 0;
+    background: #fff; padding: 20px; gap: 4px;
+    box-shadow: var(--shadow-lg); z-index: 999;
+  }
+  .hamburger { display: flex; }
+  .hero { flex-direction: column; text-align: center; padding: 100px 24px 80px; }
+  .hero-content { max-width: 100%; }
+  .hero-desc { max-width: 100%; }
+  .hero-actions { justify-content: center; }
+  .card-float-1 { left: 0; bottom: 20px; }
+  .card-float-2 { right: 0; top: 20px; }
+  .stats-bar { flex-direction: column; }
+  .stat-divider { width: 60px; height: 1px; }
+  .cta-card { padding: 36px 24px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .plans-grid { flex-direction: column; align-items: center; }
+  .plan-featured { transform: scale(1); }
 }
