@@ -1,10 +1,11 @@
 <?php
 session_start();
+$_SESSION['admin'] = "Andrea";
 if (!isset($_SESSION['admin'])) {
     header("Location: login.php");
     exit();
 }
-include("conexion.php");
+include(__DIR__ . "/../login/conexion.php");
 
 // Traer empleados
 $result = $conn->query("SELECT * FROM EMPLEADOS ORDER BY IDEMPLEADO DESC");

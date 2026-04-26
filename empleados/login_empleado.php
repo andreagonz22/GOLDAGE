@@ -13,7 +13,7 @@
     <h2>Portal de Empleados</h2>
     <p class="subtitle">Acceso exclusivo para el equipo GoldAge</p>
 
-    <form action="validar_empleado.php" method="POST">
+    <form action="/Gold/GOLDAGE/empleados/validar_empleado.php" method="POST">
       <div class="form-group">
         <label for="correo">Correo institucional</label>
         <input type="email" id="correo" name="correo" placeholder="nombre@goldage.com" required>
