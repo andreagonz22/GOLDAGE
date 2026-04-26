@@ -376,29 +376,146 @@ ul { list-style: none; }
 }
 
 /* ---- FOOTER ---- */
+/* ===== FOOTER PREMIUM (NIVEL APP) ===== */
 .footer {
-  background: var(--text); color: rgba(255,255,255,0.8);
-  padding: 60px 0 0;
+position: relative;
+background: rgba(33, 52, 72, 0.95); /* oscuro elegante */
+backdrop-filter: blur(14px);
+color: rgba(255,255,255,0.85);
+padding: 70px 0 20px;
+margin-top: 60px;
+border-top: 1px solid rgba(255,255,255,0.08);
+overflow: hidden;
 }
+
+/* EFECTO GLOW SUAVE */
+.footer::before {
+content: "";
+position: absolute;
+top: -120px;
+left: -120px;
+width: 400px;
+height: 400px;
+background: radial-gradient(circle, rgba(76,231,218,0.25), transparent 70%);
+filter: blur(80px);
+}
+
+.footer::after {
+content: "";
+position: absolute;
+bottom: -120px;
+right: -120px;
+width: 400px;
+height: 400px;
+background: radial-gradient(circle, rgba(255,215,0,0.2), transparent 70%);
+filter: blur(80px);
+}
+
+/* GRID */
 .footer-grid {
-  display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr;
-  gap: 48px; padding-bottom: 48px;
+position: relative;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+gap: 50px;
+margin-bottom: 50px;
+z-index: 2;
 }
-.footer-brand .logo { margin-bottom: 14px; filter: brightness(0) invert(1); }
-.footer-brand p { font-size: 14px; color: rgba(255,255,255,0.55); max-width: 240px; line-height: 1.7; }
-.footer-links h5, .footer-contact h5 {
-  font-size: 14px; font-weight: 700; color: #fff;
-  margin-bottom: 16px; letter-spacing: 0.5px;
+
+/* LOGO */
+.footer-brand .logo {
+margin-bottom: 12px;
+filter: brightness(0) invert(1);
 }
-.footer-links ul { display: flex; flex-direction: column; gap: 10px; }
-.footer-links a { font-size: 14px; color: rgba(255,255,255,0.55); transition: var(--transition); }
-.footer-links a:hover { color: var(--mint); }
-.footer-contact p { font-size: 14px; margin-bottom: 8px; color: rgba(255,255,255,0.55); }
+
+.footer-brand p {
+font-size: 14px;
+color: rgba(255,255,255,0.6);
+line-height: 1.6;
+}
+
+/* TITULOS */
+.footer-links h5,
+.footer-contact h5 {
+font-size: 16px;
+font-weight: 700;
+margin-bottom: 18px;
+color: #ffffff;
+}
+
+/* LINKS */
+.footer-links ul {
+list-style: none;
+}
+
+.footer-links li {
+margin-bottom: 10px;
+}
+
+.footer-links a {
+color: rgba(255,255,255,0.6);
+font-size: 14px;
+text-decoration: none;
+transition: 0.3s;
+display: inline-block;
+}
+
+.footer-links a:hover {
+color: var(--mint);
+transform: translateX(6px);
+}
+
+/* CONTACTO */
+.footer-contact p {
+font-size: 14px;
+margin-bottom: 10px;
+color: rgba(255,255,255,0.6);
+}
+
+/* BOTÓN PREMIUM */
+.footer-btn {
+margin-top: 18px;
+display: inline-block;
+padding: 12px 26px;
+border-radius: 50px;
+background: linear-gradient(135deg, var(--mint), var(--yellow));
+color: #1C2E3A;
+font-weight: 700;
+font-size: 14px;
+text-decoration: none;
+transition: 0.3s;
+box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+.footer-btn:hover {
+transform: translateY(-3px) scale(1.03);
+box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+}
+
+/* DIVISIÓN FINAL */
 .footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding: 20px 0; text-align: center;
+text-align: center;
+padding-top: 25px;
+border-top: 1px solid rgba(255,255,255,0.08);
+position: relative;
+z-index: 2;
 }
-.footer-bottom p { font-size: 13px; color: rgba(255,255,255,0.4); }
+
+.footer-bottom p {
+font-size: 13px;
+color: rgba(255,255,255,0.4);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+.footer {
+padding: 60px 0 20px;
+}
+
+.footer-grid {
+    gap: 30px;
+}
+
+}
 
 /* ---- ANIMATIONS ---- */
 @keyframes float {
