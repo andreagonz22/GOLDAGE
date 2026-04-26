@@ -1,5 +1,5 @@
 <?php
-include("conexion.php");
+include("../login/conexion.php");
 
 $id = $_GET['id'];
 
