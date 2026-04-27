@@ -1,6 +1,22 @@
 /* =====================================================
    RESET & VARIABLES (IDENTIDAD VISUAL RESPETADA)
 ===================================================== */
+/* Clase faltante para ocultar cards */
+.hidden {
+    display: none;
+}
+
+/* Animación para las cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 * {
     margin: 0;
     padding: 0;
@@ -587,4 +603,335 @@ body {
 
 .nurse-card, .filter-btn, .nurse-btn {
     will-change: transform;
+} 
+/* =====================================================
+   MODAL / POP-UP STYLES - Hire Now
+===================================================== */
+
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(8px);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Modal Container */
+.modal-container {
+    background: white;
+    border-radius: 32px;
+    width: 90%;
+    max-width: 550px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    transform: scale(0.9);
+    transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.modal-overlay.active .modal-container {
+    transform: scale(1);
+}
+
+/* Modal Header */
+.modal-header {
+    padding: 28px 32px 16px;
+    border-bottom: 1px solid rgba(42, 111, 143, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.modal-header h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1F2F38;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.modal-header h2 i {
+    color: var(--blue);
+    font-size: 26px;
+}
+
+.modal-close {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #f5f5f5;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    color: #666;
+    font-size: 18px;
+}
+
+.modal-close:hover {
+    background: #e8e8e8;
+    transform: rotate(90deg);
+}
+
+/* Modal Body */
+.modal-body {
+    padding: 24px 32px 32px;
+}
+
+/* Status Indicator */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 40px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.status-badge.available {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.status-badge.unavailable {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.status-badge.available .status-dot {
+    background: #4caf50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.3);
+}
+
+.status-badge.unavailable .status-dot {
+    background: #f44336;
+    box-shadow: 0 0 0 2px rgba(244, 67, 54, 0.3);
+}
+
+/* Professional Info */
+.professional-info {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.professional-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--mint), var(--blue));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+}
+
+.professional-icon i {
+    font-size: 42px;
+    color: white;
+}
+
+.professional-info h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1F2F38;
+    margin-bottom: 6px;
+}
+
+.professional-specialty {
+    display: inline-block;
+    background: rgba(42, 111, 143, 0.1);
+    padding: 4px 14px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--blue);
+    margin-top: 6px;
+}
+
+/* Details Grid */
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 28px;
+    background: #F8FBF9;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.detail-item {
+    text-align: center;
+}
+
+.detail-item i {
+    font-size: 22px;
+    color: var(--blue);
+    margin-bottom: 8px;
+    display: block;
+}
+
+.detail-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #8a9aa8;
+    margin-bottom: 6px;
+}
+
+.detail-value {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1F2F38;
+}
+
+/* Availability Section */
+.availability-section {
+    margin-bottom: 28px;
+}
+
+.availability-section h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1F2F38;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.availability-section h4 i {
+    color: var(--blue);
+}
+
+.availability-times {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.time-badge {
+    background: white;
+    border: 1px solid rgba(42, 111, 143, 0.2);
+    padding: 8px 16px;
+    border-radius: 40px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #4B5F6C;
+}
+
+.days-available {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.day-badge {
+    background: rgba(168, 213, 186, 0.3);
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #2A6F8F;
+}
+
+.day-badge.unavailable-day {
+    background: rgba(0, 0, 0, 0.05);
+    color: #b0bec5;
+    text-decoration: line-through;
+}
+
+/* Action Button */
+.modal-action-btn {
+    width: 100%;
+    padding: 16px;
+    border-radius: 50px;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    background: linear-gradient(95deg, var(--mint), var(--blue));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+    margin-top: 16px;
+}
+
+.modal-action-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 22px -8px rgba(42, 111, 143, 0.4);
+    background: linear-gradient(95deg, var(--blue), var(--mint));
+}
+
+.modal-action-btn i {
+    font-size: 14px;
+    transition: transform 0.2s;
+}
+
+.modal-action-btn:hover i {
+    transform: translateX(5px);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .modal-body {
+        padding: 20px;
+    }
+    
+    .modal-header {
+        padding: 20px 24px 12px;
+    }
+    
+    .details-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .professional-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .professional-icon i {
+        font-size: 32px;
+    }
+    
+    .professional-info h3 {
+        font-size: 20px;
+    }
 }
