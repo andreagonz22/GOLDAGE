@@ -1,6 +1,3 @@
-/* =========================
-   VARIABLES (AQUÍ CAMBIAS EL COLOR)
-   ========================= */
 :root {
   --btn-color: #009f9a; /* 🔴 color principal del botón */
   --btn-hover-bg: #009f9a;
@@ -146,9 +143,7 @@
   margin-bottom: 28px;
 }
 
-/* =========================
-   BOTONES (ESTILO OUTLINE)
-   ========================= */
+
 .btn-primary {
   background: transparent;
   color: var(--btn-color);
@@ -166,7 +161,7 @@
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-/* CTA botón específico */
+
 .scta-inner .btn-primary {
   background: transparent;
   color: #fff;
