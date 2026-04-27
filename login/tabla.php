@@ -1,0 +1,18 @@
+<?php
+include("conexion.php");
+
+$sql = "CREATE TABLE IF NOT EXISTS USUARIO(
+IDUSUARIO INT AUTO_INCREMENT PRIMARY KEY,
+NOMBRE VARCHAR(50) NOT NULL,
+APELLIDO VARCHAR(50) NOT NULL,
+CONTRASENA VARCHAR(255) NOT NULL,
+CONTACTO_USUA VARCHAR(50) NOT NULL,
+CORREO_USU VARCHAR(100) NOT NULL UNIQUE
+)";
+
+if ($conn->query($sql)) {
+    echo "Tabla lista";
+} else {
+    echo "Error: " . $conn->error;
+}
+?>
