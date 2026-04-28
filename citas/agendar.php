@@ -1,4 +1,6 @@
-<?php session_start(); include 'conexion.php';
+<?php
+require_once __DIR__ . '/../auth_check.php';
+include 'conexion.php';
 $result=$conn->query("SELECT IDEMPLEADO,NOMBRE_COMPLETO,PROFESION FROM EMPLEADOS WHERE ESTADO='APROBADO'");
 ?>
 <form action="guardar_cita.php" method="POST">
