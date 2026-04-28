@@ -89,3 +89,198 @@
   .form-row { grid-template-columns: 1fr; }
   .contact-form-wrap { padding: 28px 20px; }
 }
+.footer {
+position: relative;
+background: rgba(33, 52, 72, 0.95); /* oscuro elegante */
+backdrop-filter: blur(14px);
+color: rgba(255,255,255,0.85);
+padding: 70px 0 20px;
+margin-top: 60px;
+border-top: 1px solid rgba(255,255,255,0.08);
+overflow: hidden;
+}
+
+/* EFECTO GLOW SUAVE */
+.footer::before {
+content: "";
+position: absolute;
+top: -120px;
+left: -120px;
+width: 400px;
+height: 400px;
+background: radial-gradient(circle, rgba(76,231,218,0.25), transparent 70%);
+filter: blur(80px);
+}
+
+.footer::after {
+content: "";
+position: absolute;
+bottom: -120px;
+right: -120px;
+width: 400px;
+height: 400px;
+background: radial-gradient(circle, rgba(255,215,0,0.2), transparent 70%);
+filter: blur(80px);
+}
+
+/* GRID */
+.footer-grid {
+position: relative;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+gap: 50px;
+margin-bottom: 50px;
+z-index: 2;
+}
+
+/* LOGO */
+.footer-brand .logo {
+margin-bottom: 12px;
+filter: brightness(0) invert(1);
+}
+
+.footer-brand p {
+font-size: 14px;
+color: rgba(255,255,255,0.6);
+line-height: 1.6;
+}
+
+/* TITULOS */
+.footer-links h5,
+.footer-contact h5 {
+font-size: 16px;
+font-weight: 700;
+margin-bottom: 18px;
+color: #ffffff;
+}
+
+/* LINKS */
+.footer-links ul {
+list-style: none;
+}
+
+.footer-links li {
+margin-bottom: 10px;
+}
+
+.footer-links a {
+color: rgba(255,255,255,0.6);
+font-size: 14px;
+text-decoration: none;
+transition: 0.3s;
+display: inline-block;
+}
+
+.footer-links a:hover {
+color: var(--mint);
+transform: translateX(6px);
+}
+
+/* CONTACTO */
+.footer-contact p {
+font-size: 14px;
+margin-bottom: 10px;
+color: rgba(255,255,255,0.6);
+}
+
+/* BOTÓN PREMIUM */
+.footer-btn {
+margin-top: 18px;
+display: inline-block;
+padding: 12px 26px;
+border-radius: 50px;
+background: linear-gradient(135deg, var(--mint), var(--yellow));
+color: #1C2E3A;
+font-weight: 700;
+font-size: 14px;
+text-decoration: none;
+transition: 0.3s;
+box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+.footer-btn:hover {
+transform: translateY(-3px) scale(1.03);
+box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+}
+
+/* DIVISIÓN FINAL */
+.footer-bottom {
+text-align: center;
+padding-top: 25px;
+border-top: 1px solid rgba(255,255,255,0.08);
+position: relative;
+z-index: 2;
+}
+
+.footer-bottom p {
+font-size: 13px;
+color: rgba(255,255,255,0.4);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+.footer {
+padding: 60px 0 20px;
+}
+
+
+.footer-grid {
+    gap: 30px;
+}
+
+}
+
+/* ---- ANIMATIONS ---- */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.fade-in {
+  opacity: 0; transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+.fade-in-right {
+  opacity: 0; transform: translateX(40px);
+  animation: fadeInRight 0.9s 0.3s ease forwards;
+}
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInRight {
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Scroll reveal */
+.scroll-reveal {
+  opacity: 0; transform: translateY(40px);
+  transition: opacity 0.7s ease calc(var(--delay, 0s)),
+              transform 0.7s ease calc(var(--delay, 0s));
+}
+.scroll-reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 992px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+  .nav-links, .nav-search { display: none; }
+  .nav-links.open {
+    display: flex; flex-direction: column;
+    position: fixed; top: 70px; left: 0; right: 0;
+    background: #fff; padding: 20px; gap: 4px;
+    box-shadow: var(--shadow-lg); z-index: 999;
+  }
+  .hamburger { display: flex; }
+  .hero { flex-direction: column; text-align: center; padding: 100px 24px 80px; }
+  .hero-content { max-width: 100%; }
+  .hero-desc { max-width: 100%; }
+  .hero-actions { justify-content: center; }
+  .card-float-1 { left: 0; bottom: 20px; }
+  .card-float-2 { right: 0; top: 20px; }
+  .stats-bar { flex-direction: column; }
+  .stat-divider { width: 60px; height: 1px; }
+  .cta-card { padding: 36px 24px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .plans-grid { flex-direction: column; align-items: center; }
+  .plan-featured { transform: scale(1); }
+}
