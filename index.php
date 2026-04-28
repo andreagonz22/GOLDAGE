@@ -12,14 +12,10 @@ if (session_status() === PHP_SESSION_NONE) {
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
-
-    <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-
   <!-- Font Awesome (ICONOS PRO) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <!-- CSS del menú de autenticación (NUEVO — no toca styles.css) -->
+  <link rel="stylesheet" href="css/navbar_auth.css">
 </head>
 
 <body>
@@ -308,10 +304,11 @@ if (session_status() === PHP_SESSION_NONE) {
       </div>
     </div>
   </footer>
- 
-  <script src="js/main.js"
-  
-  
-  ></script>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="js/main.js"></script>
+  <!-- Script del menú de autenticación (NUEVO) -->
+  <script src="js/navbar_auth.js"></script>
+
 </body>
 </html>

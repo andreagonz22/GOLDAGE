@@ -1,8 +1,7 @@
 <?php
-session_start();
-$_SESSION['admin'] = "Andrea";
-if (!isset($_SESSION['admin'])) {
-    header("Location: login.php");
+require_once __DIR__ . '/../auth_check.php';
+if ($ga_rol !== 'admin') {
+    header("Location: ../index.php");
     exit();
 }
 include(__DIR__ . "/../login/conexion.php");
