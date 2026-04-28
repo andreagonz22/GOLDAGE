@@ -1,15 +1,4 @@
 <?php
-/**
- * index.php
- * Archivo: /Gold/GOLDAGE/index.php
- *
- * INSTRUCCIONES:
- * 1. Crea este archivo en /Gold/GOLDAGE/index.php
- * 2. Puedes dejar index.html también (no hace daño), pero XAMPP
- *    preferirá index.php automáticamente.
- * 3. Este archivo es PÚBLICO — no requiere sesión.
- */
-
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
@@ -315,7 +304,7 @@ if (session_status() === PHP_SESSION_NONE) {
       </div>
     </div>
   </footer>
-  
+
   <!-- ===== SCRIPTS ===== -->
   <script src="js/main.js"></script>
   <!-- Script del menú de autenticación (NUEVO) -->
