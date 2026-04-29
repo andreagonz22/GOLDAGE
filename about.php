@@ -1,3 +1,6 @@
+<?php
+require_once __DIR__ . '/auth_check.php';
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -12,24 +15,31 @@
 <body>
 
   <!-- NAVBAR -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="logo"><span class="logo-icon">🌿</span><span class="logo-text">Gold<span class="logo-accent">Age</span></span></a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="services.html" class="nav-link">Services</a></li>
-        <li><a href="nurses.html" class="nav-link">Nurses</a></li>
-        <li><a href="about.html" class="nav-link active">About Us</a></li>
-        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
-      </ul>
-      <div class="nav-search">
-        <input type="text" placeholder="Buscar servicio..." class="search-input" />
-        <button class="search-btn">🔍</button>
-      </div>
-      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
-    </div>
-  </nav>
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
 
+    <!-- LOGO PRO -->
+    <a href="index.php" class="logo">
+      <img src="img/logo.png" alt="GoldAge Logo" class="logo-img">
+      <span class="logo-text">Gold<span class="logo-accent">Age</span></span>
+    </a>
+
+    <!-- LINKS -->
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.php" class="nav-link">Home</a></li>
+      <li><a href="services.php" class="nav-link">Services</a></li>
+      <li><a href="nurses.php" class="nav-link">Nurses</a></li>
+      <li><a href="about.php" class="nav-link active">About Us</a></li>
+      <li><a href="contact.php" class="nav-link">Contact Us</a></li>
+    </ul>
+
+    <!-- HAMBURGER -->
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+</nav>
   <!-- PAGE HERO -->
   <section class="page-hero about-hero">
     <div class="page-hero-content fade-in">
@@ -124,17 +134,17 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="logo"><span class="logo-icon">🌿</span><span class="logo-text">Gold<span class="logo-accent">Age</span></span></a>
+          <a href="index.php" class="logo"><span class="logo-icon">🌿</span><span class="logo-text">Gold<span class="logo-accent">Age</span></span></a>
           <p>Salud domiciliaria con corazón.</p>
         </div>
         <div class="footer-links"><h5>Navegación</h5><ul>
-          <li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li>
-          <li><a href="nurses.html">Nurses</a></li><li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="index.php">Home</a></li><li><a href="services.php">Services</a></li>
+          <li><a href="nurses.php">Nurses</a></li><li><a href="about.php">About Us</a></li>
+          <li><a href="contact.php">Contact Us</a></li>
         </ul></div>
         <div class="footer-links"><h5>Servicios</h5><ul>
-          <li><a href="services.html">Atención 24/7</a></li><li><a href="services.html">Cuidados Paliativos</a></li>
-          <li><a href="services.html">Consultas Generales</a></li><li><a href="services.html">Geriatría</a></li>
+          <li><a href="services.php">Atención 24/7</a></li><li><a href="services.php">Cuidados Paliativos</a></li>
+          <li><a href="services.php">Consultas Generales</a></li><li><a href="services.php">Geriatría</a></li>
         </ul></div>
         <div class="footer-contact"><h5>Contacto</h5>
           <p>📧 hola@goldage.com</p><p>📞 +503 7000-0000</p><p>📍 San Salvador, El Salvador</p>
