@@ -1,4 +1,15 @@
 <?php
+/**
+ * validar_empleado.php  (REEMPLAZA el original)
+ * Archivo: /Gold/GOLDAGE/empleados/validar_empleado.php
+ *
+ * Cambios respecto al original:
+ *  - Agrega $_SESSION['rol'] = 'empleado'
+ *  - Agrega $_SESSION['idempleado'] para el panel de citas
+ *  - Redirige a index.php en lugar de index.html
+ *  - Redirige a la página de origen si venía de auth_check.php
+ */
+
 session_start();
 include("../login/conexion.php");
 
@@ -7,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] != "POST") {
     exit();
 }
 
-$correo = $_POST['correo'] ?? '';
+$correo    = $_POST['correo']    ?? '';
 $contrasena = $_POST['contrasena'] ?? '';
 
 if (empty($correo) || empty($contrasena)) {
@@ -17,7 +28,6 @@ if (empty($correo) || empty($contrasena)) {
 $stmt = $conn->prepare("SELECT * FROM EMPLEADOS WHERE CORREO = ?");
 $stmt->bind_param("s", $correo);
 $stmt->execute();
-
 $result = $stmt->get_result();
 
 if ($result->num_rows === 1) {
@@ -27,13 +37,20 @@ if ($result->num_rows === 1) {
     if (password_verify($contrasena, $emp['CONTRASENA'])) {
 
         if ($emp['ESTADO'] != 'APROBADO') {
-        die("Tu cuenta aún está en revisión por el administrador");
+            die("Tu cuenta aún está en revisión por el administrador");
         }
 
-        $_SESSION['empleado'] = $emp['NOMBRE_COMPLETO'];
-        $_SESSION['profesion'] = $emp['PROFESION'];
+        // ✅ Variables de sesión completas
+        $_SESSION['empleado']   = $emp['NOMBRE_COMPLETO'];
+        $_SESSION['profesion']  = $emp['PROFESION'];
+        $_SESSION['rol']        = 'empleado';
+        $_SESSION['idempleado'] = $emp['IDEMPLEADO'];
 
-        header("Location: ../index.html"); // o dashboard si haces uno
+        // Redirigir a página de origen si venía de un acceso bloqueado
+        $destino = $_SESSION['redirect_after_login'] ?? '../index.php';
+        unset($_SESSION['redirect_after_login']);
+
+        header("Location: " . $destino);
         exit();
 
     } else {
