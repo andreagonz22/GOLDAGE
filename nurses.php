@@ -10,34 +10,24 @@ require_once __DIR__ . '/auth_check.php';
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/nurses.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/navbar_auth.css">
 </head>
 <body>
 
-<nav class="navbar" id="navbar">
-  <div class="nav-container">
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.php" class="logo">
+        <img src="img/logo.png" alt="GoldAge Logo" class="logo-img">
+        <span class="logo-text">Gold<span class="logo-accent">Age</span></span>
+      </a>
 
-    <!-- LOGO -->
-    <a href="index.php" class="logo">
-      <img src="img/logo.png" alt="GoldAge Logo" class="logo-img">
-      <span class="logo-text">Gold<span class="logo-accent">Age</span></span>
-    </a>
-
-    <!-- LINKS -->
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.php" class="nav-link">Home</a></li>
-      <li><a href="services.php" class="nav-link">Services</a></li>
-      <li><a href="nurses.php" class="nav-link active">Nurses</a></li>
-      <li><a href="about.php" class="nav-link">About Us</a></li>
-      <li><a href="contact.php" class="nav-link">Contact Us</a></li>
-    </ul>
-
-    <!-- HAMBURGER -->
-    <button class="hamburger" id="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-
-  </div>
-</nav>
+      <?php
+        include __DIR__ . '/navbar_auth.php';
+      ?>
+    </div>
+  </nav>
 
 <section class="page-hero nurses-hero">
     <div class="page-hero-content">
@@ -63,7 +53,6 @@ require_once __DIR__ . '/auth_check.php';
 
 <footer class="footer">
     <div class="container">
-<<<<<<< HEAD:nurses.php
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.php" class="logo"><span class="logo-icon">🌿</span><span class="logo-text">Gold<span class="logo-accent">Age</span></span></a>
@@ -97,43 +86,6 @@ require_once __DIR__ . '/auth_check.php';
       <div class="footer-bottom">
         <p>© 2025 GoldAge. All rights reserved.</p>
       </div>
-=======
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <a href="index.html" class="logo">
-                    <img src="./img/logo.png" class="logo-img" alt="GoldAge Logo">
-                    <span class="logo-text">Gold<span class="logo-accent">Age</span></span>
-                </a>
-                <p>Home health care with heart. We care for those you love most with professionalism and warmth.</p>
-            </div>
-            <div class="footer-links">
-                <h5>Navegación</h5>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="nurses.html">Nurses</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h5>Servicios</h5>
-                <ul>
-                    <li><a href="services.html">24/7 Attention</a></li>
-                    <li><a href="services.html">General Consultations</a></li>
-                    <li><a href="services.html">Geriatrics</a></li>
-                </ul>
-            </div>
-            <div class="footer-contact">
-                <h5>Contacto</h5>
-                <p>hola@goldage.com</p>
-                <p>+503 7000-0000</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2026 GoldAge. All rights reserved.</p>
-        </div>
->>>>>>> origin/main:nurses.html
     </div>
 </footer>
 
