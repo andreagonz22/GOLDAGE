@@ -11,28 +11,22 @@ require_once __DIR__ . '/auth_check.php';
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/services.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/navbar_auth.css">
 </head>
 <body>
 
-  <!-- NAVBAR -->
+  <!-- ===== NAVBAR ===== -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="index.php" class="logo">
-  <img src="img/logo.png" alt="GoldAge Logo" class="logo-img">
-  <span class="logo-text">Gold<span class="logo-accent">Age</span></span>
-</a>
+        <img src="img/logo.png" alt="GoldAge Logo" class="logo-img">
+        <span class="logo-text">Gold<span class="logo-accent">Age</span></span>
+      </a>
 
-      <ul class="nav-links" id="navLinks">
-  <li><a href="index.php" class="nav-link active">Home</a></li>
-  <li><a href="services.php" class="nav-link">Services</a></li>
-  <li><a href="nurses.php" class="nav-link">Nurses</a></li>
-  <li><a href="about.php" class="nav-link">About Us</a></li>
-  <li><a href="contact.php" class="nav-link">Contact Us</a></li>
-</ul>
-
-<button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+      <?php
+        include __DIR__ . '/navbar_auth.php';
+      ?>
     </div>
   </nav>
 
@@ -153,5 +147,6 @@ require_once __DIR__ . '/auth_check.php';
 
   <script src="js/main.js"></script>
   <script src="js/services.js"></script>
+  <script src="js/navbar_auth.js"></script>
 </body>
 </html>
