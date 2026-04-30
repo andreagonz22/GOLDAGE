@@ -1,14 +1,34 @@
 <?php
-session_start();
-include("conexion.php"); 
+/**
+ * validar_login.php  (REEMPLAZA el original)
+ * Archivo: /Gold/GOLDAGE/login/validar_login.php
+ *
+ * Cambios respecto al original:
+ *  - Agrega $_SESSION['rol'] = 'usuario'
+ *  - Agrega $_SESSION['idusuario'] para las citas
+ *  - Redirige a index.php en vez de index.html
+ *  - Redirige a la página de origen si venía de auth_check.php
+ */
 
-$correo = $_POST['correo'];
-$contrasena = $_POST['contrasena'];
+session_start();
+include("conexion.php");
+
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    header("Location: login.php");
+    exit();
+}
+
+$correo    = trim($_POST['correo']    ?? '');
+$contrasena = trim($_POST['contrasena'] ?? '');
+
+if (empty($correo) || empty($contrasena)) {
+    header("Location: login.php?error=campos_vacios");
+    exit();
+}
 
 $stmt = $conn->prepare("SELECT * FROM USUARIO WHERE CORREO_USU = ?");
 $stmt->bind_param("s", $correo);
 $stmt->execute();
-
 $result = $stmt->get_result();
 
 if ($result->num_rows === 1) {
@@ -17,17 +37,25 @@ if ($result->num_rows === 1) {
 
     if (password_verify($contrasena, $user['CONTRASENA'])) {
 
-        $_SESSION['usuario'] = $user['NOMBRE'];
+        // ✅ Variables de sesión completas
+        $_SESSION['usuario']    = $user['NOMBRE'];
+        $_SESSION['rol']        = 'usuario';
+        $_SESSION['idusuario']  = $user['IDUSUARIO'] ?? $user['ID'] ?? 0;
 
-        // 🔥 AQUÍ REDIRIGES A TU INDEX
-        header("Location: ../index.html");
+        // Redirigir a página de origen si venía de un acceso bloqueado
+        $destino = $_SESSION['redirect_after_login'] ?? '../index.php';
+        unset($_SESSION['redirect_after_login']);
+
+        header("Location: " . $destino);
         exit();
 
     } else {
-        echo "Contraseña incorrecta";
+        header("Location: login.php?error=contrasena_incorrecta");
+        exit();
     }
 
 } else {
-    echo "Usuario no encontrado";
+    header("Location: login.php?error=usuario_no_encontrado");
+    exit();
 }
 ?>

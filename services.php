@@ -1,3 +1,6 @@
+<?php
+require_once __DIR__ . '/auth_check.php';
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -14,17 +17,17 @@
   <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
-      <a href="index.html" class="logo">
+      <a href="index.php" class="logo">
   <img src="img/logo.png" alt="GoldAge Logo" class="logo-img">
   <span class="logo-text">Gold<span class="logo-accent">Age</span></span>
 </a>
 
       <ul class="nav-links" id="navLinks">
-  <li><a href="index.html" class="nav-link active">Home</a></li>
-  <li><a href="services.html" class="nav-link">Services</a></li>
-  <li><a href="nurses.html" class="nav-link">Nurses</a></li>
-  <li><a href="about.html" class="nav-link">About Us</a></li>
-  <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+  <li><a href="index.php" class="nav-link active">Home</a></li>
+  <li><a href="services.php" class="nav-link">Services</a></li>
+  <li><a href="nurses.php" class="nav-link">Nurses</a></li>
+  <li><a href="about.php" class="nav-link">About Us</a></li>
+  <li><a href="contact.php" class="nav-link">Contact Us</a></li>
 </ul>
 
 <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -67,7 +70,7 @@
             <li>✅ Medication administration</li>
             <li>✅ Daily medical reports</li>
           </ul>
-          <a href="contact.html" class="btn btn-primary">Schedule appointment</a>
+          <a href="contact.php" class="btn btn-primary">Schedule appointment</a>
         </div>
       </div>
 
@@ -86,7 +89,7 @@
             <li>✅ Coordination with specialists</li>
             <li>✅ Spiritual and emotional care</li>
           </ul>
-          <a href="contact.html" class="btn btn-primary">Schedule appointment</a>
+          <a href="contact.php" class="btn btn-primary">Schedule appointment</a>
         </div>
       </div>
 
@@ -105,7 +108,7 @@
             <li>✅ Post-consultation follow-up</li>
             <li>✅ Digital medical records</li>
           </ul>
-          <a href="contact.html" class="btn btn-primary">Schedule appointment</a>
+          <a href="contact.php" class="btn btn-primary">Schedule appointment</a>
         </div>
       </div>
 
@@ -118,7 +121,7 @@
       <div class="scta-inner">
         <h2>Didn't find what you're looking for?</h2>
         <p>Contact us and we will design a personalized care plan for you and your family.</p>
-        <a href="contact.html" class="btn btn-primary">Talk to a specialist</a>
+        <a href="contact.php" class="btn btn-primary">Talk to a specialist</a>
       </div>
     </div>
   </section>
@@ -128,17 +131,17 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="logo"><span class="logo-icon">🌿</span><span class="logo-text">Gold<span class="logo-accent">Age</span></span></a>
+          <a href="index.php" class="logo"><span class="logo-icon">🌿</span><span class="logo-text">Gold<span class="logo-accent">Age</span></span></a>
           <p>Home healthcare with heart. We care for those you love most.</p>
         </div>
         <div class="footer-links"><h5>Navigation</h5><ul>
-          <li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li>
-          <li><a href="nurses.html">Nurses</a></li><li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="index.php">Home</a></li><li><a href="services.php">Services</a></li>
+          <li><a href="nurses.php">Nurses</a></li><li><a href="about.php">About Us</a></li>
+          <li><a href="contact.php">Contact Us</a></li>
         </ul></div>
         <div class="footer-links"><h5>Services</h5><ul>
-          <li><a href="services.html">24/7 Care</a></li><li><a href="services.html">Palliative Care</a></li>
-          <li><a href="services.html">General Consultations</a></li><li><a href="services.html">Geriatrics</a></li>
+          <li><a href="services.php">24/7 Care</a></li><li><a href="services.php">Palliative Care</a></li>
+          <li><a href="services.php">General Consultations</a></li><li><a href="services.php">Geriatrics</a></li>
         </ul></div>
         <div class="footer-contact"><h5>Contact</h5>
           <p>📧 hello@goldage.com</p><p>📞 +503 7000-0000</p><p>📍 San Salvador, El Salvador</p>
