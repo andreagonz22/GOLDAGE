@@ -135,24 +135,38 @@ require_once __DIR__ . '/auth_check.php';
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.php" class="logo"><span class="logo-icon">🌿</span><span class="logo-text">Gold<span class="logo-accent">Age</span></span></a>
-          <p>Salud domiciliaria con corazón.</p>
+          <p>Home health care with heart. We care for those you love most with professionalism and warmth.</p>
         </div>
-        <div class="footer-links"><h5>Navegación</h5><ul>
-          <li><a href="index.php">Home</a></li><li><a href="services.php">Services</a></li>
-          <li><a href="nurses.php">Nurses</a></li><li><a href="about.php">About Us</a></li>
-          <li><a href="contact.php">Contact Us</a></li>
-        </ul></div>
-        <div class="footer-links"><h5>Servicios</h5><ul>
-          <li><a href="services.php">Atención 24/7</a></li><li><a href="services.php">Cuidados Paliativos</a></li>
-          <li><a href="services.php">Consultas Generales</a></li><li><a href="services.php">Geriatría</a></li>
-        </ul></div>
-        <div class="footer-contact"><h5>Contacto</h5>
-          <p>📧 hola@goldage.com</p><p>📞 +503 7000-0000</p><p>📍 San Salvador, El Salvador</p>
+        <div class="footer-links">
+          <h5>Navegación</h5>
+          <ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="services.php">Services</a></li>
+            <li><a href="nurses.php">Nurses</a></li>
+            <li><a href="about.php">About Us</a></li>
+            <li><a href="contact.php">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h5>Servicios</h5>
+          <ul>
+            <li><a href="services.php">24/7 Attention</a></li>
+            <li><a href="services.php">General Consultations</a></li>
+            <li><a href="services.php">Geriatrics</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h5>Contacto</h5>
+          <p>hola@goldage.com</p>
+          <p>+503 7000-0000</p>
+          <p>San Salvador, El Salvador</p>
         </div>
       </div>
-      <div class="footer-bottom"><p>© 2025 GoldAge. Todos los derechos reservados.</p></div>
+      <div class="footer-bottom">
+        <p>© 2025 GoldAge. All rights reserved.</p>
+      </div>
     </div>
-  </footer>
+</footer>
 
   <script src="js/main.js"></script>
   <script src="js/about.js"></script>
