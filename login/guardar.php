@@ -23,7 +23,7 @@ $stmt = $conn->prepare("INSERT INTO USUARIO (NOMBRE, APELLIDO, CONTRASENA, CONTA
 $stmt->bind_param("sssss", $nombre, $apellido, $passwordHash, $contacto, $correo);
 
 if ($stmt->execute()) {
-    header("Location: /GOLDAGE/index.html");
+    header("Location: /GOLDAGE/index.php");
 } else {
     if ($conn->errno == 1062) {
         echo "Correo ya registrado";
