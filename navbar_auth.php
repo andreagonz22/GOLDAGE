@@ -60,7 +60,7 @@ $__prefix = str_repeat('../', max(0, $__depth - 1));
               </div>
               <div class="nav-dropdown-body">
                 <?php if ($ga_rol_nav === 'usuario'): ?>
-                  <a href="<?= $__prefix ?>pacientes/registro_paciente.php" class="nav-dd-item" role="menuitem">
+                  <a href="<?= $__prefix ?>perfildeusuario.php" class="nav-dd-item" role="menuitem">
                     <i class="fa-solid fa-user"></i> Mi perfil
                   </a>
                   <a href="<?= $__prefix ?>citas/mis_citas.php" class="nav-dd-item" role="menuitem">

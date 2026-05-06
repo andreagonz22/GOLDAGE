@@ -168,6 +168,19 @@ function completar(i){
 }
 
 render();
+
+function toggleMenu(){
+  const menu = document.getElementById("dropdownMenu");
+  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}
+
+// cerrar si haces click afuera
+window.addEventListener("click", function(e){
+  if(!e.target.closest(".user-menu")){
+    document.getElementById("dropdownMenu").style.display = "none";
+  }
+});
+
 </script>
 
 </body>
