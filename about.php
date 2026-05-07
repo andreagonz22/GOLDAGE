@@ -11,119 +11,95 @@ require_once __DIR__ . '/auth_check.php';
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/navbar_auth.css">
 </head>
 <body>
 
-  <!-- NAVBAR -->
-<nav class="navbar" id="navbar">
-  <div class="nav-container">
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.php" class="logo">
+        <img src="img/logo.png" alt="GoldAge Logo" class="logo-img">
+        <span class="logo-text">Gold<span class="logo-accent">Age</span></span>
+      </a>
 
-    <!-- LOGO PRO -->
-    <a href="index.php" class="logo">
-      <img src="img/logo.png" alt="GoldAge Logo" class="logo-img">
-      <span class="logo-text">Gold<span class="logo-accent">Age</span></span>
-    </a>
-
-    <!-- LINKS -->
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.php" class="nav-link">Home</a></li>
-      <li><a href="services.php" class="nav-link">Services</a></li>
-      <li><a href="nurses.php" class="nav-link">Nurses</a></li>
-      <li><a href="about.php" class="nav-link active">About Us</a></li>
-      <li><a href="contact.php" class="nav-link">Contact Us</a></li>
-    </ul>
-
-    <!-- HAMBURGER -->
-    <button class="hamburger" id="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-
-  </div>
-</nav>
-  <!-- PAGE HERO -->
-  <section class="page-hero about-hero">
-    <div class="page-hero-content fade-in">
-      <span class="hero-badge">Nuestra Historia</span>
-      <h1>Nació del amor<br /><em>por la familia</em></h1>
-      <p>GoldAge surgió de la necesidad de brindar atención médica digna y cercana para adultos mayores en El Salvador.</p>
+      <?php
+        include __DIR__ . '/navbar_auth.php';
+      ?>
     </div>
-    <div class="hero-wave">
-      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#f8faf7"/>
-      </svg>
-    </div>
-  </section>
+  </nav>
 
-  <!-- MISSION / VISION -->
-  <section class="mv-section section">
-    <div class="container">
-      <div class="mv-grid">
-        <div class="mv-card scroll-reveal">
-          <div class="mv-icon">🎯</div>
-          <h3>Misión</h3>
-          <p>Brindar servicios de salud domiciliaria de excelencia, con calidez humana y tecnología moderna, para mejorar la calidad de vida de cada paciente y su familia.</p>
-        </div>
-        <div class="mv-card scroll-reveal" style="--delay:0.15s">
-          <div class="mv-icon">🌟</div>
-          <h3>Visión</h3>
-          <p>Ser la red de salud domiciliaria más confiable de Centroamérica, transformando la manera en que las familias acceden al cuidado médico personalizado.</p>
-        </div>
-        <div class="mv-card scroll-reveal" style="--delay:0.3s">
-          <div class="mv-icon">💚</div>
-          <h3>Valores</h3>
-          <p>Empatía, profesionalismo, transparencia y compromiso con el bienestar de cada persona que confía en nosotros.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- STORY -->
-  <section class="story-section section">
+<!-- STORY -->
+  <section class="story-section section" style="margin-top: 150px;">
     <div class="container">
       <div class="story-inner">
         <div class="story-img scroll-reveal">
-          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&q=80" alt="Historia de GoldAge" />
+          <img src="https://canal2tv.com/wp-content/uploads/2023/01/Maria-Branyas-anciana-mundo1-1200x675.jpg" alt="Historia de GoldAge" />
         </div>
         <div class="story-content scroll-reveal" style="--delay:0.2s">
-          <div class="section-label">Nuestra Historia</div>
-          <h2 class="section-title">Cuidar a mamá <span>nos inspiró</span></h2>
-          <p>GoldAge nació en 2020 cuando nuestra fundadora, la Dra. Isabel Ramos, vivió en carne propia la dificultad de conseguir atención médica de calidad para su madre de 78 años sin tener que llevarla al hospital constantemente.</p>
-          <p style="margin-top:16px; color: var(--text-light); font-size:15px; line-height:1.75">Junto a un equipo de médicos y enfermeros comprometidos, creó GoldAge: un modelo de atención que pone al paciente en el centro, sin sacrificar la calidez del hogar.</p>
+          <div class="section-label">We created this because</div>
+          <h2 class="section-title">Isabell's Story <span>Inspired Us</span></h2>
+          <p>This company was born from the heart, after an experience that deeply affected us. We saw how a beloved member of our community did not receive the care, attention, or respect she deserved. The uncertainty, lack of trust, and poor commitment from her caregiver pushed us to take action. That’s why we created a different kind of service—one that offers compassionate, reliable, and dignified care, where every person is treated with love, respect, and the safety every family deserves.</p>
+          <p style="margin-top:16px; color: var(--text-light); font-size:15px; line-height:1.75">Every family deserves peace of mind.</p>
           <div class="story-stats">
-            <div class="sstats-item"><strong>2020</strong><span>Fundación</span></div>
-            <div class="sstats-item"><strong>3 depts.</strong><span>Cobertura</span></div>
-            <div class="sstats-item"><strong>+50</strong><span>Profesionales</span></div>
+            
           </div>
         </div>
       </div>
     </div>
   </section>
 
+ 
+
+  <!-- MISSION / VISION -->
+  <section class="mv-section section">
+    <div class="container">
+      <div class="mv-grid">
+        <div class="mv-card scroll-reveal">
+         
+          <h3>Mission</h3>
+          <p>To provide excellent home health services, with human warmth and modern technology, to improve the quality of life of each patient and their family.</p>
+        </div>
+        <div class="mv-card scroll-reveal" style="--delay:0.15s">
+         
+          <h3>Vision</h3>
+          <p>To be the most trusted home health network in Central America, transforming the way families access personalized medical care.</p>
+        </div>
+        <div class="mv-card scroll-reveal" style="--delay:0.3s">
+          
+          <h3>Values</h3>
+          <p>Empathy, professionalism, transparency and commitment to the well-being of each person who trusts us.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
   <!-- VALUES -->
   <section class="values-section section">
     <div class="container">
-      <div class="section-label">Lo que nos guía</div>
-      <h2 class="section-title">Principios que nos <span>definen</span></h2>
+      <div class="section-label">What guides us</div>
+      <h2 class="section-title">Principles that <span>define us</span></h2>
       <div class="values-grid">
         <div class="value-item scroll-reveal">
-          <span class="value-num">01</span>
-          <h4>Empatía ante todo</h4>
-          <p>Cada paciente merece ser escuchado y tratado con respeto y amor genuino.</p>
+         
+          <h4>Empathy </h4>
+          <p>Every patient deserves to be heard and treated with respect and genuine love.</p>
         </div>
         <div class="value-item scroll-reveal" style="--delay:0.1s">
-          <span class="value-num">02</span>
-          <h4>Excelencia médica</h4>
-          <p>Todos nuestros profesionales cuentan con certificaciones actualizadas y capacitación continua.</p>
+         
+          <h4>Medical excellence</h4>
+          <p>All our professionals have up to date certifications and ongoing training.</p>
         </div>
         <div class="value-item scroll-reveal" style="--delay:0.2s">
-          <span class="value-num">03</span>
-          <h4>Transparencia total</h4>
-          <p>Precios claros, diagnósticos honestos y comunicación abierta con la familia.</p>
+         
+          <h4>Transparency</h4>
+          <p>Clear prices, honest diagnoses, and open communication with the family.</p>
         </div>
         <div class="value-item scroll-reveal" style="--delay:0.3s">
-          <span class="value-num">04</span>
-          <h4>Innovación constante</h4>
-          <p>Usamos tecnología para mejorar la experiencia y los resultados de cada paciente.</p>
+         
+          <h4>Innovation</h4>
+          <p>We use technology to improve the experience and outcomes for each patient.</p>
         </div>
       </div>
     </div>
@@ -134,39 +110,25 @@ require_once __DIR__ . '/auth_check.php';
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.php" class="logo"><span class="logo-icon">🌿</span><span class="logo-text">Gold<span class="logo-accent">Age</span></span></a>
-          <p>Home health care with heart. We care for those you love most with professionalism and warmth.</p>
+          <a href="index.html" class="logo"><span class="logo-icon"></span><span class="logo-text">Gold<span class="logo-accent">Age</span></span></a>
+          <p>Home healthcare with heart.</p>
         </div>
-        <div class="footer-links">
-          <h5>Navegación</h5>
-          <ul>
-            <li><a href="index.php">Home</a></li>
-            <li><a href="services.php">Services</a></li>
-            <li><a href="nurses.php">Nurses</a></li>
-            <li><a href="about.php">About Us</a></li>
-            <li><a href="contact.php">Contact Us</a></li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <h5>Servicios</h5>
-          <ul>
-            <li><a href="services.php">24/7 Attention</a></li>
-            <li><a href="services.php">General Consultations</a></li>
-            <li><a href="services.php">Geriatrics</a></li>
-          </ul>
-        </div>
-        <div class="footer-contact">
-          <h5>Contacto</h5>
-          <p>hola@goldage.com</p>
-          <p>+503 7000-0000</p>
-          <p>San Salvador, El Salvador</p>
+        <div class="footer-links"><h5>Navegation</h5><ul>
+          <li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li>
+          <li><a href="nurses.html">Nurses</a></li><li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul></div>
+        <div class="footer-links"><h5>Services</h5><ul>
+          <li><a href="services.html">Attencion 24/7</a></li><li><a href="services.html">Palliative Care</a></li>
+          <li><a href="services.html">General Inquiries</a></li><li><a href="services.html">Geriatrics</a></li>
+        </ul></div>
+        <div class="footer-contact"><h5>Contact</h5>
+          <p> h@goldage.com</p><p> +503 7000-0000</p><p>📍 San Salvador, El Salvador</p>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>© 2025 GoldAge. All rights reserved.</p>
-      </div>
+      <div class="footer-bottom"><p>© 2026 GoldAge. All rights reserved.</p></div>
     </div>
-</footer>
+  </footer>
 
   <script src="js/main.js"></script>
   <script src="js/about.js"></script>

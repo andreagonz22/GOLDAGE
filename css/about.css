@@ -2,7 +2,7 @@
    GoldAge – about.css
    ===================================================== */
 
-.about-hero {
+   .about-hero {
   background: linear-gradient(135deg, #f0ebe0 0%, #d4ede0 100%);
 }
 
@@ -42,7 +42,7 @@
 
 /* Values */
 .values-section {
-  background: linear-gradient(135deg, #eaf7f0 0%, #e8f4fb 100%);
+  background: linear-gradient(135deg, #fbfffd 0%, #f2f5f7 100%);
 }
 .values-grid {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
@@ -54,12 +54,8 @@
   transition: var(--transition); position: relative; overflow: hidden;
 }
 .value-item:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-.value-num {
-  font-size: 60px; font-weight: 800;
-  color: var(--mint-light); position: absolute;
-  top: 10px; right: 20px; line-height: 1;
-  pointer-events: none;
-}
+
+
 .value-item h4 { font-size: 17px; font-weight: 700; margin-bottom: 10px; }
 .value-item p { font-size: 14px; color: var(--text-light); line-height: 1.7; }
 
