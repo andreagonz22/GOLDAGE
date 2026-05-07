@@ -13,12 +13,13 @@ if (session_status() === PHP_SESSION_NONE) {
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/perfildeusuario.css">
+  <link rel="stylesheet" href="css/navbar_auth.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
+  <!-- ===== NAVBAR ===== -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="index.php" class="logo">
@@ -26,7 +27,9 @@ if (session_status() === PHP_SESSION_NONE) {
         <span class="logo-text">Gold<span class="logo-accent">Age</span></span>
       </a>
 
-      <?php include __DIR__ . '/navbar_auth.php'; ?>
+      <?php
+        include __DIR__ . '/navbar_auth.php';
+      ?>
     </div>
   </nav>
 

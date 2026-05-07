@@ -64,7 +64,7 @@ require_once __DIR__ . '/auth_check.php';
             <li>Medication administration</li>
             <li>Daily medical reports</li>
           </ul>
-          <a href="contact.php" class="btn btn-primary">Schedule appointment</a>
+          <a href="./citas/agendar.php" class="btn btn-primary">Schedule appointment</a>
         </div>
       </div>
 
@@ -83,7 +83,7 @@ require_once __DIR__ . '/auth_check.php';
             <li>Coordination with specialists</li>
             <li>Spiritual and emotional care</li>
           </ul>
-          <a href="contact.php" class="btn btn-primary">Schedule appointment</a>
+          <a href="./citas/agendar.php" class="btn btn-primary">Schedule appointment</a>
         </div>
       </div>
 
@@ -102,7 +102,7 @@ require_once __DIR__ . '/auth_check.php';
             <li>Post-consultation follow-up</li>
             <li>Digital medical records</li>
           </ul>
-          <a href="contact.php" class="btn btn-primary">Schedule appointment</a>
+          <a href="./citas/agendar.php" class="btn btn-primary">Schedule appointment</a>
         </div>
       </div>
 

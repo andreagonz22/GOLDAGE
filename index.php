@@ -12,9 +12,7 @@ if (session_status() === PHP_SESSION_NONE) {
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
-  <!-- Font Awesome (ICONOS PRO) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <!-- CSS del menú de autenticación (NUEVO — no toca styles.css) -->
   <link rel="stylesheet" href="css/navbar_auth.css">
 </head>
 
@@ -46,8 +44,8 @@ if (session_status() === PHP_SESSION_NONE) {
 
     <!-- BOTONES -->
     <div class="hero-actions">
-      <a href="services.html" class="btn btn-primary">View Services</a>
-      <a href="contact.html" class="btn btn-outline">Schedule Appointment</a>
+      <a href="services.php" class="btn btn-primary">View Services</a>
+      <a href="./citas/agendar.php" class="btn btn-outline">Schedule Appointment</a>
     </div>
   </div>
 
@@ -122,7 +120,7 @@ if (session_status() === PHP_SESSION_NONE) {
             <span class="service-tag">24/7</span>
             <h4>Home Care</h4>
             <p>In-home support with daily activities, personal care, and companionship, provided by the hour or continuously.</p>
-            <a href="services.html" class="btn-link">See more →</a>
+            <a href="services.php" class="btn-link">See more →</a>
           </div>
         </div>
          
@@ -134,7 +132,7 @@ if (session_status() === PHP_SESSION_NONE) {
             <span class="service-tag">Schedules</span>
             <h4>Palliative care at home</h4>
             <p>Care focused on relieving pain and other symptoms, improving quality of life for people with serious illnesses.</p>
-            <a href="services.html" class="btn-link">See more →</a>
+            <a href="services.php" class="btn-link">See more →</a>
           </div>
         </div>
         <div class="service-card scroll-reveal" style="--delay: 0.3s">
@@ -145,7 +143,7 @@ if (session_status() === PHP_SESSION_NONE) {
             <span class="service-tag">General</span>
             <h4>General medical consultations</h4>
             <p>Basic medical care provided at home to evaluate, diagnose, and treat common health issues.</p>
-            <a href="services.html" class="btn-link">See more →</a>
+            <a href="services.php" class="btn-link">See more →</a>
           </div>
         </div>
       </div>
