@@ -59,10 +59,10 @@ require_once __DIR__ . '/auth_check.php';
           <h2>Home Care 24/7</h2>
           <p>Our team of nurses and doctors is available 24 hours a day, 7 days a week to attend any medical need in the comfort of your home.</p>
           <ul class="service-detail-list">
-            <li>✅ Emergency medical care at home</li>
-            <li>✅ Vital signs monitoring</li>
-            <li>✅ Medication administration</li>
-            <li>✅ Daily medical reports</li>
+            <li>Emergency medical care at home</li>
+            <li>Vital signs monitoring</li>
+            <li>Medication administration</li>
+            <li>Daily medical reports</li>
           </ul>
           <a href="contact.php" class="btn btn-primary">Schedule appointment</a>
         </div>
@@ -78,10 +78,10 @@ require_once __DIR__ . '/auth_check.php';
           <h2>Palliative care at home</h2>
           <p>We provide comprehensive support focused on the physical, emotional, and spiritual well-being of the patient and their family during difficult stages.</p>
           <ul class="service-detail-list">
-            <li>✅ Pain and symptom management</li>
-            <li>✅ Psychological support for the family</li>
-            <li>✅ Coordination with specialists</li>
-            <li>✅ Spiritual and emotional care</li>
+            <li>Pain and symptom management</li>
+            <li>Psychological support for the family</li>
+            <li>Coordination with specialists</li>
+            <li>Spiritual and emotional care</li>
           </ul>
           <a href="contact.php" class="btn btn-primary">Schedule appointment</a>
         </div>
@@ -97,10 +97,10 @@ require_once __DIR__ . '/auth_check.php';
           <h2>General medical consultations</h2>
           <p>Diagnosis, evaluation, and treatment of common illnesses performed by certified general practitioners directly at your home.</p>
           <ul class="service-detail-list">
-            <li>✅ Diagnosis and medical prescription</li>
-            <li>✅ Sample collection at home</li>
-            <li>✅ Post-consultation follow-up</li>
-            <li>✅ Digital medical records</li>
+            <li>Diagnosis and medical prescription</li>
+            <li>Sample collection at home</li>
+            <li>Post-consultation follow-up</li>
+            <li>Digital medical records</li>
           </ul>
           <a href="contact.php" class="btn btn-primary">Schedule appointment</a>
         </div>
