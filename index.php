@@ -17,7 +17,6 @@ if (session_status() === PHP_SESSION_NONE) {
 </head>
 
 <body>
-
   <!-- ===== NAVBAR ===== -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
@@ -25,7 +24,6 @@ if (session_status() === PHP_SESSION_NONE) {
         <img src="img/logo.png" alt="GoldAge Logo" class="logo-img">
         <span class="logo-text">Gold<span class="logo-accent">Age</span></span>
       </a>
-
       <?php
         include __DIR__ . '/navbar_auth.php';
       ?>
@@ -36,7 +34,6 @@ if (session_status() === PHP_SESSION_NONE) {
 <section class="hero" id="home">
   <div class="hero-content fade-in">
     <span class="hero-badge">Personalized attention at home</span>
-
     <h1 class="hero-title">We care<br /><em>like family</em></h1>
     <p class="hero-desc">
       Certified professionals come to your home to provide quality medical care with human warmth.
@@ -71,7 +68,7 @@ if (session_status() === PHP_SESSION_NONE) {
 <!-- ===== FEATURES ===== -->
 <section class="features section" id="features">
   <div class="container">
-    <div class="section-label">Why Choose Us?</div>
+    <div class="section-label">Why Us?</div>
     <h2 class="section-title">Comprehensive care <span>For your family</span></h2>
 
     <div class="features-grid">
@@ -117,7 +114,6 @@ if (session_status() === PHP_SESSION_NONE) {
             <img src="https://tusangeles.com.mx/wp-content/uploads/2024/01/enfermera-feliz-sosteniendo-mano-anciano-silla-ruedas-jardin-hogar-ancianos-2048x1365.jpg" alt="Atención domiciliaria" />
           </div>
           <div class="service-info">
-            <span class="service-tag">24/7</span>
             <h4>Home Care</h4>
             <p>In-home support with daily activities, personal care, and companionship, provided by the hour or continuously.</p>
             <a href="services.php" class="btn-link">See more →</a>
@@ -129,7 +125,6 @@ if (session_status() === PHP_SESSION_NONE) {
             <img src="https://media.istockphoto.com/id/1650853784/photo/doctor-senior-patient-and-blood-pressure-check-with-consultation-talking-and-help-health-in.jpg?s=612x612&w=0&k=20&c=ODv-wA2E7-FNv527tZ6GuKJ9LnFP2GMSebF56GEox3o=" alt="Consultas generales" />
           </div>
           <div class="service-info">
-            <span class="service-tag">Schedules</span>
             <h4>Palliative care at home</h4>
             <p>Care focused on relieving pain and other symptoms, improving quality of life for people with serious illnesses.</p>
             <a href="services.php" class="btn-link">See more →</a>
@@ -140,7 +135,6 @@ if (session_status() === PHP_SESSION_NONE) {
             <img src="https://www.shutterstock.com/image-photo/senior-doctor-white-medical-gown-600nw-2152462045.jpg" alt="Consultas geriátricas" />
           </div>
           <div class="service-info">
-            <span class="service-tag">General</span>
             <h4>General medical consultations</h4>
             <p>Basic medical care provided at home to evaluate, diagnose, and treat common health issues.</p>
             <a href="services.php" class="btn-link">See more →</a>
@@ -218,50 +212,7 @@ if (session_status() === PHP_SESSION_NONE) {
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- ===== PLANES ===== -->
-  <section class="plans section" id="plans">
-    <div class="container">
-      <div class="section-label" style="color:#a8d5ba">Plans</div>
-      <h2 class="section-title" style="color:#fff">Get a <span style="color:#f9c74f">premium plan</span></h2>
-      <p class="plans-subtitle">Choose the plan that best suits your family's needs</p>
-      <div class="plans-grid">
-        <div class="plan-card scroll-reveal">
-          <div class="plan-badge">Standard</div>
-          <div class="plan-price">
-            <span class="price-currency">$</span>
-            <span class="price-amount">58</span>
-            <span class="price-period">/month</span>
-          </div>
-          <ul class="plan-features">
-            <li>✅ 4 visits per month</li>
-            <li>✅ Medication reminders</li>
-            <li>✅ 3 Free general consultations</li>
-            <li>⬜ Geriatric consultation</li>
-          </ul>
-          <a href="contact.html" class="btn btn-plan">Select Plan</a>
-        </div>
-        <div class="plan-card plan-featured scroll-reveal" style="--delay: 0.2s">
-          <div class="plan-badge popular-badge">Most Popular</div>
-          <div class="plan-price">
-            <span class="price-currency">$</span>
-            <span class="price-amount">128</span>
-            <span class="price-period">/ Year</span>
-          </div>
-          <ul class="plan-features">
-            <li>✅ Unlimited visits</li>
-            <li>✅ Smart reminders</li>
-            <li>✅ General inquiries</li>
-            <li>✅ 24/7 emergency care</li>
-            <li>✅Unlimited geriatric consultations</li>
-            <li>✅ Home care</li>
-          </ul>
-          <a href="contact.html" class="btn btn-plan-featured">Select Plan</a>
-        </div>
-      </div>
-    </div>
-  </section>
+  </section>  
 
   <br><br><br>
   <!-- ===== FOOTER ===== -->

@@ -255,12 +255,6 @@ ul { list-style: none; }
 .service-img img { height: 100%; transition: transform 0.5s ease; }
 .service-card:hover .service-img img { transform: scale(1.06); }
 .service-info { padding: 20px 22px 24px; }
-.service-tag {
-  font-size: 11px; font-weight: 700; letter-spacing: 1px;
-  text-transform: uppercase; color: var(--mint-dark);
-  background: var(--mint-light); padding: 3px 10px;
-  border-radius: 50px; display: inline-block; margin-bottom: 10px;
-}
 .service-info h4 { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
 .service-info p { font-size: 13px; color: var(--text-light); margin-bottom: 14px; line-height: 1.65; }
 
@@ -313,70 +307,7 @@ ul { list-style: none; }
 .testimonial-author strong { font-size: 14px; display: block; }
 .testimonial-author small { font-size: 12px; color: var(--text-light); }
 
-/* ---- PLANS ---- */
-.plans {
-  background: linear-gradient(135deg, #2c6e5e 0%, #1a4f6e 100%);
-  position: relative; padding: 100px 0;
-}
-
-.plans-subtitle { color: rgba(255,255,255,0.7); font-size: 16px; margin-top: -30px; margin-bottom: 48px; }
-.plans-grid {
-  display: flex; gap: 28px; justify-content: center;
-  flex-wrap: wrap;
-}
-.plan-card {
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(12px);
-  border: 1.5px solid rgba(255,255,255,0.15);
-  border-radius: var(--radius-lg); padding: 40px 36px;
-  min-width: 280px; max-width: 340px; flex: 1;
-  transition: var(--transition); color: #fff;
-}
-.plan-featured {
-  background: #fff; color: var(--text);
-  border-color: var(--yellow); box-shadow: 0 20px 60px rgba(0,0,0,0.25);
-  transform: scale(1.04);
-}
-.plan-featured:hover { transform: scale(1.04) translateY(-6px); }
-.plan-badge {
-  font-size: 12px; font-weight: 700; letter-spacing: 1px;
-  text-transform: uppercase; margin-bottom: 20px;
-  color: rgba(255,255,255,0.7);
-}
-.popular-badge { color: var(--mint-dark) !important; }
-.plan-price { margin-bottom: 28px; }
-.price-currency { font-size: 24px; font-weight: 700; vertical-align: top; margin-top: 10px; display: inline-block; }
-.price-amount { font-size: 60px; font-weight: 800; line-height: 1; }
-.price-period { font-size: 16px; color: rgba(255,255,255,0.6); }
-.plan-featured .price-period { color: var(--text-light); }
-.plan-features { list-style: none; margin-bottom: 32px; display: flex; flex-direction: column; gap: 12px; }
-.plan-features li { font-size: 14px; }
-.btn-plan {
-  display: block; text-align: center;
-  padding: 14px; border-radius: 50px;
-  background: rgba(255,255,255,0.15); color: #fff;
-  font-weight: 700; font-size: 15px;
-  border: 2px solid rgba(255,255,255,0.3);
-  transition: var(--transition); font-family: var(--font);
-  cursor: pointer;
-}
-.btn-plan:hover { background: rgba(255,255,255,0.25); }
-.btn-plan-featured {
-  display: block; text-align: center;
-  padding: 14px; border-radius: 50px;
-  background: var(--yellow); color: var(--text);
-  font-weight: 700; font-size: 15px; border: none;
-  transition: var(--transition); font-family: var(--font);
-  cursor: pointer; box-shadow: 0 4px 16px rgba(249,199,79,0.4);
-}
-.btn-plan-featured:hover {
-  background: var(--yellow-dark);
-  box-shadow: 0 6px 22px rgba(249,199,79,0.5);
-  transform: translateY(-2px);
-}
-
 /* ---- FOOTER ---- */
-/* ===== FOOTER PREMIUM (NIVEL APP) ===== */
 .footer {
 position: relative;
 background: rgba(33, 52, 72, 0.95); /* oscuro elegante */
