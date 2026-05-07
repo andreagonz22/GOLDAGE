@@ -216,16 +216,16 @@ require_once __DIR__ . '/auth_check.php';
         </div>
         <div class="footer-contact">
           <h5>Contacto</h5>
-          <p>📧 hola@goldage.com</p>
-          <p>📞 +503 7000-0000</p>
-          <p>📍 San Salvador, El Salvador</p>
+          <p>hola@goldage.com</p>
+          <p>+503 7000-0000</p>
+          <p>San Salvador, El Salvador</p>
         </div>
       </div>
       <div class="footer-bottom">
         <p>© 2025 GoldAge. All rights reserved.</p>
       </div>
     </div>
-  </footer>
+</footer>
  
   <script src="js/main.js"></script>
   <script src="js/contact.js"></script>
