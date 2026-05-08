@@ -11,7 +11,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   min-height: 100vh;
-  background: linear-gradient(135deg, #eaf7f0 0%, #e8f4fb 100%);
+  background: linear-gradient(135deg, #eaf7f0 0%, #e8f4fb 50%, #f8faf7 100%) ;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,7 +25,7 @@ body {
 }
  
 .login-card {
-  background: #ffffff;
+  background: #f8faf7;
   border-radius: 28px;
   padding: 52px 44px;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.10);
@@ -133,27 +133,7 @@ button[type="submit"]:active {
   transform: translateY(0);
 }
  
-/* ---- DIVIDER ---- */
-.divider {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin: 24px 0 4px;
-}
- 
-.divider span {
-  flex: 1;
-  height: 1px;
-  background: #d4ede0;
-}
- 
-.divider p {
-  font-size: 12px;
-  color: #a0aec0;
-  white-space: nowrap;
-}
- 
-/* ---- FOOTER / LINK REGISTRO ---- */
+/* ---- LINK REGISTRO ---- */
 .login-footer {
   text-align: center;
   margin-top: 12px;

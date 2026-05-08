@@ -9,7 +9,7 @@
 <div class="register-wrapper empleado">
   <div class="register-card">
 
-    <a href="../index.html" class="register-logo">🌿 Gold<em>Age</em></a>
+    <a href="../index.html" class="register-logo"> Gold<em>Age</em></a>
     <h2>Registro de Empleado</h2>
     <p class="subtitle">Completa tu perfil profesional para unirte al equipo</p>
 
@@ -72,6 +72,8 @@
       <button type="submit">Registrarse</button>
 
     </form>
+
+    <p class="register-footer">¿Ya tienes cuenta? <a href="../empleados/login_empleado.php">Ir a login</a></p>
 
   </div>
 </div>
