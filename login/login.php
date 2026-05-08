@@ -23,9 +23,9 @@
       <button type="submit" >Ingresar</button>
     </form>
 
-    <div class="divider"><span></span><p>¿No tienes cuenta?</p><span></span></div>
-    <p class="login-footer"><a href="registro.php">Crear cuenta</a></p>
-
+    <p class="login-footer">¿No tienes cuenta? <a href="registro.php">Crear cuenta</a></p>
+    <p class="login-footer">¿Eres empleado? <a href="../empleados/login_empleado.php">Iniciar sesión</a></p>
+        
   </div>
 </div>
 
