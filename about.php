@@ -129,6 +129,7 @@ require_once __DIR__ . '/auth_check.php';
     </div>
   </section>
 
+<<<<<<< Updated upstream
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
@@ -167,6 +168,10 @@ require_once __DIR__ . '/auth_check.php';
       </div>
     </div>
 </footer>
+=======
+  <!-- ===== FOOTER ===== -->
+  <?php include 'footer.php'; ?>
+>>>>>>> Stashed changes
 
   <script src="js/main.js"></script>
   <script src="js/about.js"></script>
