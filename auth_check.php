@@ -1,16 +1,5 @@
 <?php
-/**
- * auth_check.php
- * Archivo: /Gold/GOLDAGE/auth_check.php
- * 
- * Incluir al INICIO de cada página privada con:
- *   require_once __DIR__ . '/../auth_check.php';
- *   (o ajustar la ruta relativa según la carpeta)
- * 
- * Este archivo verifica si hay sesión activa.
- * Si no la hay, guarda la URL destino y muestra el modal de acceso.
- */
-
+/*Este archivo verifica si hay sesión activa*/
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
