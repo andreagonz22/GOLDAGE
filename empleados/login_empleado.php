@@ -9,7 +9,7 @@
 <div class="login-wrapper">
   <div class="login-card">
 
-    <a href="../index.html" class="login-logo">🌿 Gold<em>Age</em></a>
+    <a href="../index.html" class="login-logo"> Gold<em>Age</em></a>
     <h2>Portal de Empleados</h2>
     <p class="subtitle">Acceso exclusivo para el equipo GoldAge</p>
 
@@ -25,6 +25,8 @@
       <button type="submit">Ingresar</button>
     </form>
 
+    <p class="login-footer">¿No tienes cuenta? <a href="../empleados/registro_empleado.php">Crear cuenta</a></p>
+    
   </div>
 </div>
 
