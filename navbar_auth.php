@@ -1,19 +1,4 @@
 <?php
-/**
- * navbar_auth.php
- * Archivo: /Gold/GOLDAGE/navbar_auth.php
- *
- * CÓMO USAR:
- * En cualquier página PHP, reemplaza el bloque <ul class="nav-links">...</ul>
- * y el <button class="hamburger"> por:
- *
- *   <?php include __DIR__ . '/navbar_auth.php'; ?>   (desde raíz del proyecto)
- *   <?php include __DIR__ . '/../navbar_auth.php'; ?> (desde subcarpeta)
- *
- * En páginas HTML estáticas: convierte el archivo a .php y usa include.
- * (Solo el archivo index.html necesita renombrarse a index.php)
- */
-
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
@@ -24,7 +9,6 @@ $ga_rol_nav   = isset($_SESSION['admin'])    ? 'admin'    :
                (isset($_SESSION['empleado']) ? 'empleado' : 'usuario');
 
 // Determinar la ruta base relativa según el archivo actual
-// Detectamos la profundidad comparando la ruta del archivo con el DOCUMENT_ROOT
 $__current   = str_replace('\\', '/', __DIR__);
 $__docroot   = str_replace('\\', '/', $_SERVER['DOCUMENT_ROOT']);
 $__rel_path  = ltrim(str_replace($__docroot, '', $__current), '/');
@@ -60,7 +44,7 @@ $__prefix = str_repeat('../', max(0, $__depth - 1));
               </div>
               <div class="nav-dropdown-body">
                 <?php if ($ga_rol_nav === 'usuario'): ?>
-                  <a href="<?= $__prefix ?>pacientes/registro_paciente.php" class="nav-dd-item" role="menuitem">
+                  <a href="<?= $__prefix ?>perfildeusuario.php" class="nav-dd-item" role="menuitem">
                     <i class="fa-solid fa-user"></i> Mi perfil
                   </a>
                   <a href="<?= $__prefix ?>citas/mis_citas.php" class="nav-dd-item" role="menuitem">

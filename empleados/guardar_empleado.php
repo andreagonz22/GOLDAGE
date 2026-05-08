@@ -16,17 +16,14 @@ $archivo = $_FILES['titulo_pdf'];
 if (empty($nombre) || empty($dui) || empty($correo) || empty($telefono) || empty($profesion) || empty($contrasena)) {
     die("Campos obligatorios incompletos");
 }
-
 // Validar correo
 if (!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
     die("Correo inválido");
 }
-
-// 🔥 Validación importante
+//  Validación importante
 if (($profesion == "MEDICO" || $profesion == "ENFERMERO") && $archivo['error'] == 4) {
     die("Debes subir el título en PDF");
 }
-
 // Validar archivo
 $rutaDestino = NULL;
 

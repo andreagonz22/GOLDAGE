@@ -38,6 +38,7 @@
     </form>
 
     <p class="register-footer">¿Ya tienes cuenta? <a href="login.php">Ir a login</a></p>
+    <p class="register-footer">¿Eres empleado? <a href="../empleados/login_empleado.php">Iniciar sesión</a></p>
 
   </div>
 </div>

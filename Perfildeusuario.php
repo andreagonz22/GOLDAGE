@@ -74,6 +74,9 @@ if (session_status() === PHP_SESSION_NONE) {
 
   <!-- ===== FOOTER ===== -->
   <?php include 'footer.php'; ?>
+
+
+
 <script>
 let citas = [
   {fecha:"2026-05-01", hora:"10:00", motivo:"Consulta", estado:"pendiente"},

@@ -1,0 +1,168 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #e8f0ef;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 560px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.07);
+}
+
+.brand {
+  font-size: 18px;
+  font-weight: 700;
+  color: #5aab8a;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+.brand em { font-style: italic; font-weight: 400; }
+
+h2 { font-size: 26px; font-weight: 800; color: #1a1a1a; margin-bottom: 6px; }
+.subtitle { font-size: 14px; color: #888; margin-bottom: 28px; }
+
+/* Lista de citas */
+.citas-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
+
+.cita-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #f7faf9;
+  border: 1.5px solid #e4ede9;
+  border-radius: 14px;
+  padding: 14px 16px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.cita-card:hover {
+  border-color: #5aab8a;
+  box-shadow: 0 0 0 3px rgba(90,171,138,0.10);
+}
+
+.cita-icon { font-size: 26px; flex-shrink: 0; }
+
+.cita-info { flex: 1; min-width: 0; }
+
+.cita-direccion {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cita-datetime {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 12px;
+  color: #777;
+}
+
+/* Estados */
+.cita-estado {
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 50px;
+}
+
+.estado-confirmada { background: #d6f0e4; color: #2e7d5e; }
+.estado-cancelada  { background: #fde8e8; color: #c0392b; }
+.estado-pendiente  { background: #fff3cd; color: #856404; }
+
+/* Empty state */
+.empty {
+  text-align: center;
+  padding: 40px 20px;
+  color: #999;
+  margin-bottom: 24px;
+}
+.empty-icon { font-size: 48px; margin-bottom: 12px; }
+.empty p { font-size: 15px; }
+
+/* Botón */
+.btn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background: #5aab8a;
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.1s;
+}
+.btn:hover { background: #4a9678; }
+.btn:active { transform: scale(0.98); }
+
+/* Highlight citas pendientes */
+.cita-pendiente {
+  border-color: #f0d080;
+  background: #fffdf0;
+}
+
+/* Botones de acción */
+.cita-acciones {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.btn-accion {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: opacity 0.2s, transform 0.1s;
+}
+.btn-accion:active { transform: scale(0.96); }
+
+.btn-confirmar {
+  background: #d6f0e4;
+  color: #2e7d5e;
+}
+.btn-confirmar:hover { background: #b8e6d0; }
+
+.btn-cancelar {
+  background: #fde8e8;
+  color: #c0392b;
+}
+.btn-cancelar:hover { background: #fbd0d0; }
+
+/* Alertas de feedback */
+.alerta {
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.alerta-ok    { background: #d6f0e4; color: #2e7d5e; }
+.alerta-error { background: #fde8e8; color: #c0392b; }
+
+.cita-acciones form {
+  display: inline;
+}

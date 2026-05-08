@@ -1,15 +1,4 @@
 <?php
-/**
- * validar_login.php  (REEMPLAZA el original)
- * Archivo: /Gold/GOLDAGE/login/validar_login.php
- *
- * Cambios respecto al original:
- *  - Agrega $_SESSION['rol'] = 'usuario'
- *  - Agrega $_SESSION['idusuario'] para las citas
- *  - Redirige a index.php en vez de index.html
- *  - Redirige a la página de origen si venía de auth_check.php
- */
-
 session_start();
 include("conexion.php");
 

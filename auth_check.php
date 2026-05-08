@@ -1,16 +1,5 @@
 <?php
-/**
- * auth_check.php
- * Archivo: /Gold/GOLDAGE/auth_check.php
- * 
- * Incluir al INICIO de cada página privada con:
- *   require_once __DIR__ . '/../auth_check.php';
- *   (o ajustar la ruta relativa según la carpeta)
- * 
- * Este archivo verifica si hay sesión activa.
- * Si no la hay, guarda la URL destino y muestra el modal de acceso.
- */
-
+/*Este archivo verifica si hay sesión activa*/
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
@@ -34,7 +23,6 @@ if (!$session_activa) {
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-      <!-- Detectar la ruta correcta a styles.css según la profundidad del archivo -->
       <script>
         // Calcular la ruta relativa al CSS según cuántos niveles de carpeta hay
         (function() {
@@ -44,7 +32,6 @@ if (!$session_activa) {
         })();
       </script>
       <style>
-        /* Variables GoldAge */
         :root {
           --mint:      #4ce7da;
           --mint-dark: #80cbc4;
@@ -213,7 +200,7 @@ if (!$session_activa) {
     </body>
     </html>
     <?php
-    exit(); // Detener cualquier ejecución del archivo protegido
+    exit();
 }
 
 // Si llegó aquí, hay sesión activa. Definir variables útiles globales.

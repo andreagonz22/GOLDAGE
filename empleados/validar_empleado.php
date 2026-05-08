@@ -1,15 +1,4 @@
 <?php
-/**
- * validar_empleado.php  (REEMPLAZA el original)
- * Archivo: /Gold/GOLDAGE/empleados/validar_empleado.php
- *
- * Cambios respecto al original:
- *  - Agrega $_SESSION['rol'] = 'empleado'
- *  - Agrega $_SESSION['idempleado'] para el panel de citas
- *  - Redirige a index.php en lugar de index.html
- *  - Redirige a la página de origen si venía de auth_check.php
- */
-
 session_start();
 include("../login/conexion.php");
 
