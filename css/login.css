@@ -25,7 +25,7 @@ body {
 }
  
 .login-card {
-  background: #f8faf7;
+  background: #fbf8ef;
   border-radius: 28px;
   padding: 52px 44px;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.10);
@@ -45,7 +45,7 @@ body {
  
 .login-logo em {
   font-style: normal;
-  color: #6bb88e;
+  color: #4adfd2;
 }
  
 /* ---- TÍTULOS ---- */
