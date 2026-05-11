@@ -32,7 +32,7 @@ if ($result->num_rows === 1) {
         // ✅ Variables de sesión completas
         $_SESSION['empleado']   = $emp['NOMBRE_COMPLETO'];
         $_SESSION['profesion']  = $emp['PROFESION'];
-        $_SESSION['rol']        = 'empleado';
+        $_SESSION['rol'] = $emp['ROL'];
         $_SESSION['idempleado'] = $emp['IDEMPLEADO'];
 
         // Redirigir a página de origen si venía de un acceso bloqueado
