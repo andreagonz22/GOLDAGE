@@ -3,7 +3,8 @@ $host='localhost';
 $user='root';
 $pass='';
 $db='usuarios';
-$conn=new mysqli($host,$user,$pass,$db);
+//Eliminar los numeros ´paa que les funcione con el puerto 3306
+$conn=new mysqli($host,$user,$pass,$db, 3307);
 
 if ($conn->connect_error) {
     die("Error de conexión: " . $conn->connect_error);
