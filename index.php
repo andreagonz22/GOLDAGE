@@ -76,7 +76,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
       <!-- Medical -->
       <div class="feature-card scroll-reveal">
-        <div class="feature-icon" style="--icon-color: #a8d5ba;">
+        <div class="feature-icon" style="--icon-color: #4adfd380;">
           <i class="fas fa-user-nurse"></i>
         </div>
         <h3>Medical Services</h3>
@@ -85,7 +85,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
       <!-- Reminders -->
       <div class="feature-card scroll-reveal" style="--delay: 0.15s">
-        <div class="feature-icon" style="--icon-color: #b3cfe8;">
+        <div class="feature-icon" style="--icon-color: #54779281;">
           <i class="fas fa-bell"></i>
         </div>
         <h3>Reminders</h3>
@@ -94,7 +94,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
       <!-- Home Care -->
       <div class="feature-card scroll-reveal" style="--delay: 0.3s">
-        <div class="feature-icon" style="--icon-color: #f5e6c8;">
+        <div class="feature-icon" style="--icon-color: #efc00477;">
           <i class="fas fa-house-medical"></i>
         </div>
         <h3>Home Care</h3>
