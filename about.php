@@ -105,31 +105,9 @@ require_once __DIR__ . '/auth_check.php';
       </div>
     </div>
   </section>
+  <!-- ===== FOOTER ===== -->
+  <?php include 'footer.php'; ?>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.html" class="logo"><span class="logo-icon"></span><span class="logo-text">Gold<span class="logo-accent">Age</span></span></a>
-          <p>Home healthcare with heart.</p>
-        </div>
-        <div class="footer-links"><h5>Navegation</h5><ul>
-          <li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li>
-          <li><a href="nurses.html">Nurses</a></li><li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul></div>
-        <div class="footer-links"><h5>Services</h5><ul>
-          <li><a href="services.html">Attencion 24/7</a></li><li><a href="services.html">Palliative Care</a></li>
-          <li><a href="services.html">General Inquiries</a></li><li><a href="services.html">Geriatrics</a></li>
-        </ul></div>
-        <div class="footer-contact"><h5>Contact</h5>
-          <p> h@goldage.com</p><p> +503 7000-0000</p><p>📍 San Salvador, El Salvador</p>
-        </div>
-      </div>
-      <div class="footer-bottom"><p>© 2026 GoldAge. All rights reserved.</p></div>
-    </div>
-  </footer>
 
   <script src="js/main.js"></script>
   <script src="js/about.js"></script>

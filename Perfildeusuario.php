@@ -12,9 +12,11 @@ if (session_status() === PHP_SESSION_NONE) {
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="css/perfildeusuario.css">
-  <link rel="stylesheet" href="css/navbar_auth.css">
+  <!-- Font Awesome (ICONOS PRO) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- CSS del menú de autenticación (NUEVO — no toca styles.css) -->
+  <link rel="stylesheet" href="css/navbar_auth.css">
+    <link rel="stylesheet" href="css/perfildeusuario.css">
 </head>
 
 <body>
@@ -33,156 +35,331 @@ if (session_status() === PHP_SESSION_NONE) {
     </div>
   </nav>
 
-  <!-- CONTENIDO -->
-  <div class="container">
-    <div class="grid">
+  <!-- MAIN -->
 
-      <div>
-        <div class="card profile">
-          <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Foto de perfil">
-          <h3 id="nombre"></h3>
-          <p id="email"></p>
+<div class="container">
 
-          <div class="info">
-            <p id="telefono"></p>
-            <p id="ubicacion"></p>
-          </div>
+    <div class="dashboard-grid">
+
+        <!-- LEFT -->
+
+        <div class="left-column">
+
+            <!-- PROFILE -->
+
+            <div class="card profile-card">
+
+                <div class="profile-cover"></div>
+
+                <img 
+                    class="profile-image"
+                    src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+                    alt="Usuario"
+                >
+
+                <h2 id="nombre"></h2>
+
+                <p class="email" id="email"></p>
+
+                <div class="info-list">
+
+                    <div class="info-item">
+
+                        <div class="icon-box">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+
+                        <div>
+                            <span>Phone</span>
+                            <p id="telefono"></p>
+                        </div>
+
+                    </div>
+
+                    <div class="info-item">
+
+                        <div class="icon-box">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+
+                        <div>
+                            <span>Location</span>
+                            <p id="ubicacion"></p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- PATIENT INFO -->
+
+            <div class="card">
+
+                <div class="card-header">
+
+                    <h3>
+                        <i class="fa-solid fa-heart-pulse"></i>
+                        Patient Information
+                    </h3>
+
+                </div>
+
+                <div class="patient-grid">
+
+                    <div class="patient-box">
+                        <span>Name</span>
+                        <strong id="pNombre"></strong>
+                    </div>
+
+                    <div class="patient-box">
+                        <span>Age</span>
+                        <strong id="pEdad"></strong>
+                    </div>
+
+                    <div class="patient-box">
+                        <span>Condition</span>
+                        <strong id="pCondicion"></strong>
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="card" style="margin-top:20px;">
-          <h4>Patient Info</h4>
-          <p><strong>Name:</strong> <span id="pNombre"></span></p>
-          <p><strong>Age:</strong> <span id="pEdad"></span></p>
-          <p><strong>Condition:</strong> <span id="pCondicion"></span></p>
-        </div>
-      </div>
+        <!-- RIGHT -->
 
-      <div>
-        <div class="card">
-          <h4 class="section-title">Pending Appointments</h4>
-          <div id="pendientes"></div>
-        </div>
+        <div class="right-column">
 
-        <div class="card" style="margin-top:20px;">
-          <h4 class="section-title">Completed Appointments</h4>
-          <div id="realizadas"></div>
+            <!-- PENDING -->
+
+            <div class="card">
+
+                <div class="card-header">
+
+                    <h3>
+                        <i class="fa-regular fa-calendar"></i>
+                        Pending Appointments
+                    </h3>
+
+                </div>
+
+                <div id="pendientes"></div>
+
+            </div>
+
+            <!-- COMPLETED -->
+
+            <div class="card">
+
+                <div class="card-header">
+
+                    <h3>
+                        <i class="fa-solid fa-circle-check"></i>
+                        Completed Appointments
+                    </h3>
+
+                </div>
+
+                <div id="realizadas"></div>
+
+            </div>
+
         </div>
-      </div>
 
     </div>
-  </div>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.php" class="logo"><span class="logo-icon">🌿</span><span class="logo-text">Gold<span class="logo-accent">Age</span></span></a>
-          <p>Home health care with heart. We care for those you love most with professionalism and warmth.</p>
+</div>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <div class="footer-grid">
+
+        <div>
+
+            <h3 class="footer-logo">
+                Gold<span>Age</span>
+            </h3>
+
+            <p>
+                Professional home healthcare services with love, dedication and excellence.
+            </p>
+
         </div>
-        <div class="footer-links">
-          <h5>Navegación</h5>
-          <ul>
-            <li><a href="index.php">Home</a></li>
-            <li><a href="services.php">Services</a></li>
-            <li><a href="nurses.php">Nurses</a></li>
-            <li><a href="about.php">About Us</a></li>
-            <li><a href="contact.php">Contact Us</a></li>
-          </ul>
+
+        <div>
+
+            <h4>Navigation</h4>
+
+            <ul>
+
+                <li><a href="index.php">Home</a></li>
+                <li><a href="services.php">Services</a></li>
+                <li><a href="nurses.php">Nurses</a></li>
+                <li><a href="about.php">About Us</a></li>
+
+            </ul>
+
         </div>
-        <div class="footer-links">
-          <h5>Servicios</h5>
-          <ul>
-            <li><a href="services.php">24/7 Attention</a></li>
-            <li><a href="services.php">General Consultations</a></li>
-            <li><a href="services.php">Geriatrics</a></li>
-          </ul>
+
+        <div>
+
+            <h4>Contact</h4>
+
+            <p>hola@goldage.com</p>
+            <p>+503 7000-0000</p>
+            <p>San Salvador, El Salvador</p>
+
         </div>
-        <div class="footer-contact">
-          <h5>Contacto</h5>
-          <p>hola@goldage.com</p>
-          <p>+503 7000-0000</p>
-          <p>San Salvador, El Salvador</p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2025 GoldAge. All rights reserved.</p>
-      </div>
+
     </div>
+
+    <div class="footer-bottom">
+
+        © 2025 GoldAge. All rights reserved.
+
+    </div>
+
 </footer>
 
 <script>
-let citas = [
-  {fecha:"2026-05-01", hora:"10:00", motivo:"Consulta", estado:"pendiente"},
-  {fecha:"2026-04-20", hora:"09:00", motivo:"Chequeo", estado:"realizada"},
-  {fecha:"2026-05-03", hora:"02:00", motivo:"Dermatología", estado:"pendiente"}
+
+const citas = [
+
+    {
+        fecha:"2026-05-01",
+        hora:"10:00 AM",
+        motivo:"General Consultation",
+        estado:"pendiente"
+    },
+
+    {
+        fecha:"2026-04-20",
+        hora:"09:00 AM",
+        motivo:"Routine Checkup",
+        estado:"realizada"
+    },
+
+    {
+        fecha:"2026-05-03",
+        hora:"02:00 PM",
+        motivo:"Dermatology",
+        estado:"pendiente"
+    }
+
 ];
 
 const usuario = {
-  nombre:"Juan Esteban",
-  email:"juanesteban19@gmail.com",
-  telefono:"+503 4568 3190",
-  ubicacion:"San Martín"
+
+    nombre:"Juan Esteban",
+    email:"juanesteban19@gmail.com",
+    telefono:"+503 4568 3190",
+    ubicacion:"San Martín"
+
 };
 
 const paciente = {
-  nombre:"Juan Esteban",
-  edad:17,
-  condicion:"Control general"
+
+    nombre:"Juan Esteban",
+    edad:17,
+    condicion:"General Control"
+
 };
 
-// CORREGIDO (más seguro)
 document.getElementById("nombre").textContent = usuario.nombre;
 document.getElementById("email").textContent = usuario.email;
 document.getElementById("telefono").textContent = usuario.telefono;
 document.getElementById("ubicacion").textContent = usuario.ubicacion;
 
 document.getElementById("pNombre").textContent = paciente.nombre;
-document.getElementById("pEdad").textContent = paciente.edad;
+document.getElementById("pEdad").textContent = paciente.edad + " years";
 document.getElementById("pCondicion").textContent = paciente.condicion;
 
 const pendientes = document.getElementById("pendientes");
 const realizadas = document.getElementById("realizadas");
 
 function render(){
-  pendientes.innerHTML="";
-  realizadas.innerHTML="";
 
-  citas.forEach((c,i)=>{
-    const div = document.createElement("div");
-    div.className = `appointment ${c.estado==="pendiente"?"pending":"done"}`;
+    pendientes.innerHTML = "";
+    realizadas.innerHTML = "";
 
-    div.innerHTML = `
-      <span>${c.fecha} - ${c.hora} | ${c.motivo}</span>
-      ${c.estado==="pendiente" ? `<button onclick="completar(${i})">Done</button>`:""}
-    `;
+    citas.forEach((cita,index)=>{
 
-    if(c.estado==="pendiente"){
-      pendientes.appendChild(div);
-    } else {
-      realizadas.appendChild(div);
-    }
-  });
+        const div = document.createElement("div");
+
+        div.className = `appointment ${
+            cita.estado === "pendiente"
+            ? "pending"
+            : "done"
+        }`;
+
+        div.innerHTML = `
+
+            <div class="appointment-info">
+
+                <h4>${cita.motivo}</h4>
+
+                <p>
+                    <i class="fa-regular fa-calendar"></i>
+                    ${cita.fecha}
+                </p>
+
+                <p>
+                    <i class="fa-regular fa-clock"></i>
+                    ${cita.hora}
+                </p>
+
+                <span class="status ${
+                    cita.estado === "pendiente"
+                    ? "pending-status"
+                    : "done-status"
+                }">
+
+                    ${
+                        cita.estado === "pendiente"
+                        ? "Pending"
+                        : "Completed"
+                    }
+
+                </span>
+
+            </div>
+
+            ${
+                cita.estado === "pendiente"
+                ?
+                `<button onclick="completar(${index})">
+                    Complete
+                </button>`
+                :
+                ""
+            }
+
+        `;
+
+        if(cita.estado === "pendiente"){
+            pendientes.appendChild(div);
+        }else{
+            realizadas.appendChild(div);
+        }
+
+    });
+
 }
 
-function completar(i){
-  citas[i].estado="realizada";
-  render();
+function completar(index){
+
+    citas[index].estado = "realizada";
+
+    render();
+
 }
 
 render();
-
-function toggleMenu(){
-  const menu = document.getElementById("dropdownMenu");
-  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
-}
-
-// cerrar si haces click afuera
-window.addEventListener("click", function(e){
-  if(!e.target.closest(".user-menu")){
-    document.getElementById("dropdownMenu").style.display = "none";
-  }
-});
 
 </script>
 
