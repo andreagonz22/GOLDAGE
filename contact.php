@@ -188,42 +188,67 @@ require_once __DIR__ . '/auth_check.php';
     </div>
   </section>
 
-  <!-- FOOTER -->
- <footer class="footer">
+  <footer class="footer">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.php" class="logo"><span class="logo-icon">🌿</span><span class="logo-text">Gold<span class="logo-accent">Age</span></span></a>
-          <p>Home health care with heart. We care for those you love most with professionalism and warmth.</p>
+        <div class="footer-content">
+
+            <!-- BRAND -->
+            <div class="footer-brand">
+                <a href="index.php" class="footer-logo">
+                    <img src="img/logo.png" alt="GoldAge Logo" class="footer-logo-img">
+                    <span class="footer-logo-text">
+                        Gold<span>Age</span>
+                    </span>
+                </a>
+
+                <p>
+                    Home health care with compassion, professionalism
+                    and warmth for every family.
+                </p>
+
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <!-- LINKS -->
+            <div class="footer-links">
+                <h4>Navigation</h4>
+
+                <a href="index.php">Home</a>
+                <a href="services.php">Services</a>
+                <a href="nurses.php">Professionals</a>
+                <a href="about.php">About Us</a>
+                <a href="contact.php">Contact</a>
+            </div>
+
+            <!-- SERVICES -->
+            <div class="footer-links">
+                <h4>Services</h4>
+
+                <a href="#">Home Care</a>
+                <a href="#">24/7 Assistance</a>
+                <a href="#">Medical Visits</a>
+                <a href="#">Elderly Support</a>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="footer-contact">
+                <h4>Contact</h4>
+
+                <p><i class="fas fa-envelope"></i> hello@goldage.com</p>
+                <p><i class="fas fa-phone"></i> +503 7000-0000</p>
+                <p><i class="fas fa-location-dot"></i> San Salvador, El Salvador</p>
+            </div>
+
         </div>
-        <div class="footer-links">
-          <h5>Navegación</h5>
-          <ul>
-            <li><a href="index.php">Home</a></li>
-            <li><a href="services.php">Services</a></li>
-            <li><a href="nurses.php">Nurses</a></li>
-            <li><a href="about.php">About Us</a></li>
-            <li><a href="contact.php">Contact Us</a></li>
-          </ul>
+
+        <div class="footer-bottom">
+            <p>© 2026 GoldAge. All rights reserved.</p>
         </div>
-        <div class="footer-links">
-          <h5>Servicios</h5>
-          <ul>
-            <li><a href="services.php">24/7 Attention</a></li>
-            <li><a href="services.php">General Consultations</a></li>
-            <li><a href="services.php">Geriatrics</a></li>
-          </ul>
-        </div>
-        <div class="footer-contact">
-          <h5>Contacto</h5>
-          <p>hola@goldage.com</p>
-          <p>+503 7000-0000</p>
-          <p>San Salvador, El Salvador</p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2025 GoldAge. All rights reserved.</p>
-      </div>
     </div>
 </footer>
  
