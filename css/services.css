@@ -2,11 +2,11 @@
    VARIABLES (AQUÍ CAMBIAS EL COLOR)
    ========================= */
 :root {
-  --btn-color: #009f9a; /* 🔴 color principal del botón */
-  --btn-hover-bg: #009f9a;
+  --btn-color: #80cbc4; /* 🔴 color principal del botón */
+  --btn-hover-bg: #80cbc4;
   --btn-hover-text: #ffffff;
 
-  --mint-dark: #2bbfa5;
+  --mint-dark: #80cbc4;
   --blue-dark: #3a7bd5;
   --text-light: #666;
   --beige: #f8faf7;
@@ -85,6 +85,7 @@
 .service-row-content {
   flex: 1;
   min-width: 260px;
+  max-width: 520px;
 }
 
 .service-row-content h2 {
@@ -99,6 +100,7 @@
   color: var(--text-light);
   line-height: 1.75;
   margin-bottom: 20px;
+
 }
 
 .service-detail-list {

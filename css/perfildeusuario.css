@@ -1,7 +1,7 @@
 :root{
 
-    --primary:#10b981;
-    --primary-dark:#059669;
+    --primary:#80cbc4;
+    --primary-dark:#57bdb3;
 
     --secondary:#213448;
 
@@ -14,8 +14,8 @@
 
     --border:#e5e7eb;
 
-    --warning:#f59e0b;
-    --success:#10b981;
+    --warning:#f4a261;
+    --success:#80cbc4;
 
 }
 
@@ -29,8 +29,19 @@
 
 body{
     font-family:'Poppins',sans-serif;
-    background:linear-gradient(135deg,#eef7f4,#f5f9ff);
+
+    background:
+    linear-gradient(
+        135deg,
+        #eef7f4,
+        #f5f9ff
+    );
+
     color:var(--text);
+
+    padding-top:100px;
+
+    overflow-x:hidden;
 }
 
 /* CONTAINER */
@@ -38,23 +49,33 @@ body{
 .container{
     width:92%;
     max-width:1300px;
-    margin:40px auto;
-    margin-top: 10%;
+
+    margin:auto;
+
+    padding-top:40px;
+    padding-bottom:40px;
 }
 
 /* GRID */
 
 .dashboard-grid{
     display:grid;
+
     grid-template-columns:340px 1fr;
+
     gap:28px;
+
+    align-items:stretch;
 }
 
 .left-column,
 .right-column{
     display:flex;
     flex-direction:column;
+
     gap:25px;
+
+    height:100%;
 }
 
 /* CARD */
@@ -64,7 +85,7 @@ body{
 
     backdrop-filter:blur(14px);
 
-    border:1px solid rgba(255,255,255,.6);
+    border:1px solid rgba(0, 0, 0, 0.25);
 
     border-radius:24px;
 
@@ -74,6 +95,27 @@ body{
     0 10px 35px rgba(0,0,0,.07);
 
     transition:.3s;
+
+    height:100%;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.card::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:1px;
+
+    background:
+    rgba(255,255,255,.8);
 }
 
 .card:hover{
@@ -84,12 +126,15 @@ body{
 
 .profile-card{
     position:relative;
+
     overflow:hidden;
+
     text-align:center;
 }
 
 .profile-cover{
     position:absolute;
+
     top:0;
     left:0;
 
@@ -99,8 +144,8 @@ body{
     background:
     linear-gradient(
         135deg,
-        #10b981,
-        #34d399
+        #80cbc4,
+        #57bdb3
     );
 }
 
@@ -112,7 +157,7 @@ body{
 
     object-fit:cover;
 
-    border:6px solid white;
+    border:4px solid white;
 
     margin-top:45px;
 
@@ -125,11 +170,13 @@ body{
 
 .profile-card h2{
     margin-top:18px;
+
     font-size:1.6rem;
 }
 
 .email{
     color:var(--text-light);
+
     margin-top:6px;
 }
 
@@ -142,6 +189,7 @@ body{
 .info-item{
     display:flex;
     align-items:center;
+
     gap:16px;
 
     padding:16px 0;
@@ -167,6 +215,8 @@ body{
     background:#ecfdf5;
 
     color:var(--primary);
+
+    font-size:1.1rem;
 }
 
 /* CARD HEADER */
@@ -178,6 +228,7 @@ body{
 .card-header h3{
     display:flex;
     align-items:center;
+
     gap:12px;
 
     font-size:1.35rem;
@@ -220,18 +271,22 @@ body{
 
 .appointment{
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
 
     gap:20px;
 
-    padding:20px;
+    padding:24px;
 
     border-radius:20px;
 
     margin-bottom:18px;
 
     transition:.3s;
+
+    min-height:140px;
 }
 
 .appointment:hover{
@@ -240,22 +295,28 @@ body{
 
 .pending{
     background:#fff7ed;
+
     border-left:6px solid var(--warning);
 }
 
 .done{
     background:#ecfdf5;
+
     border-left:6px solid var(--success);
 }
 
 .appointment-info{
     display:flex;
+
     flex-direction:column;
-    gap:8px;
+
+    gap:10px;
 }
 
 .appointment-info h4{
-    font-size:1rem;
+    font-size:1.1rem;
+
+    color:var(--secondary);
 }
 
 .appointment-info p{
@@ -263,9 +324,10 @@ body{
 
     display:flex;
     align-items:center;
+
     gap:8px;
 
-    font-size:.92rem;
+    font-size:.95rem;
 }
 
 /* STATUS */
@@ -273,21 +335,24 @@ body{
 .status{
     width:fit-content;
 
-    padding:6px 12px;
+    padding:6px 14px;
 
     border-radius:30px;
 
     font-size:.8rem;
+
     font-weight:600;
 }
 
 .pending-status{
     background:#fef3c7;
+
     color:#92400e;
 }
 
 .done-status{
     background:#d1fae5;
+
     color:#065f46;
 }
 
@@ -299,8 +364,8 @@ button{
     background:
     linear-gradient(
         135deg,
-        #10b981,
-        #059669
+        #80cbc4,
+        #57bdb3
     );
 
     color:white;
@@ -320,68 +385,6 @@ button:hover{
     transform:scale(1.04);
 }
 
-/* FOOTER */
-
-.footer{
-    margin-top:60px;
-
-    background:#111827;
-
-    color:white;
-
-    padding:70px 0 25px;
-}
-
-.footer-grid{
-    width:92%;
-    max-width:1300px;
-
-    margin:auto;
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(220px,1fr));
-
-    gap:40px;
-}
-
-.footer h4{
-    margin-bottom:15px;
-}
-
-.footer p,
-.footer a{
-    color:#d1d5db;
-    text-decoration:none;
-    line-height:1.8;
-}
-
-.footer ul{
-    list-style:none;
-}
-
-.footer-logo{
-    font-size:1.7rem;
-}
-
-.footer-logo span{
-    color:#10b981;
-}
-
-.footer-bottom{
-    margin-top:40px;
-
-    border-top:
-    1px solid rgba(255,255,255,.1);
-
-    text-align:center;
-
-    padding-top:20px;
-
-    color:#9ca3af;
-}
-
 /* RESPONSIVE */
 
 @media(max-width:950px){
@@ -396,6 +399,7 @@ button:hover{
 
     .appointment{
         flex-direction:column;
+
         align-items:flex-start;
     }
 
@@ -404,5 +408,3 @@ button:hover{
     }
 
 }
-
-
