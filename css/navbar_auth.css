@@ -22,7 +22,7 @@
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  background: rgba(128, 203, 196, 0.12);
+  background: #80cbc41f;
   border: 1.5px solid rgba(128, 203, 196, 0.35);
   border-radius: 50px;
   padding: 6px 14px 6px 8px;
