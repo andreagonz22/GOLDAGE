@@ -26,6 +26,7 @@ require_once __DIR__ . '/auth_check.php';
         <span class="logo-text">Gold<span class="logo-accent">Age</span></span>
       </a>
       <?php
+        $__caller_dir = __DIR__;
         include __DIR__ . '/navbar_auth.php';
       ?>
     </div>
@@ -499,7 +500,7 @@ require_once __DIR__ . '/auth_check.php';
 <!-- JS -->
 <script src="js/main.js"></script>
 <script src="js/contact.js"></script>
-
+<script src="js/navbar_auth.js"></script> 
 </body>
 </html>
       

@@ -111,5 +111,6 @@ require_once __DIR__ . '/auth_check.php';
 
   <script src="js/main.js"></script>
   <script src="js/about.js"></script>
+  <script src="js/navbar_auth.js"></script> 
 </body>
 </html>
