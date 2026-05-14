@@ -173,58 +173,9 @@ if (session_status() === PHP_SESSION_NONE) {
 
 </div>
 
-<!-- FOOTER -->
 
-<footer class="footer">
-
-    <div class="footer-grid">
-
-        <div>
-
-            <h3 class="footer-logo">
-                Gold<span>Age</span>
-            </h3>
-
-            <p>
-                Professional home healthcare services with love, dedication and excellence.
-            </p>
-
-        </div>
-
-        <div>
-
-            <h4>Navigation</h4>
-
-            <ul>
-
-                <li><a href="index.php">Home</a></li>
-                <li><a href="services.php">Services</a></li>
-                <li><a href="nurses.php">Nurses</a></li>
-                <li><a href="about.php">About Us</a></li>
-
-            </ul>
-
-        </div>
-
-        <div>
-
-            <h4>Contact</h4>
-
-            <p>hola@goldage.com</p>
-            <p>+503 7000-0000</p>
-            <p>San Salvador, El Salvador</p>
-
-        </div>
-
-    </div>
-
-    <div class="footer-bottom">
-
-        © 2025 GoldAge. All rights reserved.
-
-    </div>
-
-</footer>
+  <!-- ===== FOOTER ===== -->
+  <?php include 'footer.php'; ?>
 
 <script>
 
