@@ -1,0 +1,729 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* FUENTE GLOBAL */
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+
+  margin: 0;
+
+  font-family: 'Poppins', sans-serif;
+
+  background: #f0f0f0;
+}
+.modal{
+  padding-top: 110px;
+}
+
+/* CONTENEDOR */
+
+.modal {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  min-height: 100vh;
+}
+
+.modal__container {
+
+  width: 900px;
+
+  background: white;
+
+  border-radius: 28px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 25px 70px rgba(0,0,0,0.08);
+}
+
+.modal__content {
+
+  padding: 40px;
+}
+
+.modal__content h2 {
+
+  margin-bottom: 28px;
+
+  font-size: 28px;
+
+  font-weight: 600;
+
+  color: #111827;
+}
+
+/* TARJETA */
+
+.credit-card {
+
+  width: 100%;
+
+  height: 250px;
+
+  border-radius: 26px;
+
+  padding: 28px;
+
+  box-sizing: border-box;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #111827 0%,
+      #172033 50%,
+      #1f2d4d 100%
+    );
+
+  color: white;
+
+  box-shadow:
+    0 20px 45px rgba(0,0,0,0.18);
+
+  margin-bottom: 35px;
+}
+
+/* REFLEJO */
+
+.credit-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 320px;
+  height: 320px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255,255,255,0.04);
+
+  top: -140px;
+  right: -120px;
+}
+
+/* =========================
+   CHIP PREMIUM REALISTA
+========================= */
+
+.chip {
+
+  width: 92px;
+  height: 66px;
+
+  border-radius: 12px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      115deg,
+      #8a6500 0%,
+      #d4af37 18%,
+      #fff2a6 38%,
+      #f0c94d 55%,
+      #fff4b8 72%,
+      #9c7300 100%
+    );
+
+  border: 1.5px solid rgba(0,0,0,0.45);
+
+  box-shadow:
+    inset 0 1px 2px rgba(255,255,255,0.8),
+    inset 0 -2px 4px rgba(0,0,0,0.25),
+    0 4px 10px rgba(0,0,0,0.35);
+}
+
+/* LINEAS FINAS */
+
+.chip::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+
+    /* verticales */
+    linear-gradient(to right,
+      transparent 22%,
+      rgba(0,0,0,0.55) 22%,
+      rgba(0,0,0,0.55) 23.2%,
+      transparent 23.2%,
+
+      transparent 49%,
+      rgba(0,0,0,0.55) 49%,
+      rgba(0,0,0,0.55) 50.2%,
+      transparent 50.2%,
+
+      transparent 76%,
+      rgba(0,0,0,0.55) 76%,
+      rgba(0,0,0,0.55) 77.2%,
+      transparent 77.2%
+    ),
+
+    /* horizontales */
+    linear-gradient(to bottom,
+      transparent 30%,
+      rgba(0,0,0,0.55) 30%,
+      rgba(0,0,0,0.55) 31.2%,
+      transparent 31.2%,
+
+      transparent 67%,
+      rgba(0,0,0,0.55) 67%,
+      rgba(0,0,0,0.55) 68.2%,
+      transparent 68.2%
+    );
+}
+
+/* REFLEJO */
+
+.chip::after {
+
+  content: "";
+
+  position: absolute;
+
+  top: -20px;
+  left: -25px;
+
+  width: 42px;
+  height: 130px;
+
+  background:
+    linear-gradient(
+      to right,
+      rgba(255,255,255,0),
+      rgba(255,255,255,0.4),
+      rgba(255,255,255,0)
+    );
+
+  transform: rotate(25deg);
+}
+/* LOGO */
+
+#card-logo {
+
+  width: 82px;
+  height: 54px;
+
+  object-fit: contain;
+
+  position: absolute;
+
+  top: 28px;
+  right: 28px;
+
+  display: none;
+}
+
+/* NUMERO */
+
+.card-number {
+
+  position: absolute;
+
+  left: 28px;
+
+  top: 120px;
+
+  font-size: 42px;
+
+  font-weight: 600;
+
+  letter-spacing: 4px;
+
+  color: white;
+}
+/* BOTTOM */
+
+.card-bottom {
+
+  position: absolute;
+
+  left: 28px;
+  right: 28px;
+  bottom: 24px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+}
+
+
+.card-bottom small {
+
+  display: block;
+
+  margin-bottom: 4px;
+
+  font-size: 10px;
+
+  letter-spacing: 1px;
+
+  opacity: 0.65;
+
+  text-transform: uppercase;
+}
+
+.card-holder-label.hide {
+  opacity: 0;
+  transition: 0.2s;
+}
+
+#card-name-view,
+#card-date-view {
+
+  font-size: 18px;
+
+  font-weight: 500;
+
+  letter-spacing: 1px;
+}
+
+/* FORMULARIO */
+
+.form-list {
+
+  list-style: none;
+
+  padding: 0;
+
+  margin: 0;
+}
+
+.form-list__row {
+
+  margin-bottom: 22px;
+}
+
+.form-list__row--inline {
+
+  display: flex;
+
+  gap: 18px;
+
+  align-items: flex-start;
+}
+
+.form-list__row--inline > div {
+
+  flex: 1;
+}
+.form-list__input-inline {
+
+  display: flex;
+
+  gap: 12px;
+}
+
+label {
+
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #4b5563;
+
+  font-size: 14px;
+
+  font-weight: 500;
+}
+
+input {
+
+  width: 100%;
+
+  padding: 14px;
+
+  border-radius: 14px;
+
+  border: 1px solid #d1d5db;
+
+  font-size: 15px;
+
+  font-family: 'Poppins', sans-serif;
+
+  box-sizing: border-box;
+
+  transition: 0.2s;
+}
+
+input:focus {
+
+  outline: none;
+
+  border-color: #80cbc4;
+
+  box-shadow:
+    0 0 0 4px rgba(34,197,94,0.15);
+}
+
+/* BOTON */
+
+.button {
+
+  width: 100%;
+
+  padding: 15px;
+
+  border: none;
+
+  border-radius: 16px;
+
+  background: linear-gradient(
+    135deg,
+    #80cbc4,
+    #88d4cb
+  );
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  font-family: 'Poppins', sans-serif;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.button:hover {
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 20px rgba(34,197,94,0.2);
+}
+
+/* =========================
+   MODAL EXITO
+========================= */
+.success-modal{
+  display: none;
+}
+
+.success-modal.active{
+  display: flex;
+}
+.success-modal {
+
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0,0,0,0.45);
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transition: 0.25s;
+
+  z-index: 999;
+}
+
+.success-modal.active {
+
+  opacity: 1;
+
+  visibility: visible;
+}
+
+.success-box {
+
+  width: 360px;
+
+  background: white;
+
+  border-radius: 24px;
+
+  padding: 40px 30px;
+
+  text-align: center;
+
+  box-shadow:
+    0 25px 60px rgba(0,0,0,0.18);
+
+  animation: popUp 0.3s ease;
+}
+
+
+.success-box h3 {
+
+  margin: 0 0 10px;
+
+  font-size: 28px;
+
+  color: #111827;
+}
+
+.success-box p {
+
+  margin-bottom: 25px;
+
+  color: #6b7280;
+
+  font-size: 15px;
+}
+
+.success-box button {
+
+  border: none;
+
+  padding: 13px 24px;
+
+  border-radius: 14px;
+
+  background: #80cbc4;
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.success-box button:hover {
+
+  transform: translateY(-2px);
+}
+
+@keyframes popUp {
+
+  from {
+
+    transform: scale(0.8);
+
+    opacity: 0;
+  }
+
+  to {
+
+    transform: scale(1);
+
+    opacity: 1;
+  }
+}
+
+/* =========================
+   MODAL EXITO
+========================= */
+
+.success-modal {
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,0.45);
+
+  display: none;
+
+  justify-content: center;
+
+  align-items: center;
+
+  z-index: 9999;
+}
+
+.success-modal.active {
+
+  display: flex;
+}
+
+.success-box {
+
+  width: 360px;
+
+  background: white;
+
+  border-radius: 24px;
+
+  padding: 40px 30px;
+
+  text-align: center;
+
+  animation: popup 0.3s ease;
+}
+
+
+.success-box h3 {
+
+  margin: 0 0 10px;
+
+  font-size: 28px;
+}
+
+.success-box p {
+
+  color: #6b7280;
+
+  margin-bottom: 24px;
+}
+
+.success-box button {
+
+  border: none;
+
+  padding: 14px 24px;
+
+  border-radius: 14px;
+
+  background: #083374;
+
+  color: white;
+
+  font-size: 15px;
+
+  cursor: pointer;
+}
+
+@keyframes popup {
+
+  from {
+
+    transform: scale(0.8);
+
+    opacity: 0;
+  }
+
+  to {
+
+    transform: scale(1);
+
+    opacity: 1;
+  }
+}
+
+/* =========================
+   MODAL SUCCESS
+========================= */
+
+.success-modal {
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,0.5);
+
+  display: none;
+
+  justify-content: center;
+
+  align-items: center;
+
+  z-index: 9999;
+}
+
+.success-modal.active {
+
+  display: flex;
+}
+
+.success-box {
+
+  background: white;
+
+  width: 350px;
+
+  padding: 40px 30px;
+
+  border-radius: 24px;
+
+  text-align: center;
+
+  animation: popup 0.25s ease;
+}
+
+
+
+.success-box h3 {
+
+  margin-bottom: 10px;
+
+  font-size: 28px;
+}
+
+.success-box p {
+
+  color: #6b7280;
+
+  margin-bottom: 25px;
+}
+
+.success-box button {
+
+  border: none;
+
+  background: #4adfd2;
+
+  color: white;
+
+  padding: 14px 24px;
+
+  border-radius: 14px;
+
+  cursor: pointer;
+
+  font-size: 15px;
+}
+
+@keyframes popup {
+
+  from {
+
+    transform: scale(0.8);
+
+    opacity: 0;
+  }
+
+  to {
+
+    transform: scale(1);
+
+    opacity: 1;
+  }
+}

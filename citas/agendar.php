@@ -14,7 +14,7 @@ $result = $conn->query("SELECT IDEMPLEADO, NOMBRE_COMPLETO, PROFESION FROM EMPLE
 </head>
 <body>
 <div class="card">
-  <div class="brand">🌿 Gold<em>Age</em></div>
+
   <h2>Agendar cita</h2>
   <p class="subtitle">Reserva tu consulta con un profesional de salud</p>
 
