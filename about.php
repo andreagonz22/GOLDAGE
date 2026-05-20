@@ -1,5 +1,7 @@
 <?php
-require_once __DIR__ . '/auth_check.php';
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -10,7 +12,7 @@ require_once __DIR__ . '/auth_check.php';
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="about.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/navbar_auth.css">
 </head>
@@ -43,7 +45,7 @@ require_once __DIR__ . '/auth_check.php';
           <p>This company was born from the heart, after an experience that deeply affected us. We saw how a beloved member of our community did not receive the care, attention, or respect she deserved. The uncertainty, lack of trust, and poor commitment from her caregiver pushed us to take action. That’s why we created a different kind of service—one that offers compassionate, reliable, and dignified care, where every person is treated with love, respect, and the safety every family deserves.</p>
           <p style="margin-top:16px; color: var(--text-light); font-size:15px; line-height:1.75">Every family deserves peace of mind.</p>
           <div class="story-stats">
-            
+           
           </div>
         </div>
       </div>
@@ -67,7 +69,7 @@ require_once __DIR__ . '/auth_check.php';
           <p>To be the most trusted home health network in Central America, transforming the way families access personalized medical care.</p>
         </div>
         <div class="mv-card scroll-reveal" style="--delay:0.3s">
-          
+         
           <h3>Values</h3>
           <p>Empathy, professionalism, transparency and commitment to the well-being of each person who trusts us.</p>
         </div>
@@ -75,11 +77,10 @@ require_once __DIR__ . '/auth_check.php';
     </div>
   </section>
 
-  
+ 
   <!-- VALUES -->
   <section class="values-section section">
     <div class="container">
-      <div class="section-label">What guides us</div>
       <h2 class="section-title">Principles that <span>define us</span></h2>
       <div class="values-grid">
         <div class="value-item scroll-reveal">
@@ -104,7 +105,52 @@ require_once __DIR__ . '/auth_check.php';
         </div>
       </div>
     </div>
+  </div>
   </section>
+  <section class="about-us">
+  <div class="container">
+
+ <h2 class="section-title">ABOUT  <span>US</span></h2>
+
+    <div class="about-grid">
+<!--Imagenes de we-->
+      <!-- BLOQUE 1 -->
+      <div class="about-item">
+        <img src="img/enfermero 2.jpg" alt="Nuestro equipo">
+        <div class="about-text">
+          <h3 class="section-title">WHO WE ARE</h3>
+          <p>
+            We are a dedicated team committed to providing high-quality home healthcare services, combining compassion, professionalism, and innovation.
+          </p>
+        </div>
+      </div>
+
+      <!-- BLOQUE 2 -->
+      <div class="about-item reverse">
+        <img src="img/enfermero 3.jpeg" alt="Nuestro servicio">
+        <div class="about-text">
+          <h3 class="section-title">WHAT WE DO</h3>
+          <p>
+            We bring personalized medical care directly to our patients' homes, ensuring comfort, safety, and a better quality of life.
+          </p>
+        </div>
+      </div>
+
+      <!-- BLOQUE 3 -->
+      <div class="about-item">
+        <img src="img/enfermero 5.jpg" alt="Nuestra misión">
+        <div class="about-text">
+          <h3 class="section-title">OUR COMMITMENT</h3>
+          <p>
+            Our mission is to support families with reliable and compassionate care, making healthcare more accessible and human-centered.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
   <!-- ===== FOOTER ===== -->
   <?php include 'footer.php'; ?>
 

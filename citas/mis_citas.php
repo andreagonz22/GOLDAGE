@@ -21,7 +21,7 @@ $citas = $res->fetch_all(MYSQLI_ASSOC);
 
 <div class="citas-wrapper">
   <div class="citas-header">
-    <a href="../index.html" class="register-logo">🌿 Gold<em>Age</em></a>
+    <a href="../index.php" class="register-logo">Gold<em>Age</em></a>
     <h2>Mis Citas</h2>
     <p class="subtitle">Historial y estado de tus consultas agendadas</p>
   </div>
