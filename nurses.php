@@ -283,5 +283,6 @@ require_once __DIR__ . '/auth_check.php';
     document.addEventListener("keydown", (e) => { if (e.key === 'Escape') closeModal(); });
 })();
 </script>
+<script src="js/navbar_auth.js"></script> 
 </body>
 </html>

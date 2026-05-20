@@ -157,5 +157,6 @@ if (session_status() === PHP_SESSION_NONE) {
 
   <script src="js/main.js"></script>
   <script src="js/about.js"></script>
+  <script src="js/navbar_auth.js"></script> 
 </body>
 </html>

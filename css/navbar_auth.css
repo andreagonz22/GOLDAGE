@@ -1,15 +1,3 @@
-/* ============================================================
-   navbar_auth.css
-   Archivo: /Gold/GOLDAGE/css/navbar_auth.css
-
-   Pegar el <link> en el <head> de TODAS las páginas:
-   <link rel="stylesheet" href="css/navbar_auth.css">
-   (ajustar ruta relativa si estás en subcarpeta)
-
-   NO modifica nada del styles.css existente.
-   Solo agrega estilos del menú de perfil y botón de login.
-   ============================================================ */
-
 /* ---- Wrapper del perfil en nav ---- */
 .nav-profile-wrap {
   position: relative;
