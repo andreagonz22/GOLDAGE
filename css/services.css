@@ -192,3 +192,60 @@
     padding: 36px 24px;
   }
 }
+
+/*BOTON PRICES DE SERVICES*/
+.service-cta-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-price {
+  background: transparent;
+  color: var(--mint-dark);
+  border: 2px solid var(--mint-dark);
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  font-family: inherit;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.price-dropdown {
+  display: none;
+  position: absolute;
+  bottom: calc(100% + 10px);  /* <-- arriba en vez de abajo */
+  left: 0;
+  background: #fff;
+  border: 1.5px solid var(--mint-dark);
+  border-radius: 14px;
+  padding: 10px 0;
+  min-width: 170px;
+  z-index: 100;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+  list-style: none;
+  margin: 0;
+}
+
+.price-dropdown.open { display: block; }
+
+.price-dropdown li {
+  padding: 9px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--mint-dark);
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 0.5px solid #e0f2f1;
+}
+
+.price-dropdown li:last-child { border-bottom: none; }
+
+.price-dropdown li span { color: #999; font-weight: 400; }

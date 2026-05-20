@@ -77,9 +77,20 @@ require_once __DIR__ . '/auth_check.php';
             <li>Medicine administration</li>
             <li>Daily health reports</li>
           </ul>
-          <a href="./citas/agendar.php" class="btn btn-primary">
-            Schedule Appointment
-          </a>
+         <div class="service-cta-row">
+              <a href="./citas/agendar.php" class="btn btn-primary">
+    Schedule Appointment
+</a>
+  <button class="btn-price" onclick="togglePrices(this)">
+     Prices
+    <ul class="price-dropdown">
+      <li>$45 <span>8 hrs</span></li>
+      <li>$90 <span>12 hrs</span></li>
+      <li>$100 <span>24 hrs</span></li>
+    </ul>
+  </button>
+</div>
+          
         </div>
       </div>
 
