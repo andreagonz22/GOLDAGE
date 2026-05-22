@@ -173,7 +173,12 @@ if (session_status() === PHP_SESSION_NONE) {
 
 </div>
 
+<<<<<<< HEAD
 <!-- ===== FOOTER ===== -->
+=======
+
+  <!-- ===== FOOTER ===== -->
+>>>>>>> main
   <?php include 'footer.php'; ?>
 
 <script>

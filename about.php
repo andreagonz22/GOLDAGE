@@ -1,5 +1,7 @@
 <?php
-require_once __DIR__ . '/auth_check.php';
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -10,7 +12,7 @@ require_once __DIR__ . '/auth_check.php';
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="about.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/navbar_auth.css">
 </head>
@@ -43,7 +45,7 @@ require_once __DIR__ . '/auth_check.php';
           <p>This company was born from the heart, after an experience that deeply affected us. We saw how a beloved member of our community did not receive the care, attention, or respect she deserved. The uncertainty, lack of trust, and poor commitment from her caregiver pushed us to take action. That’s why we created a different kind of service—one that offers compassionate, reliable, and dignified care, where every person is treated with love, respect, and the safety every family deserves.</p>
           <p style="margin-top:16px; color: var(--text-light); font-size:15px; line-height:1.75">Every family deserves peace of mind.</p>
           <div class="story-stats">
-            
+           
           </div>
         </div>
       </div>
@@ -52,6 +54,8 @@ require_once __DIR__ . '/auth_check.php';
 
  
 
+  
+
   <!-- MISSION / VISION -->
   <section class="mv-section section">
     <div class="container">
@@ -59,57 +63,112 @@ require_once __DIR__ . '/auth_check.php';
         <div class="mv-card scroll-reveal">
          
           <h3>Mission</h3>
-          <p>To provide excellent home health services, with human warmth and modern technology, to improve the quality of life of each patient and their family.</p>
+          <p>
+           Our mission is to provide compassionate, professional home healthcare using modern technology to improve the quality of life for patients and their families.
         </div>
         <div class="mv-card scroll-reveal" style="--delay:0.15s">
          
           <h3>Vision</h3>
-          <p>To be the most trusted home health network in Central America, transforming the way families access personalized medical care.</p>
+          <p>
+           Our vision is to become the most trusted home healthcare network in Central America by making personalized care available to every family.
+
+          </p>
         </div>
         <div class="mv-card scroll-reveal" style="--delay:0.3s">
-          
+         
           <h3>Values</h3>
-          <p>Empathy, professionalism, transparency and commitment to the well-being of each person who trusts us.</p>
+          <p>
+            Our values are empathy, professionalism, honesty, and a strong commitment to the health and quality of life of every patient we serve.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  
+ 
   <!-- VALUES -->
   <section class="values-section section">
     <div class="container">
-      <div class="section-label">What guides us</div>
       <h2 class="section-title">Principles that <span>define us</span></h2>
       <div class="values-grid">
         <div class="value-item scroll-reveal">
          
-          <h4>Empathy </h4>
-          <p>Every patient deserves to be heard and treated with respect and genuine love.</p>
+          <h4>Empathy</h4>
+          <p>
+            We treat every patient with kindness, respect, and understanding.
+          </p>
         </div>
         <div class="value-item scroll-reveal" style="--delay:0.1s">
          
-          <h4>Medical excellence</h4>
-          <p>All our professionals have up to date certifications and ongoing training.</p>
+          <h4>Medical Excellence</h4>
+          <p>
+            Our healthcare professionals are fully trained and continuously improving their skills.
+          </p>
         </div>
         <div class="value-item scroll-reveal" style="--delay:0.2s">
          
           <h4>Transparency</h4>
-          <p>Clear prices, honest diagnoses, and open communication with the family.</p>
-        </div>
-        <div class="value-item scroll-reveal" style="--delay:0.3s">
+          <p>
+            We believe in honest communication, clear pricing, and trust with every family.
+   
          
-          <h4>Innovation</h4>
-          <p>We use technology to improve the experience and outcomes for each patient.</p>
+        
         </div>
       </div>
     </div>
+  </div>
   </section>
+
+  <section class="about-us">
+  <div class="container">
+
+ <h2 class="section-title">ABOUT <span>US</span></h2>
+
+    <div class="about-grid">
+
+      <!-- BLOQUE 1 -->
+      <div class="about-item">
+        <img src="img/enfermero 2.jpg" alt="Nuestro equipo">
+        <div class="about-text">
+          <h3 class="section-title">WHO WE ARE</h3>
+          <p>
+            We are a dedicated team focused on providing reliable and compassionate home healthcare services for every patient.
+          </p>
+        </div>
+      </div>
+
+      <!-- BLOQUE 2 -->
+      <div class="about-item reverse">
+        <img src="img/enfermero 3.jpeg" alt="Nuestro servicio">
+        <div class="about-text">
+          <h3 class="section-title">WHAT WE DO</h3>
+          <p>
+            We provide personalized medical care at home, helping patients feel safe, comfortable, and supported.
+          </p>
+        </div>
+      </div>
+
+      <!-- BLOQUE 3 -->
+      <div class="about-item">
+        <img src="img/enfermero 5.jpg" alt="Nuestra misión">
+        <div class="about-text">
+          <h3 class="section-title">OUR COMMITMENT</h3>
+          <p>
+            We are committed to supporting families with professional, accessible, and human-centered healthcare services.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
   <!-- ===== FOOTER ===== -->
   <?php include 'footer.php'; ?>
 
 
   <script src="js/main.js"></script>
   <script src="js/about.js"></script>
+  <script src="js/navbar_auth.js"></script> 
 </body>
 </html>

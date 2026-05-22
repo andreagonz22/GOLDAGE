@@ -11,10 +11,10 @@ if (session_status() === PHP_SESSION_NONE) {
   <title>GOLDAGE</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="css/styles.css" />
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/navbar_auth.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
@@ -34,7 +34,7 @@ if (session_status() === PHP_SESSION_NONE) {
 <!-- ===== HERO ===== -->
 <section class="hero" id="home">
   <div class="hero-content fade-in">
-    <span class="hero-badge">Personalized attention at home</span>
+    
     <h1 class="hero-title">We care<br /><em>like family</em></h1>
     <p class="hero-desc">
       Certified professionals come to your home to provide quality medical care with human warmth.
@@ -69,7 +69,6 @@ if (session_status() === PHP_SESSION_NONE) {
 <!-- ===== FEATURES ===== -->
 <section class="features section" id="features">
   <div class="container">
-    <div class="section-label">Why Us?</div>
     <h2 class="section-title">Comprehensive care <span>For your family</span></h2>
 
     <div class="features-grid">
@@ -107,7 +106,6 @@ if (session_status() === PHP_SESSION_NONE) {
   <!-- ===== SERVICIOS CARDS ===== -->
   <section class="services-preview section" id="services">
     <div class="container">
-      <div class="section-label">What We Offer</div>
       <h2 class="section-title">Health Services<span> at home</span></h2>
       <div class="services-grid">
         <div class="service-card scroll-reveal">
@@ -175,7 +173,7 @@ if (session_status() === PHP_SESSION_NONE) {
   <!-- ===== TESTIMONIOS ===== -->
   <section class="testimonials section">
     <div class="container">
-      <div class="section-label">Testimonials</div>
+  
       <h2 class="section-title">The happiness of the customers <span>speaks for us</span></h2>
       <div class="testimonials-grid">
         <div class="testimonial-card scroll-reveal">

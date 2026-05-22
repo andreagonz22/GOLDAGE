@@ -8,14 +8,12 @@ $ga_nombre    = $_SESSION['usuario'] ?? $_SESSION['empleado'] ?? $_SESSION['admi
 $ga_rol_nav   = isset($_SESSION['admin'])    ? 'admin'    :
                (isset($_SESSION['empleado']) ? 'empleado' : 'usuario');
 
-// Determinar la ruta base relativa según el archivo actual
-$__current   = str_replace('\\', '/', __DIR__);
-$__docroot   = str_replace('\\', '/', $_SERVER['DOCUMENT_ROOT']);
-$__rel_path  = ltrim(str_replace($__docroot, '', $__current), '/');
-$__depth     = substr_count($__rel_path, '/');
-// Gold/GOLDAGE = depth 1  →  prefix = ''
-// Gold/GOLDAGE/citas = depth 2  →  prefix = '../'
-$__prefix = str_repeat('../', max(0, $__depth - 1));
+// Usar el __DIR__ del archivo que llamó, no el propio
+$__current  = str_replace('\\', '/', $__caller_dir ?? __DIR__);
+$__docroot  = str_replace('\\', '/', $_SERVER['DOCUMENT_ROOT']);
+$__rel_path = ltrim(str_replace($__docroot, '', $__current), '/');
+$__depth    = substr_count($__rel_path, '/');
+$__prefix   = str_repeat('../', max(0, $__depth - 1));
 ?>
 
       <!-- ===== NAV LINKS (dinámico con sesión) ===== -->

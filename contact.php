@@ -5,254 +5,432 @@ require_once __DIR__ . '/auth_check.php';
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact Us – GoldAge</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="css/contact.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/navbar_auth.css">
+  <link rel="stylesheet" href="css/styles.css"/>
+  <link rel="stylesheet" href="css/contact.css"/>
 </head>
+
 <body>
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.php" class="logo">
+        <img src="img/logo.png" alt="GoldAge Logo" class="logo-img">
+        <span class="logo-text">Gold<span class="logo-accent">Age</span></span>
+      </a>
+      <?php
+        $__caller_dir = __DIR__;
+        include __DIR__ . '/navbar_auth.php';
+      ?>
+    </div>
+  </nav>
 
-  <!-- NAVBAR -->
-<nav class="navbar" id="navbar">
-  <div class="nav-container">
+<!-- ===== HERO ===== -->
+<section class="page-hero contact-hero">
 
-    <!-- LOGO PRO -->
-    <a href="index.php" class="logo">
-      <img src="img/logo.png" alt="GoldAge Logo" class="logo-img">
-      <span class="logo-text">Gold<span class="logo-accent">Age</span></span>
-    </a>
+  <div class="page-hero-content fade-in">
 
-    <!-- LINKS -->
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.php" class="nav-link">Home</a></li>
-      <li><a href="services.php" class="nav-link">Services</a></li>
-      <li><a href="nurses.php" class="nav-link">Nurses</a></li>
-      <li><a href="about.php" class="nav-link active">About Us</a></li>
-      <li><a href="contact.php" class="nav-link">Contact Us</a></li>
-    </ul>
+    <span class="hero-badge">
+      Contact Us
+    </span>
 
-    <!-- HAMBURGER -->
-    <button class="hamburger" id="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <h1>
+      We are here <br/>
+      <em>for you</em>
+    </h1>
+
+    <p>
+      Schedule an appointment, resolve your doubts,
+      or join the team.
+    </p>
 
   </div>
-</nav>
 
-  <!-- PAGE HERO -->
-  <section class="page-hero contact-hero">
-    <div class="page-hero-content fade-in">
-      <h1>We are here<br /><em>for you</em></h1>
-      <p>Schedule an appointment, resolve your questions, or join the team. We respond in less than 2 hours.</p>
-    </div>
-  </section>
+</section>
 
-  <!-- CONTACT SECTION -->
-  <section class="contact-section section">
-    <div class="container">
-      <div class="contact-grid">
+<!-- ===== CONTACT ===== -->
+<section class="contact-section section">
 
-        <!-- Info -->
-        <div class="contact-info scroll-reveal">
-          <h2>Let’s talk</h2>
-          <p>You can contact us through any of these channels or fill out the form and we will respond shortly.</p>
+  <div class="container">
 
-          <div class="contact-cards">
-            <div class="contact-card">
-              <div class="cc-icon">📞</div>
-              <div>
-                <strong>Phone</strong>
-                <span>+503 7000-0000</span>
-                <small>Mon–Sun 6am – 10pm</small>
-              </div>
+    <div class="contact-grid">
+
+      <!-- ===== INFO ===== -->
+      <div class="contact-info scroll-reveal">
+
+        <h2>Let's Talk</h2>
+
+        <div class="contact-cards">
+
+          <!-- CARD -->
+          <div class="contact-card">
+
+            <div class="cc-icon">📞</div>
+
+            <div>
+
+              <strong>Phone Number</strong>
+
+              <span>+503 7000-0000</span>
+
+              <small>Sun – Mon 6am – 10pm</small>
+
             </div>
-            <div class="contact-card">
-              <div class="cc-icon">📧</div>
-              <div>
-                <strong>Email</strong>
-                <span>hola@goldage.com</span>
-                <small>We reply in &lt;2 hrs</small>
-              </div>
-            </div>
-            <div class="contact-card">
-              <div class="cc-icon">💬</div>
-              <div>
-                <strong>WhatsApp</strong>
-                <span>+503 7000-0001</span>
-                <small>Immediate support</small>
-              </div>
-            </div>
-            <div class="contact-card">
-              <div class="cc-icon">📍</div>
-              <div>
-                <strong>Office</strong>
-                <span>San Salvador, El Salvador</span>
-                <small>Escalón District, Main Avenue</small>
-              </div>
-            </div>
+
           </div>
+
+          <!-- CARD -->
+          <div class="contact-card">
+
+            <div class="cc-icon">📧</div>
+
+            <div>
+
+              <strong>Email</strong>
+
+              <span>hola@goldage.com</span>
+
+              <small>We answer in less than 2 hrs</small>
+
+            </div>
+
+          </div>
+
+          <!-- CARD -->
+          <div class="contact-card">
+
+            <div class="cc-icon">💬</div>
+
+            <div>
+
+              <strong>WhatsApp</strong>
+
+              <span>+503 7000-0001</span>
+
+              <small>Immediate attention</small>
+
+            </div>
+
+          </div>
+
+          <!-- CARD -->
+          <div class="contact-card">
+
+            <div class="cc-icon">📍</div>
+
+            <div>
+
+              <strong>Office</strong>
+
+              <span>San Salvador, El Salvador</span>
+
+              <small>Col. Escalón, Av. Principal</small>
+
+            </div>
+
+          </div>
+
         </div>
 
-        <!-- Form -->
-        <div class="contact-form-wrap scroll-reveal" style="--delay:0.2s">
-          <div class="form-header">
-            <h3>Schedule an appointment</h3>
-            <p>Fill out the form and a specialist will contact you.</p>
-          </div>
-          <div class="contact-form" id="contactForm">
-            <div class="form-row">
-              <div class="form-group">
-                <label>Full name</label>
-                <input type="text" id="name" placeholder="Maria Garcia" />
-              </div>
-              <div class="form-group">
-                <label>Phone</label>
-                <input type="tel" id="phone" placeholder="+503 0000-0000" />
-              </div>
-            </div>
+      </div>
+
+      <!-- ===== IMAGE ===== -->
+      <div class="contact-image scroll-reveal">
+
+        <img src="./img/señora 1.jpg" alt="Older woman smiling"/>
+
+      </div>
+
+      <!-- ===== FORM ===== -->
+      <div class="contact-form-wrap scroll-reveal">
+
+        <div class="form-header">
+
+          <h3>Leave a review</h3>
+
+          <p>
+            Share your experience with GoldAge.
+            Your feedback helps us improve.
+          </p>
+
+        </div>
+
+        <form class="contact-form" id="reviewForm">
+
+          <!-- ROW -->
+          <div class="form-row">
+
             <div class="form-group">
+
+              <label>Full Name</label>
+
+              <input
+                type="text"
+                id="name"
+                placeholder="Maria Garcia"
+              />
+
+            </div>
+
+            <div class="form-group">
+
               <label>Email</label>
-              <input type="email" id="email" placeholder="maria@email.com" />
+
+              <input
+                type="email"
+                id="email"
+                placeholder="maria@email.com"
+              />
+
             </div>
-            <div class="form-group">
-              <label>Service of interest</label>
-              <select id="service">
-                <option value="">Select a service...</option>
-                <option>24/7 home care</option>
-                <option>Palliative care</option>
-                <option>General consultations</option>
-                <option>Geriatric consultations</option>
-                <option>In-home physiotherapy</option>
-                <option>Standard monthly plan</option>
-                <option>Premium annual plan</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label>Message</label>
-              <textarea id="message" rows="4" placeholder="Tell us more about your family member’s needs..."></textarea>
-            </div>
-            <button type="button" class="btn btn-primary submit-btn" onclick="submitForm()">
-              Send message ✉️
-            </button>
-            <div class="form-success" id="formSuccess">
-              ✅ Message sent! We will contact you soon.
-            </div>
+
           </div>
+
+          <!-- STARS -->
+          <div class="form-group">
+
+            <label>Rating</label>
+
+            <div class="rating-stars" id="ratingStars">
+
+              <span data-value="1">★</span>
+              <span data-value="2">★</span>
+              <span data-value="3">★</span>
+              <span data-value="4">★</span>
+              <span data-value="5">★</span>
+
+            </div>
+
+          </div>
+
+          <!-- MESSAGE -->
+          <div class="form-group">
+
+            <label>Your review</label>
+
+            <textarea
+              id="message"
+              rows="4"
+              placeholder="Tell us about your experience..."
+            ></textarea>
+
+          </div>
+
+          <!-- BUTTON -->
+          <button
+            type="button"
+            class="btn btn-primary submit-btn"
+            onclick="submitReview()"
+          >
+            Submit Review ⭐
+          </button>
+          <div class="form-success" id="formSuccess">
+  ✅ Review submitted successfully!
+</div>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ===== FAQ SECTION ===== -->
+<section class="faq-section section">
+
+  <div class="container">
+
+    <!-- TITLE -->
+    <div class="section-label">
+      Frequently Asked Questions
+    </div>
+
+    <h2 class="section-title">
+      We answer your <span>questions</span>
+    </h2>
+
+    <!-- FAQ LIST -->
+    <div class="faq-list">
+
+      <!-- FAQ 1 -->
+      <div class="faq-item scroll-reveal">
+
+        <button
+          class="faq-question"
+          onclick="toggleFAQ(this)"
+        >
+          How do I schedule an appointment?
+          <span class="faq-arrow">▼</span>
+        </button>
+
+        <div class="faq-answer">
+
+          <p>
+            You can schedule through this form,
+            via WhatsApp, or by calling directly.
+          </p>
+
         </div>
 
       </div>
-    </div>
-  </section>
 
-  <!-- FAQ -->
-  <section class="faq-section section">
-    <div class="container">
-      <div class="section-label">Frequently Asked Questions</div>
-      <h2 class="section-title">We answer your <span>questions</span></h2>
-      <div class="faq-list">
-        <div class="faq-item scroll-reveal">
-          <button class="faq-question" onclick="toggleFAQ(this)">
-            How do I schedule an appointment? <span class="faq-arrow">▼</span>
-          </button>
-          <div class="faq-answer">
-            <p>You can schedule through this form, via WhatsApp, or by calling directly. A coordinator will assign the most suitable professional and confirm your appointment.</p>
-          </div>
+      <!-- FAQ 2 -->
+      <div class="faq-item scroll-reveal">
+
+        <button
+          class="faq-question"
+          onclick="toggleFAQ(this)"
+        >
+          How long does it take for a professional to arrive?
+          <span class="faq-arrow">▼</span>
+        </button>
+
+        <div class="faq-answer">
+
+          <p>
+            Usually between 30 and 60 minutes
+            depending on the location.
+          </p>
+
         </div>
-        <div class="faq-item scroll-reveal" style="--delay:0.1s">
-          <button class="faq-question" onclick="toggleFAQ(this)">
-            How long does it take for a professional to arrive? <span class="faq-arrow">▼</span>
-          </button>
-          <div class="faq-answer">
-            <p>For scheduled visits, we confirm 12 hours in advance. For emergencies, our response time is 30 to 60 minutes depending on the area.</p>
-          </div>
-        </div>
-        <div class="faq-item scroll-reveal" style="--delay:0.2s">
-          <button class="faq-question" onclick="toggleFAQ(this)">
-            What does the annual plan include? <span class="faq-arrow">▼</span>
-          </button>
-          <div class="faq-answer">
-            <p>The annual plan includes unlimited visits, medication reminders, general and geriatric consultations, 24/7 emergency care, and palliative care if needed.</p>
-          </div>
-        </div>
-        <div class="faq-item scroll-reveal" style="--delay:0.3s">
-          <button class="faq-question" onclick="toggleFAQ(this)">
-            Are the professionals verified? <span class="faq-arrow">▼</span>
-          </button>
-          <div class="faq-answer">
-            <p>Yes, all professionals undergo credential verification, background checks, psychological interviews, and internal training before attending patients.</p>
-          </div>
-        </div>
+
       </div>
-    </div>
-  </section>
 
-  <footer class="footer">
-    <div class="container">
-        <div class="footer-content">
+      <!-- FAQ 4 -->
+      <div class="faq-item scroll-reveal">
 
-            <!-- BRAND -->
-            <div class="footer-brand">
-                <a href="index.php" class="footer-logo">
-                    <img src="img/logo.png" alt="GoldAge Logo" class="footer-logo-img">
-                    <span class="footer-logo-text">
-                        Gold<span>Age</span>
-                    </span>
-                </a>
+        <button
+          class="faq-question"
+          onclick="toggleFAQ(this)"
+        >
+          Are the professionals verified?
+          <span class="faq-arrow">▼</span>
+        </button>
 
-                <p>
-                    Home health care with compassion, professionalism
-                    and warmth for every family.
-                </p>
+        <div class="faq-answer">
 
-                <div class="footer-socials">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-x-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-
-            <!-- LINKS -->
-            <div class="footer-links">
-                <h4>Navigation</h4>
-
-                <a href="index.php">Home</a>
-                <a href="services.php">Services</a>
-                <a href="nurses.php">Professionals</a>
-                <a href="about.php">About Us</a>
-                <a href="contact.php">Contact</a>
-            </div>
-
-            <!-- SERVICES -->
-            <div class="footer-links">
-                <h4>Services</h4>
-
-                <a href="#">Home Care</a>
-                <a href="#">24/7 Assistance</a>
-                <a href="#">Medical Visits</a>
-                <a href="#">Elderly Support</a>
-            </div>
-
-            <!-- CONTACT -->
-            <div class="footer-contact">
-                <h4>Contact</h4>
-
-                <p><i class="fas fa-envelope"></i> hello@goldage.com</p>
-                <p><i class="fas fa-phone"></i> +503 7000-0000</p>
-                <p><i class="fas fa-location-dot"></i> San Salvador, El Salvador</p>
-            </div>
+          <p>
+            Yes. All professionals go through
+            title verification, background checks,
+            psychological interviews, and internal
+            training before attending patients.
+          </p>
 
         </div>
 
-        <div class="footer-bottom">
-            <p>© 2026 GoldAge. All rights reserved.</p>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div class="faq-item scroll-reveal">
+
+        <button
+          class="faq-question"
+          onclick="toggleFAQ(this)"
+        >
+          Do you offer emergency services?
+          <span class="faq-arrow">▼</span>
+        </button>
+
+        <div class="faq-answer">
+
+          <p>
+            Yes. We provide 24/7 emergency care services
+            for urgent medical assistance at home.
+          </p>
+
         </div>
+
+      </div>
+
+      <!-- FAQ 6 -->
+      <div class="faq-item scroll-reveal">
+
+        <button
+          class="faq-question"
+          onclick="toggleFAQ(this)"
+        >
+          Can I choose my preferred nurse?
+          <span class="faq-arrow">▼</span>
+        </button>
+
+        <div class="faq-answer">
+
+          <p>
+            Absolutely. You may request a preferred nurse
+            depending on availability and your care needs.
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- FAQ 8 -->
+      <div class="faq-item scroll-reveal">
+
+        <button
+          class="faq-question"
+          onclick="toggleFAQ(this)"
+        >
+          Can family members receive updates about the patient?
+          <span class="faq-arrow">▼</span>
+        </button>
+
+        <div class="faq-answer">
+
+          <p>
+            Yes. We maintain communication with authorized
+            family members to provide updates and peace of mind.
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- FAQ 10 -->
+      <div class="faq-item scroll-reveal">
+
+        <button
+          class="faq-question"
+          onclick="toggleFAQ(this)"
+        >
+          Are your services available on weekends and holidays?
+          <span class="faq-arrow">▼</span>
+        </button>
+
+        <div class="faq-answer">
+
+          <p>
+            Yes. GoldAge operates every day,
+            including weekends and holidays.
+          </p>
+
+        </div>
+
+      </div>
+
     </div>
-</footer>
- 
-  <script src="js/main.js"></script>
-  <script src="js/contact.js"></script>
+
+  </div>
+
+</section>
+
+ <!-- ===== FOOTER ===== -->
+  <?php include 'footer.php'; ?>
+
+<!-- JS -->
+<script src="js/main.js"></script>
+<script src="js/contact.js"></script>
+<script src="js/navbar_auth.js"></script> 
 </body>
 </html>
+      
