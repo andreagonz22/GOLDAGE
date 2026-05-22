@@ -35,14 +35,14 @@ require_once __DIR__ . '/auth_check.php';
   <section class="page-hero services-hero">
 
     <div class="page-hero-content fade-in">
-      <span class="hero-badge">Our Services</span>
+     
       <h1>
         Professional Care<br />
         <em>At Your Home</em>
       </h1>
       <p>
-        We offer home healthcare services every day of the week
-        to help your family stay safe, healthy, and comfortable.
+        We offer home healthcare services every day
+        to help your family stay healthy and comfortable.
       </p>
     </div>
 
@@ -116,6 +116,14 @@ require_once __DIR__ . '/auth_check.php';
           <a href="./citas/agendar.php" class="btn btn-primary">
             Schedule Appointment
           </a>
+            <button class="btn-price" onclick="togglePrices(this)">
+              Prices
+              <ul class="price-dropdown">
+              <li>$45 <span>8 hrs</span></li>
+              <li>$90 <span>12 hrs</span></li>
+              <li>$100 <span>24 hrs</span></li>
+              </ul>
+            </button>
         </div>
       </div>
 
@@ -142,6 +150,14 @@ require_once __DIR__ . '/auth_check.php';
           <a href="./citas/agendar.php" class="btn btn-primary">
             Schedule Appointment
           </a>
+            <button class="btn-price" onclick="togglePrices(this)">
+              Prices
+              <ul class="price-dropdown">
+              <li>$45 <span>8 hrs</span></li>
+              <li>$90 <span>12 hrs</span></li>
+              <li>$100 <span>24 hrs</span></li>
+              </ul>
+            </button>
         </div>
       </div>
 
