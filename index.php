@@ -37,7 +37,7 @@ if (session_status() === PHP_SESSION_NONE) {
     
     <h1 class="hero-title">We care<br /><em>like family</em></h1>
     <p class="hero-desc">
-      Certified professionals come to your home to provide quality medical care with human warmth.
+     Certified professionals provide quality home medical care.
     </p>
 
     <!-- BOTONES -->
@@ -79,7 +79,8 @@ if (session_status() === PHP_SESSION_NONE) {
           <i class="fas fa-user-nurse"></i>
         </div>
         <h3>Medical Services</h3>
-        <p>Our team will work with you providing medical and nursing services.</p>
+        <p>Our team will work with you providing medical services.
+</p>
       </div>
 
       <!-- Reminders -->
@@ -88,7 +89,7 @@ if (session_status() === PHP_SESSION_NONE) {
           <i class="fas fa-bell"></i>
         </div>
         <h3>Reminders</h3>
-        <p>Manage health, safety, and notify next of kin of your maintenance.</p>
+        <p>Weekly reminders for your appointments and schedules.</p>
       </div>
 
       <!-- Home Care -->
@@ -97,7 +98,8 @@ if (session_status() === PHP_SESSION_NONE) {
           <i class="fas fa-house-medical"></i>
         </div>
         <h3>Home Care</h3>
-        <p>Our main goal is to help people maintain a family lifestyle in the comfort of home.</p>
+        <p>Our goal is to support a comfortable family life at home.
+</p>
       </div>
     </div>
   </div>
@@ -114,7 +116,8 @@ if (session_status() === PHP_SESSION_NONE) {
           </div>
           <div class="service-info">
             <h4>Home Care</h4>
-            <p>In-home support with daily activities, personal care, and companionship, provided by the hour or continuously.</p>
+            <p>We help people at home with personal care, and companionship, either for a few hours or full time.
+</p>
             <a href="services.php" class="btn-link">See more →</a>
           </div>
         </div>
@@ -125,7 +128,7 @@ if (session_status() === PHP_SESSION_NONE) {
           </div>
           <div class="service-info">
             <h4>Palliative care at home</h4>
-            <p>Care focused on relieving pain and other symptoms, improving quality of life for people with serious illnesses.</p>
+            <p>Palliative care at home helps manage discomfort and symptoms, improving comfort and quality of life for people with serious illnesses.</p>
             <a href="services.php" class="btn-link">See more →</a>
           </div>
         </div>
@@ -135,7 +138,7 @@ if (session_status() === PHP_SESSION_NONE) {
           </div>
           <div class="service-info">
             <h4>General medical consultations</h4>
-            <p>Basic medical care provided at home to evaluate, diagnose, and treat common health issues.</p>
+            <p>General consultations at home provide basic medical care to evaluate, diagnose, and treat common health problems.</p>
             <a href="services.php" class="btn-link">See more →</a>
           </div>
         </div>
@@ -183,7 +186,7 @@ if (session_status() === PHP_SESSION_NONE) {
             <img src="https://i.pravatar.cc/60?img=47" alt="María López" />
             <div>
               <strong>María López</strong>
-              <small>57 Years, San Salvador</small>
+              <small>36 Years, San Salvador</small>
             </div>
           </div>
         </div>
@@ -194,7 +197,7 @@ if (session_status() === PHP_SESSION_NONE) {
             <img src="https://i.pravatar.cc/60?img=12" alt="Carlos Méndez" />
             <div>
               <strong>Carlos Méndez</strong>
-              <small>54 Years, Santa Ana</small>
+              <small>40 Years, Santa Ana</small>
             </div>
           </div>
         </div>
