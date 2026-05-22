@@ -424,78 +424,8 @@ require_once __DIR__ . '/auth_check.php';
 
 </section>
 
-<!-- ===== FOOTER ===== -->
-<footer class="footer">
-
-  <div class="container">
-
-    <div class="footer-grid">
-
-      <!-- BRAND -->
-      <div class="footer-brand">
-
-        <a href="index.html" class="logo">
-
-          <img src="./img/logo.png" alt="" class="logo-img"/>
-
-          <span class="logo-text">
-            Gold<span class="logo-accent">Age</span>
-          </span>
-
-        </a>
-
-        <p>
-          Home health care with heart.
-        </p>
-
-      </div>
-
-      <!-- LINKS -->
-      <div class="footer-links">
-
-        <h5>Navigation</h5>
-
-        <ul>
-
-          <li>
-            <a href="index.html">Home</a>
-          </li>
-
-          <li>
-            <a href="services.html">Services</a>
-          </li>
-
-        </ul>
-
-      </div>
-
-      <!-- CONTACT -->
-      <div class="footer-contact">
-
-        <h5>Contact</h5>
-
-        <p>📧 hola@goldage.com</p>
-
-        <p>📞 +503 7000-0000</p>
-
-        <p>📍 San Salvador</p>
-
-      </div>
-
-    </div>
-
-    <!-- COPYRIGHT -->
-    <div class="footer-bottom">
-
-      <p>
-        © 2025 GoldAge. All rights reserved.
-      </p>
-
-    </div>
-
-  </div>
-
-</footer>
+ <!-- ===== FOOTER ===== -->
+  <?php include 'footer.php'; ?>
 
 <!-- JS -->
 <script src="js/main.js"></script>
