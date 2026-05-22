@@ -16,8 +16,6 @@ $result = $conn->query("SELECT IDEMPLEADO, NOMBRE_COMPLETO, PROFESION FROM EMPLE
 <div class="card">
 
   <h2>Agendar cita</h2>
-  <p class="subtitle">Reserva tu consulta con un profesional de salud</p>
-
   <form action="guardar_cita.php" method="POST">
 
     <div class="row">
@@ -36,8 +34,9 @@ $result = $conn->query("SELECT IDEMPLEADO, NOMBRE_COMPLETO, PROFESION FROM EMPLE
       <div class="select-wrap">
         <select name="duracion" required>
           <option value="" disabled selected>Selecciona duración</option>
-          <option value="1 hora">1 hora</option>
-          <option value="2 horas">2 horas</option>
+          <option value="1 hora">8 horas</option>
+          <option value="2 horas">12 horas</option>
+          <option value="2 horas">24 horas</option>
         </select>
       </div>
     </div>
@@ -61,7 +60,7 @@ $result = $conn->query("SELECT IDEMPLEADO, NOMBRE_COMPLETO, PROFESION FROM EMPLE
       </div>
     </div>
 
-    <button type="submit" class="btn">Agendar cita</button>
+    <button type="submit" class="btn">Realizar Pago</button>
   </form>
 
   <p class="footer-link">¿Ya tienes una cita? <a href="mis_citas.php">Ver mis citas</a></p>
