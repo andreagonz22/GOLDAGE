@@ -98,7 +98,8 @@ if (session_status() === PHP_SESSION_NONE) {
           <i class="fas fa-house-medical"></i>
         </div>
         <h3>Home Care</h3>
-        <p>Our main goal is to help people keep a comfortable family life while receiving care at home.</p>
+        <p>Our goal is to support a comfortable family life at home.
+</p>
       </div>
     </div>
   </div>
