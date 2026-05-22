@@ -37,10 +37,6 @@ require_once __DIR__ . '/auth_check.php';
 
   <div class="page-hero-content fade-in">
 
-    <span class="hero-badge">
-      Contact Us
-    </span>
-
     <h1>
       We are here <br/>
       <em>for you</em>
@@ -62,92 +58,67 @@ require_once __DIR__ . '/auth_check.php';
 
     <div class="contact-grid">
 
-      <!-- ===== INFO ===== -->
-      <div class="contact-info scroll-reveal">
+      <div class="contact-info-box scroll-reveal">
 
-        <h2>Let's Talk</h2>
+  <div class="contact-info">
 
-        <div class="contact-cards">
+    <h2>Let's Talk</h2>
 
-          <!-- CARD -->
-          <div class="contact-card">
+    <div class="contact-cards">
 
-            <div class="cc-icon">📞</div>
+      <!-- CARD -->
+      <div class="contact-card">
 
-            <div>
+        <div class="cc-icon">📞</div>
 
-              <strong>Phone Number</strong>
-
-              <span>+503 7000-0000</span>
-
-              <small>Sun – Mon 6am – 10pm</small>
-
-            </div>
-
-          </div>
-
-          <!-- CARD -->
-          <div class="contact-card">
-
-            <div class="cc-icon">📧</div>
-
-            <div>
-
-              <strong>Email</strong>
-
-              <span>hola@goldage.com</span>
-
-              <small>We answer in less than 2 hrs</small>
-
-            </div>
-
-          </div>
-
-          <!-- CARD -->
-          <div class="contact-card">
-
-            <div class="cc-icon">💬</div>
-
-            <div>
-
-              <strong>WhatsApp</strong>
-
-              <span>+503 7000-0001</span>
-
-              <small>Immediate attention</small>
-
-            </div>
-
-          </div>
-
-          <!-- CARD -->
-          <div class="contact-card">
-
-            <div class="cc-icon">📍</div>
-
-            <div>
-
-              <strong>Office</strong>
-
-              <span>San Salvador, El Salvador</span>
-
-              <small>Col. Escalón, Av. Principal</small>
-
-            </div>
-
-          </div>
-
+        <div>
+          <strong>Phone Number</strong>
+          <span>+503 7000-0000</span>
         </div>
 
       </div>
 
-      <!-- ===== IMAGE ===== -->
-      <div class="contact-image scroll-reveal">
+      <!-- CARD -->
+      <div class="contact-card">
 
-        <img src="./img/señora 1.jpg" alt="Older woman smiling"/>
+        <div class="cc-icon">📧</div>
+
+        <div>
+          <strong>Email</strong>
+          <span>hola@goldage.com</span>
+        </div>
 
       </div>
 
+      <!-- CARD -->
+      <div class="contact-card">
+
+        <div class="cc-icon">💬</div>
+
+        <div>
+          <strong>WhatsApp</strong>
+          <span>+503 7000-0001</span>
+        </div>
+
+      </div>
+
+      <!-- CARD -->
+      <div class="contact-card">
+
+        <div class="cc-icon">📍</div>
+
+        <div>
+          <strong>Office</strong>
+          <span>Col. Escalón, Av. Principal, San Salvador</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
       <!-- ===== FORM ===== -->
       <div class="contact-form-wrap scroll-reveal">
 
@@ -227,13 +198,14 @@ require_once __DIR__ . '/auth_check.php';
           <button
             type="button"
             class="btn btn-primary submit-btn"
-            onclick="submitReview()"
+            onclick="submitForm()"
           >
-            Submit Review ⭐
+            Submit Review
           </button>
+
           <div class="form-success" id="formSuccess">
-  ✅ Review submitted successfully!
-</div>
+             Review submitted successfully!
+          </div>
 
         </form>
 
@@ -251,9 +223,6 @@ require_once __DIR__ . '/auth_check.php';
   <div class="container">
 
     <!-- TITLE -->
-    <div class="section-label">
-      Frequently Asked Questions
-    </div>
 
     <h2 class="section-title">
       We answer your <span>questions</span>

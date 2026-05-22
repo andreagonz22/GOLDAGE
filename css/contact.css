@@ -62,9 +62,21 @@
 
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.9fr 1.1fr;
   gap: 40px;
-  align-items: stretch;
+  align-items: start;
+}
+
+/* ===== CONTACT INFO BOX ===== */
+
+.contact-info-box {
+  background: white;
+
+  padding: 20px;
+  border-radius: 24px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+  height: 610px;
+  width: 500px;
 }
 
 /* ===== INFO ===== */
@@ -127,37 +139,15 @@
   color: #6b7280;
 }
 
-/* ===== IMAGE ===== */
-.contact-image {
-  height: 100%;
-  display: flex;
-  
-}
-
-.contact-image img {
-  width: 98%;
-  height: 90%;
-  margin: 10%;
-  object-fit: cover;
-  border-radius: 20px;
-  display: fle;
-  
-}
 
 /* ===== FORM ===== */
 .contact-form-wrap {
-  grid-column: span 2;
-  margin-top: 20px;
   background: white;
-  padding: 40px;
+  padding: 30px;
   border-radius: 20px;
   box-shadow: 0 12px 45px rgba(0,0,0,0.08);
-  max-width: 800px;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
 }
-
 .form-header {
   text-align: center;
   margin-bottom: 30px;
@@ -237,29 +227,6 @@
   text-align: center;
 }
 
-/* TITLE */
-.section-label {
-  display: inline-block;
-  padding: 8px 18px;
-  border-radius: 999px;
-  background: #eef7f1;
-  color: var(--mint-dark);
-  font-size: 13px;
-  font-weight: 600;
-  margin-bottom: 16px;
-}
-
-.section-title {
-  font-size: clamp(32px, 5vw, 48px);
-  font-weight: 800;
-  color: var(--text);
-  margin-bottom: 40px;
-}
-
-.section-title span {
-  color: var(--mint-dark);
-}
-
 /* FAQ LIST */
 .faq-list {
   max-width: 760px;
@@ -282,7 +249,7 @@
   transform: translateY(-2px);
 }
 
-/* QUESTION BUTTON */
+/* QUESTION */
 .faq-question {
   width: 100%;
   padding: 22px 24px;
@@ -326,14 +293,30 @@
   margin: 0;
 }
 
-/* ACTIVE */
-.faq-item.active .faq-answer {
+/* OPEN */
+.faq-answer.open {
   max-height: 300px;
   padding: 0 24px 24px;
 }
 
-.faq-item.active .faq-arrow {
+.faq-question.open .faq-arrow {
   transform: rotate(180deg);
+}
+
+/* SUCCESS MESSAGE */
+.form-success {
+  display: none;
+  margin-top: 16px;
+  padding: 14px;
+  border-radius: 12px;
+  background: #dff5e8;
+  color: #1f7a4d;
+  text-align: center;
+  font-weight: 600;
+}
+
+.form-success.visible {
+  display: block;
 }
 
 /* RESPONSIVE */
