@@ -30,7 +30,7 @@ $empleados = $conn->query("
   <h2>Agendar cita</h2>
 
   <!-- FIX: action apunta a guardar_cita.php (antes apuntaba a formpago.php) -->
-  <form action="citas/guardar_cita.php" method="POST">
+  <form action="guardar_cita.php" method="POST">
 
     <!-- FECHA Y HORA -->
     <div class="row">
