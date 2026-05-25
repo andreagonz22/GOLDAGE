@@ -347,37 +347,17 @@ ul{
 
   color:white;
 
-  background:
-  linear-gradient(
-    rgba(18,25,35,0.60),
-    rgba(18,25,35,0.70)
-  ),
+  background-image: url("https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2070&auto=format&fit=crop");
 
-  url('img/doctorpanel.jpg')
-  center/cover;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
 
   overflow:hidden;
 }
 
-.hero::before{
 
-  content:"";
 
-  position:absolute;
-
-  width:500px;
-  height:500px;
-
-  background:
-  rgba(84,119,146,0.18);
-
-  border-radius:50%;
-
-  filter:blur(90px);
-
-  top:-150px;
-  right:-100px;
-}
 
 
 /* HERO TEXT */

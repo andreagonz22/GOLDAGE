@@ -20,7 +20,7 @@ $__prefix   = str_repeat('../', max(0, $__depth - 1));
       <ul class="nav-links" id="navLinks">
         <li><a href="<?= $__prefix ?>index.php" class="nav-link">Home</a></li>
         <li><a href="<?= $__prefix ?>services.php" class="nav-link">Services</a></li>
-        <li><a href="<?= $__prefix ?>nurses.php" class="nav-link">Nurses</a></li>
+        <li><a href="<?= $__prefix ?>nurses.php" class="nav-link active">Nurses</a></li>
         <li><a href="<?= $__prefix ?>about.php" class="nav-link">About Us</a></li>
         <li><a href="<?= $__prefix ?>contact.php" class="nav-link">Contact Us</a></li>
 
