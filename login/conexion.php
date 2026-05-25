@@ -8,7 +8,7 @@ $pass = "";
 $db = "usuarios";
 
 //Eliminar los numeros para que les funcione con el puerto 3306, si no estan agregar ", 3307"
-$conn = new mysqli("127.0.0.1", "root", "", "usuarios", );
+$conn = new mysqli("127.0.0.1", "root", "", "usuarios");
 if ($conn->connect_error) {
     die("Error de conexión: " . $conn->connect_error);
 }

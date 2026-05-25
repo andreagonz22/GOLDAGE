@@ -1,19 +1,14 @@
-/* ===== VARIABLES ===== */
 :root{
   --mint:#4ce7da;
   --mint-light:#4adfd2;
   --mint-dark:#80cbc4;
-
   --blue:#547792;
   --blue-light:#94b4c1;
   --blue-dark:#213448;
-
   --beige:#f8faf7;
   --beige-2:#fbf8ef;
-
   --yellow:#ffd700;
   --yellow-dark:#efbf04;
-
   --text:#2d3748;
   --text-light:#718096;
   --white:     #fbf8ef;
@@ -1263,4 +1258,12 @@ ul{
     font-size:1.1rem;
   }
 
+}
+.hero-desc,
+.feature-card p,
+.service-info p,
+.testimonial-text {
+    text-align: justify !important;
+    text-justify: inter-word;
+    max-width: 100%;
 }

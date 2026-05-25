@@ -1,17 +1,16 @@
-
 :root {
   --btn-color: #80cbc4;
   --btn-hover-bg: #80cbc4;
   --btn-hover-text: #ffffff;
   --mint-dark: #80cbc4;
-  --blue-dark: #3a7bd5;
-  --text-light: #666;
+  --blue-dark: #213448;
+  --text-light: #718096;
   --beige: #f8faf7;
   --radius-lg: 16px;
   --shadow-lg: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-/* Page Hero */ 
+/* Page Hero */
 .page-hero {
   min-height: 42vh;
   display: flex;
@@ -28,9 +27,14 @@
   background: linear-gradient(135deg, #d4ede0 0%, #d0e8f5 100%);
 }
 
-.page-hero-content { max-width: 680px; }
+.page-hero-content {
+  max-width: 680px;
+}
 
-.page-hero em { font-style: normal; color: var(--mint-dark); }
+.page-hero em {
+  font-style: normal;
+  color: var(--mint-dark);
+}
 
 .page-hero h1 {
   font-size: clamp(32px, 5vw, 56px);
@@ -48,7 +52,9 @@
 }
 
 /* Service Rows */
-.services-list { background: var(--beige); }
+.services-list {
+  background: var(--beige);
+}
 
 .service-row {
   display: flex;
@@ -58,7 +64,9 @@
   flex-wrap: wrap;
 }
 
-.service-row-reverse { flex-direction: row-reverse; }
+.service-row-reverse {
+  flex-direction: row-reverse;
+}
 
 .service-row-img {
   flex: 1;
@@ -67,6 +75,7 @@
 }
 
 .service-row-img img {
+  width: 100%;
   border-radius: var(--radius-lg);
   aspect-ratio: 4/3;
   object-fit: cover;
@@ -96,7 +105,6 @@
   color: var(--text-light);
   line-height: 1.75;
   margin-bottom: 20px;
-
 }
 
 .service-detail-list {
@@ -112,41 +120,21 @@
   color: var(--text-light);
 }
 
-/* TAGS (24/7, Schedules, General) */
+/* TAG */
 .service-tag {
   color: #fff;
   font-weight: 600;
 }
 
-/* Services CTA */
-.services-cta {
-  padding: 60px 0;
-  background: var(--beige);
+/* BOTONES */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  text-decoration: none;
 }
 
-.scta-inner {
-  background: linear-gradient(135deg, var(--mint-dark), var(--blue-dark));
-  border-radius: var(--radius-lg);
-  padding: 56px 48px;
-  text-align: center;
-  color: #fff;
-}
-
-.scta-inner h2 {
-  font-size: clamp(22px, 3vw, 36px);
-  font-weight: 800;
-  margin-bottom: 12px;
-}
-
-.scta-inner p {
-  font-size: 16px;
-  opacity: 0.85;
-  margin-bottom: 28px;
-}
-
-/* =========================
-   BOTONES (ESTILO OUTLINE)
-   ========================= */
 .btn-primary {
   background: transparent;
   color: var(--btn-color);
@@ -164,16 +152,74 @@
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-/* CTA botón específico */
-.scta-inner .btn-primary {
-  background: transparent;
-  color: #fff;
-  border: 2px solid #fff;
+/* CTA ROW */
+.service-cta-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 10px;
 }
 
-.scta-inner .btn-primary:hover {
+/* PRICE BUTTON */
+.btn-price {
+  background: transparent;
+  color: var(--mint-dark);
+  border: 2px solid var(--mint-dark);
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  font-family: inherit;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+/* DROPDOWN */
+.price-dropdown {
+  display: none;
+  position: absolute;
+
+  bottom: calc(100% + 10px);
+  left: 0;
+
   background: #fff;
-  color: var(--btn-hover-bg);
+  border: 1.5px solid var(--mint-dark);
+  border-radius: 14px;
+  padding: 10px 0;
+  min-width: 170px;
+  z-index: 100;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+  list-style: none;
+  margin: 0;
+}
+
+.price-dropdown.open {
+  display: block;
+}
+
+.price-dropdown li {
+  padding: 9px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--mint-dark);
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 0.5px solid #e0f2f1;
+}
+
+.price-dropdown li:last-child {
+  border-bottom: none;
+}
+
+.price-dropdown li span {
+  color: #999;
+  font-weight: 400;
 }
 
 /* RESPONSIVE */
@@ -186,9 +232,5 @@
 
   .service-row-img {
     max-width: 100%;
-  }
-
-  .scta-inner {
-    padding: 36px 24px;
   }
 }
