@@ -9,7 +9,7 @@
   <div class="login-card">
 
     <a class="login-logo">
-    <img src=""></a>
+    <img src="logo.png"></a>
 
     <h2>Welcome Back</h2>
     <p class="subtitle">Sign in to continue</p>
@@ -17,13 +17,13 @@
     <form action="validate_login.php" method="POST">
 
       <div class="form-group">
-        <label for="email">Email Address</label>
+        <label for="gmail">Email Address</label>
 
         <input 
-          type="email" 
-          id="email" 
-          name="email" 
-          placeholder="maria@email.com"
+          type="gmail" 
+          id="gmail" 
+          name="gmail" 
+          placeholder="maria@gmail.com"
           required>
       </div>
 
