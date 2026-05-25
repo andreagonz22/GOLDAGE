@@ -17,10 +17,10 @@
                 </p>
 
                 <div class="footer-socials">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-x-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.facebook.com/share/1CtpCrii5B/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/goldage.sv?utm_source=qr&igsh=MXdwYjFzdjFhOWJ3cA==lñ"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/GoldAgeOfsv"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/gold-age-517407411?utm_source=share_via&utm_content=profile&utm_medium=member_android"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
 
