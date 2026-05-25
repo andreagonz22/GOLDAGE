@@ -2,7 +2,7 @@
    GoldAge – about.css
    ===================================================== */
 
-.about-hero {
+   .about-hero {
   background: linear-gradient(135deg, #f0ebe0 0%, #d4ede0 100%);
 }
 
@@ -42,7 +42,7 @@
 
 /* Values */
 .values-section {
-  background: linear-gradient(135deg, #eaf7f0 0%, #e8f4fb 100%);
+  background: linear-gradient(135deg, #fbfffd 0%, #f2f5f7 100%);
 }
 .values-grid {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
@@ -54,16 +54,85 @@
   transition: var(--transition); position: relative; overflow: hidden;
 }
 .value-item:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-.value-num {
-  font-size: 60px; font-weight: 800;
-  color: var(--mint-light); position: absolute;
-  top: 10px; right: 20px; line-height: 1;
-  pointer-events: none;
-}
+
+
 .value-item h4 { font-size: 17px; font-weight: 700; margin-bottom: 10px; }
 .value-item p { font-size: 14px; color: var(--text-light); line-height: 1.7; }
 
 @media (max-width: 768px) {
   .story-inner { flex-direction: column; }
   .story-img { max-width: 100%; }
+}
+
+/* SECTION */
+.about-us {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+/* TITULO */
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 60px;
+}
+
+/* GRID */
+.about-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* ITEM */
+.about-item {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* INVERTIR */
+.about-item.reverse {
+  flex-direction: row-reverse;
+}
+
+/* IMAGEN */
+.about-item img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* TEXTO */
+.about-text {
+  flex: 1;
+  min-width: 260px;
+}
+
+.about-text h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.about-text p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .about-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-item.reverse {
+    flex-direction: column;
+  }
 }

@@ -11,19 +11,13 @@ if (session_status() === PHP_SESSION_NONE) {
   <title>GOLDAGE</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
-
-    <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-
-  <!-- Font Awesome (ICONOS PRO) -->
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <link rel="stylesheet" href="css/navbar_auth.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-
   <!-- ===== NAVBAR ===== -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
@@ -31,7 +25,6 @@ if (session_status() === PHP_SESSION_NONE) {
         <img src="img/logo.png" alt="GoldAge Logo" class="logo-img">
         <span class="logo-text">Gold<span class="logo-accent">Age</span></span>
       </a>
-
       <?php
         include __DIR__ . '/navbar_auth.php';
       ?>
@@ -40,17 +33,17 @@ if (session_status() === PHP_SESSION_NONE) {
 
 <!-- ===== HERO ===== -->
 <section class="hero" id="home">
-
-
+  <div class="hero-content fade-in">
+    
     <h1 class="hero-title">We care<br /><em>like family</em></h1>
     <p class="hero-desc">
-      Certified professionals come to your home to provide quality medical care with human warmth.
+     Certified professionals provide quality home medical care.
     </p>
 
     <!-- BOTONES -->
     <div class="hero-actions">
-      <a href="services.html" class="btn btn-primary">View Services</a>
-      <a href="contact.html" class="btn btn-outline">Schedule Appointment</a>
+      <a href="services.php" class="btn btn-primary">View Services</a>
+      <a href="./citas/agendar.php" class="btn btn-outline">Schedule Appointment</a>
     </div>
   </div>
 
@@ -76,36 +69,37 @@ if (session_status() === PHP_SESSION_NONE) {
 <!-- ===== FEATURES ===== -->
 <section class="features section" id="features">
   <div class="container">
-    <div class="section-label">Why Choose Us?</div>
     <h2 class="section-title">Comprehensive care <span>For your family</span></h2>
 
     <div class="features-grid">
 
       <!-- Medical -->
       <div class="feature-card scroll-reveal">
-        <div class="feature-icon" style="--icon-color: #a8d5ba;">
+        <div class="feature-icon" style="--icon-color: #4adfd380;">
           <i class="fas fa-user-nurse"></i>
         </div>
         <h3>Medical Services</h3>
-        <p>Our team will work with you providing medical and nursing services.</p>
+        <p>Our team will work with you providing medical services.
+</p>
       </div>
 
       <!-- Reminders -->
       <div class="feature-card scroll-reveal" style="--delay: 0.15s">
-        <div class="feature-icon" style="--icon-color: #b3cfe8;">
+        <div class="feature-icon" style="--icon-color: #54779281;">
           <i class="fas fa-bell"></i>
         </div>
         <h3>Reminders</h3>
-        <p>Manage health, safety, and notify next of kin of your maintenance.</p>
+        <p>Weekly reminders for your appointments and schedules.</p>
       </div>
 
       <!-- Home Care -->
       <div class="feature-card scroll-reveal" style="--delay: 0.3s">
-        <div class="feature-icon" style="--icon-color: #f5e6c8;">
+        <div class="feature-icon" style="--icon-color: #efc00477;">
           <i class="fas fa-house-medical"></i>
         </div>
         <h3>Home Care</h3>
-        <p>Our main goal is to help people maintain a family lifestyle in the comfort of home.</p>
+        <p>Our goal is to support a comfortable family life at home.
+</p>
       </div>
     </div>
   </div>
@@ -114,7 +108,6 @@ if (session_status() === PHP_SESSION_NONE) {
   <!-- ===== SERVICIOS CARDS ===== -->
   <section class="services-preview section" id="services">
     <div class="container">
-      <div class="section-label">What We Offer</div>
       <h2 class="section-title">Health Services<span> at home</span></h2>
       <div class="services-grid">
         <div class="service-card scroll-reveal">
@@ -122,10 +115,10 @@ if (session_status() === PHP_SESSION_NONE) {
             <img src="https://tusangeles.com.mx/wp-content/uploads/2024/01/enfermera-feliz-sosteniendo-mano-anciano-silla-ruedas-jardin-hogar-ancianos-2048x1365.jpg" alt="Atención domiciliaria" />
           </div>
           <div class="service-info">
-            <span class="service-tag">24/7</span>
             <h4>Home Care</h4>
-            <p>In-home support with daily activities, personal care, and companionship, provided by the hour or continuously.</p>
-            <a href="services.html" class="btn-link">See more →</a>
+            <p>We help people at home with personal care, and companionship, either for a few hours or full time.
+</p>
+            <a href="services.php" class="btn-link">See more →</a>
           </div>
         </div>
          
@@ -134,10 +127,9 @@ if (session_status() === PHP_SESSION_NONE) {
             <img src="https://media.istockphoto.com/id/1650853784/photo/doctor-senior-patient-and-blood-pressure-check-with-consultation-talking-and-help-health-in.jpg?s=612x612&w=0&k=20&c=ODv-wA2E7-FNv527tZ6GuKJ9LnFP2GMSebF56GEox3o=" alt="Consultas generales" />
           </div>
           <div class="service-info">
-            <span class="service-tag">Schedules</span>
             <h4>Palliative care at home</h4>
-            <p>Care focused on relieving pain and other symptoms, improving quality of life for people with serious illnesses.</p>
-            <a href="services.html" class="btn-link">See more →</a>
+            <p>Palliative care at home helps manage discomfort and symptoms, improving comfort and quality of life for people with serious illnesses.</p>
+            <a href="services.php" class="btn-link">See more →</a>
           </div>
         </div>
         <div class="service-card scroll-reveal" style="--delay: 0.3s">
@@ -145,10 +137,9 @@ if (session_status() === PHP_SESSION_NONE) {
             <img src="https://www.shutterstock.com/image-photo/senior-doctor-white-medical-gown-600nw-2152462045.jpg" alt="Consultas geriátricas" />
           </div>
           <div class="service-info">
-            <span class="service-tag">General</span>
             <h4>General medical consultations</h4>
-            <p>Basic medical care provided at home to evaluate, diagnose, and treat common health issues.</p>
-            <a href="services.html" class="btn-link">See more →</a>
+            <p>General consultations at home provide basic medical care to evaluate, diagnose, and treat common health problems.</p>
+            <a href="services.php" class="btn-link">See more →</a>
           </div>
         </div>
       </div>
@@ -185,7 +176,7 @@ if (session_status() === PHP_SESSION_NONE) {
   <!-- ===== TESTIMONIOS ===== -->
   <section class="testimonials section">
     <div class="container">
-      <div class="section-label">Testimonials</div>
+  
       <h2 class="section-title">The happiness of the customers <span>speaks for us</span></h2>
       <div class="testimonials-grid">
         <div class="testimonial-card scroll-reveal">
@@ -195,7 +186,7 @@ if (session_status() === PHP_SESSION_NONE) {
             <img src="https://i.pravatar.cc/60?img=47" alt="María López" />
             <div>
               <strong>María López</strong>
-              <small>57 Years, San Salvador</small>
+              <small>36 Years, San Salvador</small>
             </div>
           </div>
         </div>
@@ -206,7 +197,7 @@ if (session_status() === PHP_SESSION_NONE) {
             <img src="https://i.pravatar.cc/60?img=12" alt="Carlos Méndez" />
             <div>
               <strong>Carlos Méndez</strong>
-              <small>54 Years, Santa Ana</small>
+              <small>40 Years, Santa Ana</small>
             </div>
           </div>
         </div>
@@ -223,119 +214,15 @@ if (session_status() === PHP_SESSION_NONE) {
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- ===== PLANES ===== -->
-  <section class="plans section" id="plans">
-    <div class="container">
-      <div class="section-label" style="color:#a8d5ba">Plans</div>
-      <h2 class="section-title" style="color:#fff">Get a <span style="color:#f9c74f">premium plan</span></h2>
-      <p class="plans-subtitle">Choose the plan that best suits your family's needs</p>
-      <div class="plans-grid">
-        <div class="plan-card scroll-reveal">
-          <div class="plan-badge">Standard</div>
-          <div class="plan-price">
-            <span class="price-currency">$</span>
-            <span class="price-amount">58</span>
-            <span class="price-period">/month</span>
-          </div>
-          <ul class="plan-features">
-            <li>✅ 4 visits per month</li>
-            <li>✅ Medication reminders</li>
-            <li>✅ 3 Free general consultations</li>
-            <li>⬜ Geriatric consultation</li>
-          </ul>
-          <a href="contact.html" class="btn btn-plan">Select Plan</a>
-        </div>
-        <div class="plan-card plan-featured scroll-reveal" style="--delay: 0.2s">
-          <div class="plan-badge popular-badge">Most Popular</div>
-          <div class="plan-price">
-            <span class="price-currency">$</span>
-            <span class="price-amount">128</span>
-            <span class="price-period">/ Year</span>
-          </div>
-          <ul class="plan-features">
-            <li>✅ Unlimited visits</li>
-            <li>✅ Smart reminders</li>
-            <li>✅ General inquiries</li>
-            <li>✅ 24/7 emergency care</li>
-            <li>✅Unlimited geriatric consultations</li>
-            <li>✅ Home care</li>
-          </ul>
-          <a href="contact.html" class="btn btn-plan-featured">Select Plan</a>
-        </div>
-      </div>
-    </div>
-  </section>
+  </section>  
 
   <br><br><br>
-<footer class="footer">
-    <div class="container">
-        <div class="footer-content">
+  <!-- ===== FOOTER ===== -->
+  <?php include 'footer.php'; ?>
+  <!-- ===== SCRIPTS ===== -->
+  <script src="js/main.js"></script>
+  <!-- Script del menú de autenticación (NUEVO) -->
+  <script src="js/navbar_auth.js"></script>
 
-            <!-- BRAND -->
-            <div class="footer-brand">
-                <a href="index.php" class="footer-logo">
-                    <img src="img/logo.png" alt="GoldAge Logo" class="footer-logo-img">
-                    <span class="footer-logo-text">
-                        Gold<span>Age</span>
-                    </span>
-                </a>
-
-                <p>
-                    Home health care with compassion, professionalism
-                    and warmth for every family.
-                </p>
-
-                <div class="footer-socials">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-x-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-
-            <!-- LINKS -->
-            <div class="footer-links">
-                <h4>Navigation</h4>
-
-                <a href="index.php">Home</a>
-                <a href="services.php">Services</a>
-                <a href="nurses.php">Professionals</a>
-                <a href="about.php">About Us</a>
-                <a href="contact.php">Contact</a>
-            </div>
-
-            <!-- SERVICES -->
-            <div class="footer-links">
-                <h4>Services</h4>
-
-                <a href="#">Home Care</a>
-                <a href="#">24/7 Assistance</a>
-                <a href="#">Medical Visits</a>
-                <a href="#">Elderly Support</a>
-            </div>
-
-            <!-- CONTACT -->
-            <div class="footer-contact">
-                <h4>Contact</h4>
-
-                <p><i class="fas fa-envelope"></i> hello@goldage.com</p>
-                <p><i class="fas fa-phone"></i> +503 7000-0000</p>
-                <p><i class="fas fa-location-dot"></i> San Salvador, El Salvador</p>
-            </div>
-
-        </div>
-
-        <div class="footer-bottom">
-            <p>© 2026 GoldAge. All rights reserved.</p>
-        </div>
-    </div>
-</footer>
- 
-  <script src="js/main.js"
-  
-  
-  ></script>
 </body>
 </html>

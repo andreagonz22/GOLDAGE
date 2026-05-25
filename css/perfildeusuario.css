@@ -1,0 +1,265 @@
+:root{
+    --primary:#7bc7c0;
+    --primary-dark:#4fb5aa;
+    --secondary:#1d2d44;
+    --bg:#f3f7fb;
+    --white:#ffffff;
+    --text:#1e293b;
+    --text-light:#64748b;
+    --border:#e2e8f0;
+    --warning:#f59e0b;
+    --success:#10b981;
+    --shadow:0 10px 40px rgba(15,23,42,.08);
+}
+
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background: white;
+    color:var(--text);
+    padding-top:100px;
+}
+
+/* CONTAINER */
+.container{
+    width:92%;
+    max-width:1400px;
+    margin:auto;
+    padding:40px 0;
+}
+
+/* GRID */
+.dashboard-grid{
+    display:grid;
+    grid-template-columns:360px 1fr;
+    gap:30px;
+}
+
+/* COLUMNS */
+.left-column,.right-column{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+/* CARD */
+.card{
+    background:rgba(255,255,255,.75);
+    backdrop-filter:blur(16px);
+    border-radius:25px;
+    padding:25px;
+    box-shadow:var(--shadow);
+}
+
+/* PROFILE */
+.profile-card{
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+    
+}
+
+.profile-cover{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:120px;
+    background:linear-gradient(135deg,#7bc7c0,#4fb5aa);
+}
+
+.profile-image{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    border:5px solid white;
+    margin-top:60px;
+    position:relative;
+    z-index:2;
+}
+
+.profile-card h2{
+    margin-top:15px;
+    color:var(--secondary);
+}
+
+.email{
+    color:var(--text-light);
+    font-size:.9rem;
+}
+
+/* INFO */
+.info-item{
+    display:flex;
+    gap:15px;
+    margin-top:20px;
+    align-items:center;
+}
+
+.icon-box{
+    width:45px;
+    height:45px;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#ecfeff;
+    color:var(--primary-dark);
+}
+
+/* PATIENT */
+.patient-grid{
+    display:grid;
+    gap:15px;
+}
+
+.patient-box{
+    background:white;
+    padding:18px;
+    border-radius:15px;
+}
+
+.patient-box span{
+    font-size:.8rem;
+    color:var(--text-light);
+}
+
+/* HEADER SUPERIOR */
+.top-bar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.top-bar h1{
+    font-size:1.7rem;
+    color:var(--secondary);
+}
+
+.top-bar p{
+    color:var(--text-light);
+}
+
+/* FECHA */
+.date-box{
+    background:white;
+    padding:10px 16px;
+    border-radius:12px;
+    box-shadow:var(--shadow);
+    font-weight:600;
+}
+
+/* SUMMARY */
+.summary-cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.summary-card{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+
+    height:100%; /* 🔥 importante */
+}
+
+
+.summary-card i{
+    background:linear-gradient(135deg,var(--primary),var(--primary-dark));
+    color:white;
+    padding:12px;
+    border-radius:12px;
+}
+
+.summary-card.success i{
+    background:linear-gradient(135deg,#10b981,#059669);
+}
+
+.summary-card h2{
+    font-size:1.4rem;
+}
+
+.summary-card p{
+    font-size:.8rem;
+    color:var(--text-light);
+}
+
+/* HEADERS */
+.card-header h3{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:var(--secondary);
+}
+
+/* APPOINTMENTS */
+.appointment{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px;
+    border-radius:18px;
+    margin-bottom:15px;
+}
+
+.appointment.pending{
+    background:#fff7ed;
+    border-left:5px solid var(--warning);
+}
+
+.appointment.done{
+    background:#ecfdf5;
+    border-left:5px solid var(--success);
+}
+
+.appointment-info h4{
+    color:var(--secondary);
+}
+
+.appointment-info p{
+    font-size:.85rem;
+    color:var(--text-light);
+}
+
+.status{
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:.8rem;
+}
+
+.done-status{
+    background:#d1fae5;
+    color:#065f46;
+}
+
+/* BUTTON */
+button{
+    border:none;
+    background:linear-gradient(135deg,#7bc7c0,#4fb5aa);
+    color:white;
+    padding:10px 18px;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+button:hover{
+    opacity:.9;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .dashboard-grid{
+        grid-template-columns:1fr;
+    }
+
+    .summary-cards{
+        grid-template-columns:1fr;
+    }
+}
