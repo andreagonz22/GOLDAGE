@@ -45,12 +45,12 @@
 
     <p class="login-footer">
       Don't have an account?
-      <a href="register.php">Create Account</a>
+      <a href="registro.php">Create Account</a>
     </p>
 
     <p class="login-footer">
       Are you an employee?
-      <a href="../employees/employee_login.php">Sign In</a>
+      <a href="../empleados/login_empleado.php">Sign In</a>
     </p>
 
   </div>
