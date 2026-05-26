@@ -11,10 +11,9 @@ if (session_status() === PHP_SESSION_NONE) {
   <title>GOLDAGE</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  
+  <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/navbar_auth.css">
-  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
@@ -37,7 +36,7 @@ if (session_status() === PHP_SESSION_NONE) {
     
     <h1 class="hero-title">We care<br /><em>like family</em></h1>
     <p class="hero-desc">
-      Certified professionals come to your home to provide quality medical care with human warmth.
+     Certified professionals provide quality home medical care.
     </p>
 
     <!-- BOTONES -->
@@ -75,29 +74,31 @@ if (session_status() === PHP_SESSION_NONE) {
 
       <!-- Medical -->
       <div class="feature-card scroll-reveal">
-        <div class="feature-icon" style="--icon-color: #4adfd380;">
+        <div class="feature-icon" style="--icon-color: #a8d5ba;">
           <i class="fas fa-user-nurse"></i>
         </div>
         <h3>Medical Services</h3>
-        <p>Our team will work with you providing medical and nursing services.</p>
+        <p>Our team will work with you providing medical services.
+</p>
       </div>
 
       <!-- Reminders -->
       <div class="feature-card scroll-reveal" style="--delay: 0.15s">
-        <div class="feature-icon" style="--icon-color: #54779281;">
+        <div class="feature-icon" style="--icon-color: #b3cfe8;">
           <i class="fas fa-bell"></i>
         </div>
         <h3>Reminders</h3>
-        <p>Manage health, safety, and notify next of kin of your maintenance.</p>
+        <p>Weekly reminders for your appointments and schedules.</p>
       </div>
 
       <!-- Home Care -->
       <div class="feature-card scroll-reveal" style="--delay: 0.3s">
-        <div class="feature-icon" style="--icon-color: #efc00477;">
+        <div class="feature-icon" style="--icon-color: #f5e6c8;">
           <i class="fas fa-house-medical"></i>
         </div>
         <h3>Home Care</h3>
-        <p>Our main goal is to help people maintain a family lifestyle in the comfort of home.</p>
+        <p>Our goal is to support a comfortable family life at home.
+</p>
       </div>
     </div>
   </div>
@@ -114,7 +115,8 @@ if (session_status() === PHP_SESSION_NONE) {
           </div>
           <div class="service-info">
             <h4>Home Care</h4>
-            <p>In-home support with daily activities, personal care, and companionship, provided by the hour or continuously.</p>
+            <p>We help people at home with personal care, and companionship, either for a few hours or full time.
+</p>
             <a href="services.php" class="btn-link">See more →</a>
           </div>
         </div>
@@ -125,7 +127,7 @@ if (session_status() === PHP_SESSION_NONE) {
           </div>
           <div class="service-info">
             <h4>Palliative care at home</h4>
-            <p>Care focused on relieving pain and other symptoms, improving quality of life for people with serious illnesses.</p>
+            <p>Palliative care at home helps manage discomfort and symptoms, improving comfort and quality of life for people with serious illnesses.</p>
             <a href="services.php" class="btn-link">See more →</a>
           </div>
         </div>
@@ -135,7 +137,7 @@ if (session_status() === PHP_SESSION_NONE) {
           </div>
           <div class="service-info">
             <h4>General medical consultations</h4>
-            <p>Basic medical care provided at home to evaluate, diagnose, and treat common health issues.</p>
+            <p>General consultations at home provide basic medical care to evaluate, diagnose, and treat common health problems.</p>
             <a href="services.php" class="btn-link">See more →</a>
           </div>
         </div>
@@ -183,7 +185,7 @@ if (session_status() === PHP_SESSION_NONE) {
             <img src="https://i.pravatar.cc/60?img=47" alt="María López" />
             <div>
               <strong>María López</strong>
-              <small>57 Years, San Salvador</small>
+              <small>36 Years, San Salvador</small>
             </div>
           </div>
         </div>
@@ -194,7 +196,7 @@ if (session_status() === PHP_SESSION_NONE) {
             <img src="https://i.pravatar.cc/60?img=12" alt="Carlos Méndez" />
             <div>
               <strong>Carlos Méndez</strong>
-              <small>54 Years, Santa Ana</small>
+              <small>40 Years, Santa Ana</small>
             </div>
           </div>
         </div>
@@ -215,7 +217,44 @@ if (session_status() === PHP_SESSION_NONE) {
 
   <br><br><br>
   <!-- ===== FOOTER ===== -->
-  <?php include 'footer.php'; ?>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.php" class="logo"><span class="logo-icon">🌿</span><span class="logo-text">Gold<span class="logo-accent">Age</span></span></a>
+          <p>Home health care with heart. We care for those you love most with professionalism and warmth.</p>
+        </div>
+        <div class="footer-links">
+          <h5>Navegación</h5>
+          <ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="services.php">Services</a></li>
+            <li><a href="nurses.php">Nurses</a></li>
+            <li><a href="about.php">About Us</a></li>
+            <li><a href="contact.php">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h5>Servicios</h5>
+          <ul>
+            <li><a href="services.php">24/7 Attention</a></li>
+            <li><a href="services.php">General Consultations</a></li>
+            <li><a href="services.php">Geriatrics</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h5>Contacto</h5>
+          <p>hola@goldage.com</p>
+          <p>+503 7000-0000</p>
+          <p>San Salvador, El Salvador</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 GoldAge. All rights reserved.</p>
+      </div>
+    </div>
+</footer>
+
   <!-- ===== SCRIPTS ===== -->
   <script src="js/main.js"></script>
   <!-- Script del menú de autenticación (NUEVO) -->

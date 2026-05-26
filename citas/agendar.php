@@ -1,7 +1,19 @@
 <?php
 require_once __DIR__ . '/../auth_check.php';
 include 'conexion.php';
-$result = $conn->query("SELECT IDEMPLEADO, NOMBRE_COMPLETO, PROFESION FROM EMPLEADOS WHERE ESTADO='APROBADO'");
+
+$servicios = $conn->query("
+    SELECT IDSERVICIOS, NOMBRE_SERVICIO, TIPO_PROFESIONAL, PRECIO
+    FROM SERVICIOS
+    ORDER BY TIPO_PROFESIONAL
+");
+
+$empleados = $conn->query("
+    SELECT IDEMPLEADO, NOMBRE_COMPLETO, PROFESION
+    FROM EMPLEADOS
+    WHERE ESTADO = 'APROBADO'
+    ORDER BY NOMBRE_COMPLETO
+");
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -13,17 +25,19 @@ $result = $conn->query("SELECT IDEMPLEADO, NOMBRE_COMPLETO, PROFESION FROM EMPLE
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+
 <div class="card">
-
   <h2>Agendar cita</h2>
-  <p class="subtitle">Reserva tu consulta con un profesional de salud</p>
 
+  <!-- FIX: action apunta a guardar_cita.php (antes apuntaba a formpago.php) -->
   <form action="guardar_cita.php" method="POST">
 
+    <!-- FECHA Y HORA -->
     <div class="row">
       <div class="field">
         <label>Fecha</label>
-        <input type="date" name="fecha" required>
+        <input type="date" name="fecha" required
+               min="<?= date('Y-m-d') ?>">
       </div>
       <div class="field">
         <label>Hora</label>
@@ -31,40 +45,60 @@ $result = $conn->query("SELECT IDEMPLEADO, NOMBRE_COMPLETO, PROFESION FROM EMPLE
       </div>
     </div>
 
+    <!-- SERVICIO -->
+    <!-- FIX: el select ahora usa name="idservicio" que guardar_cita.php espera -->
+    <!-- FIX: campo "duracion" eliminado — guardar_cita.php lo lee directo de la BD -->
     <div class="field">
-      <label>Duración</label>
+      <label>Servicio</label>
       <div class="select-wrap">
-        <select name="duracion" required>
-          <option value="" disabled selected>Selecciona duración</option>
-          <option value="1 hora">1 hora</option>
-          <option value="2 horas">2 horas</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="field">
-      <label>Dirección</label>
-      <input type="text" name="direccion" placeholder="Ej: Calle Principal #123" required>
-    </div>
-
-    <div class="field">
-      <label>Profesional</label>
-      <div class="select-wrap">
-        <select name="idempleado" required>
-          <option value="" disabled selected>Selecciona un profesional</option>
-          <?php while ($row = $result->fetch_assoc()): ?>
-            <option value="<?= $row['IDEMPLEADO'] ?>">
-              <?= htmlspecialchars($row['NOMBRE_COMPLETO']) ?> - <?= htmlspecialchars($row['PROFESION']) ?>
+        <select name="idservicio" required>
+          <option value="" disabled selected>Selecciona un servicio</option>
+          <?php while ($servicio = $servicios->fetch_assoc()): ?>
+            <option value="<?= (int)$servicio['IDSERVICIOS'] ?>">
+              <?= htmlspecialchars($servicio['NOMBRE_SERVICIO']) ?>
+              — $<?= htmlspecialchars($servicio['PRECIO']) ?>
             </option>
           <?php endwhile; ?>
         </select>
       </div>
     </div>
 
-    <button type="submit" class="btn">Agendar cita</button>
+    <!-- DIRECCIÓN -->
+    <div class="field">
+      <label>Dirección del servicio</label>
+      <input
+        type="text"
+        name="direccion"
+        placeholder="Ej: Calle Principal #123, Colonia Centro"
+        required
+      >
+    </div>
+
+    <!-- EMPLEADO -->
+    <div class="field">
+      <label>Profesional</label>
+      <div class="select-wrap">
+        <select name="idempleado" required>
+          <option value="" disabled selected>Selecciona un profesional</option>
+          <?php while ($row = $empleados->fetch_assoc()): ?>
+            <option value="<?= (int)$row['IDEMPLEADO'] ?>">
+              <?= htmlspecialchars($row['NOMBRE_COMPLETO']) ?>
+              — <?= htmlspecialchars($row['PROFESION']) ?>
+            </option>
+          <?php endwhile; ?>
+        </select>
+      </div>
+    </div>
+
+    <!-- BOTÓN -->
+    <button type="submit" class="btn">Continuar al pago</button>
+
   </form>
 
-  <p class="footer-link">¿Ya tienes una cita? <a href="mis_citas.php">Ver mis citas</a></p>
+  <p class="footer-link">
+    ¿Ya tienes una cita? <a href="mis_citas.php">Ver mis citas</a>
+  </p>
 </div>
+
 </body>
 </html>

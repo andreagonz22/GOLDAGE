@@ -1,7 +1,6 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  font-family: 'DM Sans', sans-serif;
   background: #e8f0ef;
   min-height: 100vh;
   display: flex;
@@ -11,7 +10,7 @@ body {
 }
 
 .card {
-  background: #fff;
+  background: #f8faf7;
   border-radius: 20px;
   padding: 40px 36px;
   width: 100%;
@@ -19,17 +18,13 @@ body {
   box-shadow: 0 4px 32px rgba(0,0,0,0.07);
 }
 
-.brand {
-  font-size: 18px;
-  font-weight: 700;
-  color: #5aab8a;
-  letter-spacing: 0.5px;
-  margin-bottom: 20px;
+h2 { 
+  font-size: 26px; 
+  font-weight: 800; 
+  color: #1a1a1a; 
+  margin-bottom: 6px;
+  
 }
-.brand em { font-style: italic; font-weight: 400; }
-
-h2 { font-size: 26px; font-weight: 800; color: #1a1a1a; margin-bottom: 6px; }
-.subtitle { font-size: 14px; color: #888; margin-bottom: 28px; }
 
 .field { margin-bottom: 18px; }
 
@@ -38,7 +33,7 @@ label {
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 1px;
-  color: #555;
+  color: #2d3748;
   text-transform: uppercase;
   margin-bottom: 7px;
 }
@@ -83,7 +78,7 @@ input:focus, select:focus {
 .btn {
   width: 100%;
   padding: 15px;
-  background: #5aab8a;
+  background: #80cbc4;
   color: #fff;
   font-family: 'DM Sans', sans-serif;
   font-size: 16px;
@@ -94,7 +89,7 @@ input:focus, select:focus {
   margin-top: 10px;
   transition: background 0.2s, transform 0.1s;
 }
-.btn:hover { background: #4a9678; }
+.btn:hover { background: #4adfd2; }
 .btn:active { transform: scale(0.98); }
 
 .footer-link { text-align: center; font-size: 13px; color: #888; margin-top: 18px; }
