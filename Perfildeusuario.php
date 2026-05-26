@@ -131,6 +131,15 @@ if (session_status() === PHP_SESSION_NONE) {
 
 </div>
 
+
+
+<!-- ===== FOOTER ===== -->
+
+
+  <!-- ===== FOOTER ===== -->
+
+  <?php include 'footer.php'; ?>
+
 <!-- PENDING -->
 <div class="card">
     <div class="card-header">
@@ -146,6 +155,7 @@ if (session_status() === PHP_SESSION_NONE) {
     </div>
     <div id="completed"></div>
 </div>
+
 
 </div>
 
