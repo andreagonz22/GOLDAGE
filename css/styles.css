@@ -1259,3 +1259,11 @@ ul{
   }
 
 }
+.hero-desc,
+.feature-card p,
+.service-info p,
+.testimonial-text {
+    text-align: justify !important;
+    text-justify: inter-word;
+    max-width: 100%;
+}
