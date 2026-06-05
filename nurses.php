@@ -31,8 +31,8 @@ require_once __DIR__ . '/auth_check.php';
 
 <section class="page-hero nurses-hero">
     <div class="page-hero-content">
-        <h1>Choose your professional</h1>
-        <p>Select the best care for your family in seconds quality & empathy</p>
+        <h1>Choose your <em>professional</em></h1>
+        <p>Select the best care for your family in seconds</p>
     </div>
 </section>
 
@@ -56,58 +56,55 @@ require_once __DIR__ . '/auth_check.php';
 <div class="modal-overlay" id="hireModal">
     <div class="modal-container">
         <div class="modal-header">
-            <h2><i class="fas fa-calendar-check"></i> Contratar Servicio</h2>
+            <h2><i class="fas fa-calendar-check"></i> Hire Service</h2>
             <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
         </div>
         <div class="modal-body">
             <div class="status-badge available">
                 <span class="status-dot"></span>
-                <span>Disponible ahora</span>
+                <span>Available now</span>
             </div>
             <div class="professional-info">
-                <div class="professional-icon">
-                    <i class="fas fa-user-md"></i>
-                </div>
+                <div class="professional-icon" id="modalIcon">
+    <i class="fas fa-user-md"></i>
+</div>
                 <h3 id="modalProfessionalName">Dra. Elena Méndez</h3>
                 <div class="professional-specialty" id="modalSpecialty">
-                    <i class="fas fa-stethoscope"></i> Geriatría & Cuidados Paliativos
+                    <i class="fas fa-stethoscope"></i> Geriatrics
                 </div>
             </div>
             <div class="details-grid">
                 <div class="detail-item">
                     <i class="fas fa-briefcase"></i>
-                    <div class="detail-label">Experiencia</div>
-                    <div class="detail-value">12+ años</div>
+                    <div class="detail-label">Experience</div>
+                    <div class="detail-value" id="modalExperience">12+ years</div>
                 </div>
                 <div class="detail-item">
                     <i class="fas fa-graduation-cap"></i>
-                    <div class="detail-label">Especialidad</div>
-                    <div class="detail-value">Geriatría Clínica</div>
+                    <div class="detail-label">Specialty</div>
+                    <div class="detail-value">Clinical Geriatrics</div>
                 </div>
             </div>
-            <p style="text-align: center; margin-bottom: 24px; color: #4B5F6C; line-height: 1.5;">
-                Atención especializada para adultos mayores en la comodidad de su hogar.
-                Evaluación integral, manejo de enfermedades crónicas y cuidado con calidez humana.
+            <p id="modalDescription" style="text-align: center; margin-bottom: 24px; color: #4B5F6C; line-height: 1.5;">
+                We care for you in the comfort of your own home.
+
+We check your health fully, help you manage your everyday medical conditions, and support you with kindness and respect.
             </p>
             <div class="availability-section">
-                <h4><i class="fas fa-clock"></i> Horarios Disponibles</h4>
-                <div class="availability-times">
-                    <span class="time-badge"><i class="fas fa-sun"></i> 8:00 am - 12:00 pm</span>
-                    <span class="time-badge"><i class="fas fa-moon"></i> 2:00 pm - 5:00 pm</span>
-                </div>
-                <h4><i class="fas fa-calendar-week"></i> Días disponibles</h4>
+                
+                <h4><i class="fas fa-calendar-week"></i> Available days</h4>
                 <div class="days-available">
-                    <span class="day-badge">Lunes</span>
-                    <span class="day-badge">Martes</span>
-                    <span class="day-badge">Miércoles</span>
-                    <span class="day-badge">Jueves</span>
-                    <span class="day-badge">Viernes</span>
-                    <span class="day-badge unavailable-day">Sábado</span>
-                    <span class="day-badge unavailable-day">Domingo</span>
+                    <span class="day-badge">Monday</span>
+                    <span class="day-badge">Tuesday</span>
+                    <span class="day-badge">Wednesday</span>
+                    <span class="day-badge">Thursday</span>
+                    <span class="day-badge">Friday</span>
+                    <span class="day-badge unavailable-day">Saturday</span>
+                    <span class="day-badge unavailable-day">Sunday</span>
                 </div>
             </div>
             <button class="modal-action-btn" id="hireNowBtn">
-                <i class="fas fa-calendar-alt"></i> Agendar cita <i class="fas fa-arrow-right"></i>
+                <i class="fas fa-calendar-alt"></i> Hire now<i class="fas fa-arrow-right"></i>
             </button>
         </div>
     </div>
@@ -116,32 +113,125 @@ require_once __DIR__ . '/auth_check.php';
 <script>
 (function() {
     const data = [
-        { name:"Karla Hernández", type:"medico", specialty:"General Medicine", desc:"Experienced in home care and prevention, personalized follow-up.", rating:"4.9", reviews:"120", img:"img/1.jpg" },
-        { name:"José Martínez", type:"medico", specialty:"Geriatrics", desc:"Specialist in heart conditions & geriatric cardiac health.", rating:"4.8", reviews:"90", img:"img/Photo 5.jpg" },
-        { name:"Ana López", type:"cuidador", specialty:"Geriatric Nursing", desc:"Daily support, companionship and personal assistance.", rating:"4.7", reviews:"80", img:"img/2.jpg" },
-        { name:"María Pérez", type:"enfermero", specialty:"Geriatric Nursing", desc:"Emergency & monitoring expert, post-op care specialist.", rating:"5.0", reviews:"150", img:"img/3.jpg" },
-        { name:"Luis Gómez", type:"medico", specialty:"Geriatric Physical Therapy", desc:"Child health specialist, gentle and attentive.", rating:"4.9", reviews:"110", img:"img/enfermero 5.jpg" },
-        { name:"Carolina Rivas", type:"enfermero", specialty:"Psychogeriatrics", desc:"Advanced healing techniques & chronic care management.", rating:"4.9", reviews:"95", img:"img/4.jpg" },
-        { name:"Fernando Ortiz", type:"cuidador", specialty:"Geriatric Nutrition", desc:"Certified dementia caregiver, empathetic approach.", rating:"4.8", reviews:"112", img:"img/enfermero 6.jpg" },
-        { name:"Elena Méndez", type:"medico", specialty:"Geriatrics", desc:"Comprehensive elderly health management.", rating:"5.0", reviews:"204", img:"img/5.jpg" },
-        { name:"Ricardo Torres", type:"medico", specialty:"Geriatric Neurology", desc:"Stroke rehabilitation and neurological disorders.", rating:"4.9", reviews:"87", img:"img/Photo 1.jpg" },
-        { name:"Patricia Soto", type:"enfermero", specialty:"Geriatric Cardiology", desc:"Compassionate end-of-life care and family support.", rating:"4.9", reviews:"134", img:"img/6.jpg" },
-        { name:"Jorge Ramírez", type:"enfermero", specialty:"Palliative Care", desc:"Mobility exercises and fall prevention specialist.", rating:"4.7", reviews:"68", img:"img/enfermero 1.jpg" },
-        { name:"Silvia Castro", type:"medico", specialty:"Geriatric Rehabilitation", desc:"Diabetes and metabolic disorders expert.", rating:"4.8", reviews:"76", img:"img/7.jpg" },
-        { name:"Andrés Mendoza", type:"enfermero", specialty:"Geriatric Pharmacology", desc:"Specialized care for children with chronic conditions.", rating:"4.9", reviews:"103", img:"img/enfermero 2.jpg" },
-        { name:"Laura Flores", type:"cuidador", specialty:"Geriatrics", desc:"Recovery assistance and medication management.", rating:"4.8", reviews:"92", img:"img/8.jpg" },
-        { name:"Daniel Vega", type:"medico", specialty:"Geriatric Nursing", desc:"Mental health support for elderly patients.", rating:"4.9", reviews:"118", img:"img/Photo 3.jpg" },
-        { name:"Verónica Luna", type:"enfermero", specialty:"Geriatric Physical Therapy", desc:"Respiratory therapy and ventilator management.", rating:"4.8", reviews:"71", img:"img/9.jpg" },
-        { name:"Mario Peña", type:"cuidador", specialty:"Psychogeriatrics", desc:"Social engagement and daily activity planning.", rating:"4.7", reviews:"89", img:"img/enfermero 3.jpeg" },
-        { name:"Claudia Reyes", type:"medico", specialty:"Geriatric Nutrition", desc:"Arthritis and mobility joint treatment.", rating:"4.8", reviews:"64", img:"img/10.jpg" },
-        { name:"Hugo Sandoval", type:"enfermero", specialty:"Geriatric Neurology", desc:"Specialized in complex wound care.", rating:"4.9", reviews:"107", img:"img/Photo 4.jpg" },
-        { name:"Natalia Bravo", type:"cuidador", specialty:"Geriatric Cardiology", desc:"Validation therapy and memory stimulation.", rating:"4.9", reviews:"131", img:"img/11.jpg" },
-        { name:"Roberto Fuentes", type:"medico", specialty:"Palliative Care", desc:"Geriatric urological conditions specialist.", rating:"4.7", reviews:"59", img:"img/Photo 7.jpg" },
-        { name:"Isabel Ortega", type:"enfermero", specialty:"Geriatric Rehabilitation", desc:"Insulin management and glucose monitoring.", rating:"4.9", reviews:"98", img:"img/12.jpg" },
-        { name:"Gabriel Navarro", type:"cuidador", specialty:"Geriatric Pharmacology", desc:"Emotional and physical support for terminal patients.", rating:"4.8", reviews:"85", img:"img/enfermero 3.jpg" },
-        { name:"Valentina Cruz", type:"medico", specialty:"General Medicine", desc:"Comprehensive primary care at home.", rating:"4.9", reviews:"146", img:"img/13.jpg" },
-        { name:"Sergio Delgado", type:"enfermero", specialty:"Geriatrics", desc:"IV antibiotics and hydration at home.", rating:"4.8", reviews:"77", img:"img/enfermero 3.jpg" }
+    { name:"Karla Hernández", type:"medico", specialty:"General Medicine", desc:"General health checkups and treatment for common illnesses.", rating:"4.9", reviews:"120", img:"img/1.png" },
+
+    { name:"José Martínez", type:"medico", specialty:"Geriatrics", desc:"Specialized care focused on the health and well-being of older adults.", rating:"4.8", reviews:"90", img:"img/Photo_5.png" },
+
+    { name:"Ana López", type:"cuidador", specialty:"Geriatric Nursing", desc:"Daily assistance, personal care, and medication reminders.", rating:"4.7", reviews:"80", img:"img/2.png" },
+
+    { name:"María Pérez", type:"enfermero", specialty:"Geriatric Nursing", desc:"Nursing care, health monitoring, and support with treatments.", rating:"5.0", reviews:"150", img:"img/3.png" },
+
+    { name:"Luis Gómez", type:"medico", specialty:"Geriatric Physical Therapy", desc:"Exercises and therapy to improve strength, balance, and mobility.", rating:"4.9", reviews:"110", img:"img/enfermero 5.png" },
+
+    { name:"Carolina Rivas", type:"enfermero", specialty:"Psychogeriatrics", desc:"Support for memory, emotional health, and mental well-being.", rating:"4.9", reviews:"95", img:"img/4.png" },
+
+    { name:"Fernando Ortiz", type:"cuidador", specialty:"Geriatric Nutrition", desc:"Guidance on healthy eating and nutrition for older adults.", rating:"4.8", reviews:"112", img:"img/enfermero 6.png" },
+
+    { name:"Elena Méndez", type:"medico", specialty:"Geriatrics", desc:"Comprehensive healthcare to help seniors stay healthy and active.", rating:"5.0", reviews:"204", img:"img/5.png" },
+
+    { name:"Ricardo Torres", type:"medico", specialty:"Geriatric Neurology", desc:"Care for memory problems and conditions affecting the brain and nerves.", rating:"4.9", reviews:"87", img:"img/Photo_1.png" },
+
+    { name:"Patricia Soto", type:"enfermero", specialty:"Geriatric Cardiology", desc:"Monitoring and support for heart health and cardiovascular conditions.", rating:"4.9", reviews:"134", img:"img/6.png" },
+
+    { name:"Jorge Ramírez", type:"enfermero", specialty:"Palliative Care", desc:"Comfort-focused care that helps improve quality of life.", rating:"4.7", reviews:"68", img:"img/enfermero 1.png" },
+
+    { name:"Silvia Castro", type:"medico", specialty:"Geriatric Rehabilitation", desc:"Recovery support after illness, injury, or surgery.", rating:"4.8", reviews:"76", img:"img/7.png" },
+
+    { name:"Andrés Mendoza", type:"enfermero", specialty:"Geriatric Pharmacology", desc:"Medication review and guidance to ensure safe treatment.", rating:"4.9", reviews:"103", img:"img/enfermero 2.png" },
+
+    { name:"Laura Flores", type:"cuidador", specialty:"Geriatrics", desc:"Companionship and assistance with daily activities.", rating:"4.8", reviews:"92", img:"img/8.png" },
+
+    { name:"Daniel Vega", type:"medico", specialty:"Geriatric Nursing", desc:"Specialized nursing care tailored to older adults' needs.", rating:"4.9", reviews:"118", img:"img/Photo_3.png" },
+
+    { name:"Verónica Luna", type:"enfermero", specialty:"Geriatric Physical Therapy", desc:"Therapy and exercises to help maintain independence and prevent falls.", rating:"4.8", reviews:"71", img:"img/9.png" },
+
+    { name:"Camila Peña", type:"cuidador", specialty:"Psychogeriatrics", desc:"Emotional support and activities that keep the mind active.", rating:"4.7", reviews:"89", img:"img/13.png" },
+
+    { name:"Claudia Reyes", type:"medico", specialty:"Geriatric Nutrition", desc:"Personalized nutrition plans to support healthy aging.", rating:"4.8", reviews:"64", img:"img/10.png" },
+
+    { name:"Hugo Sandoval", type:"enfermero", specialty:"Geriatric Neurology", desc:"Care and support for neurological conditions and memory concerns.", rating:"4.9", reviews:"107", img:"img/Photo_4.png" },
+
+    { name:"Natalia Bravo", type:"cuidador", specialty:"Geriatric Cardiology", desc:"Assistance for seniors managing heart-related conditions.", rating:"4.9", reviews:"131", img:"img/11.png" },
+
+    { name:"Roberto Fuentes", type:"medico", specialty:"Palliative Care", desc:"Pain management, comfort care, and family support.", rating:"4.7", reviews:"59", img:"img/Photo_7.png" },
+
+    { name:"Isabel Ortega", type:"enfermero", specialty:"Geriatric Rehabilitation", desc:"Rehabilitation support to regain strength and independence.", rating:"4.9", reviews:"98", img:"img/12.png" },
+
+    { name:"Gabriel Navarro", type:"cuidador", specialty:"Geriatric Pharmacology", desc:"Help with medication schedules and treatment management.", rating:"4.8", reviews:"85", img:"img/enfermero 16.png" },
+
+    { name:"Valentina Cruz", type:"medico", specialty:"General Medicine", desc:"Primary healthcare services provided in the comfort of home.", rating:"4.9", reviews:"146", img:"img/13.png" },
+
     ];
+
+    const specialtyInfo = {
+
+    "General Medicine": {
+        icon: "fa-user-doctor",
+        experience: "10+ years",
+        description: "Provides routine health evaluations, diagnoses common illnesses, and helps older adults maintain their overall health."
+    },
+
+    "Geriatrics": {
+        icon: "fa-user-doctor",
+        experience: "15+ years",
+        description: "Specialized medical care focused on healthy aging, chronic disease management, and improving quality of life."
+    },
+
+    "Geriatric Nursing": {
+        icon: "fa-heart-pulse",
+        experience: "12+ years",
+        description: "Provides daily nursing care, medication assistance, health monitoring, and personalized support."
+    },
+
+    "Psychogeriatrics": {
+        icon: "fa-brain",
+        experience: "11+ years",
+        description: "Supports emotional wellbeing, memory care, dementia management, and mental health needs."
+    },
+
+    "Geriatric Physical Therapy": {
+        icon: "fa-person-walking",
+        experience: "9+ years",
+        description: "Improves mobility, strength, balance, and independence through personalized exercise programs."
+    },
+
+    "Geriatric Nutrition": {
+        icon: "fa-apple-whole",
+        experience: "8+ years",
+        description: "Creates nutrition plans that support healthy aging and help manage chronic conditions."
+    },
+
+    "Geriatric Neurology": {
+        icon: "fa-brain",
+        experience: "14+ years",
+        description: "Evaluates and treats memory disorders, neurological diseases, and cognitive decline."
+    },
+
+    "Geriatric Cardiology": {
+        icon: "fa-heart-pulse",
+        experience: "13+ years",
+        description: "Specialized heart care focused on cardiovascular health in older adults."
+    },
+
+    "Palliative Care": {
+        icon: "fa-hand-holding-heart",
+        experience: "16+ years",
+        description: "Provides comfort-focused care, symptom management, and emotional support."
+    },
+
+    "Geriatric Rehabilitation": {
+        icon: "fa-dumbbell",
+        experience: "10+ years",
+        description: "Helps patients recover after illness, injury, or surgery and regain independence."
+    },
+
+    "Geriatric Pharmacology": {
+        icon: "fa-pills",
+        experience: "12+ years",
+        description: "Reviews medications, prevents interactions, and ensures safe treatment plans."
+    }
+
+};
 
     let currentFilter = "all";
     const grid = document.getElementById("grid");
@@ -216,14 +306,32 @@ require_once __DIR__ . '/auth_check.php';
     }
 
     function handleHireClick(e) {
-        const btn = e.currentTarget;
-        const name = btn.getAttribute('data-name');
-        const specialty = btn.getAttribute('data-specialty');
-        if (modalName) modalName.textContent = name;
-        if (modalSpecialtySpan) modalSpecialtySpan.innerHTML = `<i class="fas fa-stethoscope"></i> ${specialty}`;
-        if (modal) modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
+
+    const btn = e.currentTarget;
+
+    const name = btn.getAttribute('data-name');
+    const specialty = btn.getAttribute('data-specialty');
+
+    const info = specialtyInfo[specialty];
+
+    modalName.textContent = name;
+
+    modalSpecialtySpan.innerHTML =
+        `<i class="fas fa-stethoscope"></i> ${specialty}`;
+
+    document.getElementById("modalExperience").textContent =
+        info ? info.experience : "10+ years";
+
+    document.getElementById("modalDescription").textContent =
+        info ? info.description : "Professional healthcare services tailored to older adults.";
+
+    document.getElementById("modalIcon").innerHTML =
+        `<i class="fas ${info ? info.icon : 'fa-user-doctor'}"></i>`;
+
+    modal.classList.add("active");
+
+    document.body.style.overflow = "hidden";
+}
 
     function closeModal() {
         if (modal) modal.classList.remove('active');
