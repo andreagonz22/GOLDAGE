@@ -79,7 +79,7 @@ if (session_status() === PHP_SESSION_NONE) {
           <i class="fas fa-user-nurse"></i>
         </div>
         <h3>Medical Services</h3>
-        <p>Our team will work with you providing medical services.
+        <p>Our team will work with you providing geriatrics services.
 </p>
       </div>
 
@@ -97,8 +97,8 @@ if (session_status() === PHP_SESSION_NONE) {
         <div class="feature-icon" style="--icon-color: #efc00477;">
           <i class="fas fa-house-medical"></i>
         </div>
-        <h3>Home Care</h3>
-        <p>Our goal is to support a comfortable family life at home.
+        <h3>Care</h3>
+        <p>Specialized care for your family members.
 </p>
       </div>
     </div>
@@ -118,7 +118,9 @@ if (session_status() === PHP_SESSION_NONE) {
             <h4>Home Care</h4>
             <p>We help people at home with personal care, and companionship, either for a few hours or full time.
 </p>
-            <a href="services.php" class="btn-link">See more →</a>
+            <a href="services.php#home-care" class="btn-link">See more →</a>
+            
+            
           </div>
         </div>
          
@@ -129,7 +131,7 @@ if (session_status() === PHP_SESSION_NONE) {
           <div class="service-info">
             <h4>Palliative care at home</h4>
             <p>Palliative care at home helps manage discomfort and symptoms, improving comfort and quality of life for people with serious illnesses.</p>
-            <a href="services.php" class="btn-link">See more →</a>
+            <a href="services.php#especial" class="btn-link">See more →</a>
           </div>
         </div>
         <div class="service-card scroll-reveal" style="--delay: 0.3s">
@@ -139,7 +141,7 @@ if (session_status() === PHP_SESSION_NONE) {
           <div class="service-info">
             <h4>General medical consultations</h4>
             <p>General consultations at home provide basic medical care to evaluate, diagnose, and treat common health problems.</p>
-            <a href="services.php" class="btn-link">See more →</a>
+            <a href="services.php#visits" class="btn-link">See more →</a>
           </div>
         </div>
       </div>

@@ -1,38 +1,45 @@
+
 <?php
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
+require_once __DIR__ . '/auth_check.php';
 ?>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us – GoldAge</title>
+  <title>Services – GOLDAGE</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="about.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" Shref="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/about.css" />
   <link rel="stylesheet" href="css/navbar_auth.css">
+
+  
+
 </head>
+
 <body>
 
-  <!-- ===== NAVBAR ===== -->
+  <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="index.php" class="logo">
         <img src="img/logo.png" alt="GoldAge Logo" class="logo-img">
         <span class="logo-text">Gold<span class="logo-accent">Age</span></span>
       </a>
-
       <?php
         include __DIR__ . '/navbar_auth.php';
       ?>
     </div>
   </nav>
 
-<!-- STORY -->
+
+
+  
   <section class="story-section section" style="margin-top: 150px;">
     <div class="container">
       <div class="story-inner">
@@ -45,7 +52,7 @@ if (session_status() === PHP_SESSION_NONE) {
           <p>This company was born from the heart, after an experience that deeply affected us. We saw how a beloved member of our community did not receive the care, attention, or respect she deserved. The uncertainty, lack of trust, and poor commitment from her caregiver pushed us to take action. That’s why we created a different kind of service—one that offers compassionate, reliable, and dignified care, where every person is treated with love, respect, and the safety every family deserves.</p>
           <p style="margin-top:16px; color: var(--text-light); font-size:15px; line-height:1.75">Every family deserves peace of mind.</p>
           <div class="story-stats">
-           
+            
           </div>
         </div>
       </div>
@@ -54,119 +61,293 @@ if (session_status() === PHP_SESSION_NONE) {
 
  
 
-  
-
   <!-- MISSION / VISION -->
   <section class="mv-section section">
     <div class="container">
       <div class="mv-grid">
         <div class="mv-card scroll-reveal">
+          
+      <div class="section-label">Our guide</div>
+      <h2 class="section-title">The center of <span>everything</span></h2>
+      <div class="values-grid">
          
+       <div class="mv-card scroll-reveal" style="--delay:0.15s">
           <h3>Mission</h3>
-          <p>
-           Our mission is to provide compassionate, professional home healthcare using modern technology to improve the quality of life for patients and their families.
+          <p>Bring comfort and care into every home. With compassion we support patients and their families, helping them to live with dignity, peace, and a better quality of life. </p>
         </div>
         <div class="mv-card scroll-reveal" style="--delay:0.15s">
          
           <h3>Vision</h3>
-          <p>
-           Our vision is to become the most trusted home healthcare network in Central America by making personalized care available to every family.
-
-          </p>
+          <p>Be the home healthcare network families trust the most in Central America. We want every family feel cared with personalized support, bringing health and comfort right where they live.</p>
         </div>
         <div class="mv-card scroll-reveal" style="--delay:0.3s">
-         
+          
           <h3>Values</h3>
-          <p>
-            Our values are empathy, professionalism, honesty, and a strong commitment to the health and quality of life of every patient we serve.
-          </p>
+          <div>  
+            
+  <ul>
+    <li><p>✦ Trust</p></li>
+    <li><p>✦ Empathy</p></li>
+    <li><p>✦ Responsibility</p></li>
+    <li><p>✦ Safety</p></li>
+    <li><p>✦ Commitment</p></li>
+    <li><p>✦ Respect</p></li>
+
+  </ul>
+<div>
+          
         </div>
       </div>
     </div>
   </section>
 
- 
+  
   <!-- VALUES -->
   <section class="values-section section">
     <div class="container">
-      <h2 class="section-title">Principles that <span>define us</span></h2>
+      <div class="section-label">What guides us</div>
+       <h2 class="section-title">Principles that <span>define us</span></h2>
       <div class="values-grid">
         <div class="value-item scroll-reveal">
          
-          <h4>Empathy</h4>
-          <p>
-            We treat every patient with kindness, respect, and understanding.
-          </p>
+          <h4>Better Living</h4>
+          <p>We help patients feel more comfortable and live with dignity at home.</p>
         </div>
         <div class="value-item scroll-reveal" style="--delay:0.1s">
          
-          <h4>Medical Excellence</h4>
-          <p>
-            Our healthcare professionals are fully trained and continuously improving their skills.
-          </p>
+          <h4>Peace of Mind</h4>
+          <p>families feel safe and supported knowing their loved one are acred for.</p>
         </div>
         <div class="value-item scroll-reveal" style="--delay:0.2s">
          
-          <h4>Transparency</h4>
-          <p>
-            We believe in honest communication, clear pricing, and trust with every family.
-   
-         
-        
+          <h4>Respect for People</h4>
+          <p>We treat every person with kindness, respect, and humanity.</p>
         </div>
       </div>
     </div>
-  </div>
   </section>
 
-  <section class="about-us">
-  <div class="container">
-
- <h2 class="section-title">ABOUT <span>US</span></h2>
-
-    <div class="about-grid">
-
-      <!-- BLOQUE 1 -->
-      <div class="about-item">
-        <img src="img/enfermero 2.jpg" alt="Nuestro equipo">
-        <div class="about-text">
-          <h3 class="section-title">WHO WE ARE</h3>
-          <p>
-            We are a dedicated team focused on providing reliable and compassionate home healthcare services for every patient.
-          </p>
+<!--RESEÑAS-->
+<section class="testimonials section">
+    <div class="container">
+      <div class="section-label">Testimonials</div>
+      <h2 class="section-title">The happiness of the customers <span>speaks for us</span></h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card scroll-reveal">
+          <div class="stars">★★★★☆</div>
+          <p class="testimonial-text">"The GoldAge service has been a blessing for our family. The nurses are incredibly kind and professional. My mom feels safe and happy."</p>
+          <div class="testimonial-author">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8uRRK9Jr5sHDdFv4mdF4CwBFztR3Lu_kJGA&s" alt="María López" />
+            <div>
+              <strong>María López</strong>
+              <small>57 Years, San Salvador</small>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card scroll-reveal featured-testimonial" style="--delay: 0.15s">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"Thanks to GoldAge, dad receives quality medical care without the stress of going to the hospital. The team is punctual, warm, and very competent. I totally recommend it."</p>
+          <div class="testimonial-author">
+            <img src="https://preview.redd.it/selfie-sunday-58-years-old-not-the-best-picture-v0-0vj231t6os6b1.jpg?width=1245&format=pjpg&auto=webp&s=da0533c37a9b3466bf7093b05dc453acebb45dd3" alt="Carlos Méndez" />
+            <div>
+              <strong>Carlos Méndez</strong>
+              <small>54 Years, Santa Ana</small>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card scroll-reveal" style="--delay: 0.3s">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"The premium plan is worth every penny. We have medication reminders, scheduled visits, and emergency care. The peace of mind it gives us is invaluable."</p>
+          <div class="testimonial-author">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMVN06O44uNTh9DohNOBH2UUcpcnuwx5bZHw&s" alt="Ana Herrera" />
+            <div>
+              <strong>Ana Herrera</strong>
+              <small>41 Years, San Miguel</small>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- BLOQUE 2 -->
-      <div class="about-item reverse">
-        <img src="img/enfermero 3.jpeg" alt="Nuestro servicio">
-        <div class="about-text">
-          <h3 class="section-title">WHAT WE DO</h3>
-          <p>
-            We provide personalized medical care at home, helping patients feel safe, comfortable, and supported.
-          </p>
-        </div>
-      </div>
+<!--Carousel de presentacion-->
+<!-- ===== INICIO CARRUSEL ABOUT US ===== -->
+ <section class="team-carousel-section">
 
-      <!-- BLOQUE 3 -->
-      <div class="about-item">
-        <img src="img/enfermero 5.jpg" alt="Nuestra misión">
-        <div class="about-text">
-          <h3 class="section-title">OUR COMMITMENT</h3>
-          <p>
-            We are committed to supporting families with professional, accessible, and human-centered healthcare services.
-          </p>
-        </div>
-      </div>
+    <div class="section-label">
+        <i class="fa-solid fa-users"></i>
+        Our Team
+    </div>
+
+    <div id="carouselExampleDark"
+     class="carousel slide"
+     data-bs-ride="carousel"
+     data-bs-interval="2500"
+     data-bs-pause="false">
+
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide-to="0" class="active"></button>
+
+            <button type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide-to="1"></button>
+
+            <button type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide-to="2"></button>
+                 <button type="button" data-bs-target="#carouselExampleDark"
+        data-bs-slide-to="3"></button>
+
+    <button type="button" data-bs-target="#carouselExampleDark"
+        data-bs-slide-to="4"></button>
+
+    <button type="button" data-bs-target="#carouselExampleDark"
+        data-bs-slide-to="5"></button>
+
+    <button type="button" data-bs-target="#carouselExampleDark"
+        data-bs-slide-to="6"></button>
+
+    <button type="button" data-bs-target="#carouselExampleDark"
+        data-bs-slide-to="7"></button>
+
+    <button type="button" data-bs-target="#carouselExampleDark"
+        data-bs-slide-to="8"></button>
+
+</div>
+        
+
+        <div class="carousel-inner">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+
+                <img src="img/William.png" alt="">
+
+                <div class="team-info">
+                 
+                </div>
+
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+
+                <img src="img/Andrea.png" alt="">
+
+                <div class="team-info">
+                
+                </div>
+
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+
+                <img src="img/Nicole.png" alt="">
+
+                <div class="team-info">
+                 
+                </div>
+
+            </div>
+ 
+           <!-- Slide 4 -->
+            <div class="carousel-item ">
+
+                <img src="img/Adonay.png" alt="">
+
+                <div class="team-info">
+                 
+                </div>
+
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="carousel-item">
+
+                <img src="img/Emely.png" alt="">
+
+                <div class="team-info">
+                
+                </div>
+
+            </div>
+
+            <!-- Slide 6 -->
+            <div class="carousel-item">
+
+                <img src="img/Diana.png" alt="">
+
+                <div class="team-info">
+                 
+                </div>
+
+            </div>
+          
+           <!-- Slide 7 -->
+            <div class="carousel-item ">
+
+                <img src="img/Katherine.png" alt="">
+
+                <div class="team-info">
+                 
+                </div>
+
+            </div>
+
+            <!-- Slide 8 -->
+            <div class="carousel-item">
+
+                <img src="img/Angie.png" alt="">
+
+                <div class="team-info">
+                
+                </div>
+
+            </div>
+
+            <!-- Slide 9 -->
+            <div class="carousel-item">
+
+                <img src="img/Grupo.png" alt="">
+
+                <div class="team-info">
+                 
+                </div>
+
+            </div>
+
+
+
+
+
+
+          </div>
+
+<button class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleDark"
+        data-bs-slide="prev">
+    <i class="fas fa-chevron-left"></i>
+</button>
+
+<button class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleDark"
+        data-bs-slide="next">
+    <i class="fas fa-chevron-right"></i>
+</button>
 
     </div>
-  </div>
+
 </section>
+
+<!-- ===== FIN CARRUSEL ABOUT US ===== -->
+
 
   <!-- ===== FOOTER ===== -->
   <?php include 'footer.php'; ?>
 
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>
   <script src="js/about.js"></script>
   <script src="js/navbar_auth.js"></script> 

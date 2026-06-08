@@ -10,7 +10,12 @@
   --shadow-lg: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-/* Page Hero */
+/* SCROLL SUAVE */
+html {
+  scroll-behavior: smooth;
+}
+
+/* HERO */
 .page-hero {
   min-height: 42vh;
   display: flex;
@@ -49,9 +54,10 @@
   max-width: 480px;
   margin: 0 auto;
   line-height: 1.7;
+  text-align: justify;
 }
 
-/* Service Rows */
+/* SERVICES */
 .services-list {
   background: var(--beige);
 }
@@ -91,6 +97,9 @@
   flex: 1;
   min-width: 260px;
   max-width: 520px;
+
+  /* PARA EL SCROLL */
+  scroll-margin-top: 120px;
 }
 
 .service-row-content h2 {
@@ -98,6 +107,7 @@
   font-weight: 800;
   margin: 10px 0 14px;
   line-height: 1.2;
+  text-align: left;
 }
 
 .service-row-content > p {
@@ -105,8 +115,13 @@
   color: var(--text-light);
   line-height: 1.75;
   margin-bottom: 20px;
+
+  /* JUSTIFICADO */
+  text-align: justify;
+  hyphens: auto;
 }
 
+/* LISTAS */
 .service-detail-list {
   list-style: none;
   display: flex;
@@ -118,12 +133,17 @@
 .service-detail-list li {
   font-size: 14px;
   color: var(--text-light);
+
+  /* JUSTIFICADO */
+  text-align: justify;
+  hyphens: auto;
 }
 
 /* TAG */
 .service-tag {
   color: #fff;
   font-weight: 600;
+  text-align: left;
 }
 
 /* BOTONES */
@@ -152,41 +172,38 @@
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-/* CTA ROW */
+/* CTA */
 .service-cta-row {
   display: flex;
   align-items: center;
   gap: 16px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* CORRECCIÓN */
   margin-top: 10px;
 }
 
-/* PRICE BUTTON */
-.btn-price {
-  background: transparent;
-  color: var(--mint-dark);
-  border: 2px solid var(--mint-dark);
-  padding: 14px 28px;
-  border-radius: 50px;
-  font-weight: 600;
+/* TEXTO AL LADO DEL BOTÓN */
+.price-text {
+  margin: 0;
   font-size: 15px;
-  cursor: pointer;
-  font-family: inherit;
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  color: var(--text-light);
   white-space: nowrap;
 }
+
+/* PRICE BUTTON */
+
+.btn-price {
+ 
+  position: relative;
+}
+
+
 
 /* DROPDOWN */
 .price-dropdown {
   display: none;
   position: absolute;
-
   bottom: calc(100% + 10px);
   left: 0;
-
   background: #fff;
   border: 1.5px solid var(--mint-dark);
   border-radius: 14px;
@@ -221,9 +238,17 @@
   color: #999;
   font-weight: 400;
 }
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .service-row-content {
+      scroll-margin-top: 120px;
+    }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+
   .service-row,
   .service-row-reverse {
     flex-direction: column;
@@ -232,5 +257,9 @@
 
   .service-row-img {
     max-width: 100%;
+  }
+
+  .service-cta-row {
+    flex-wrap: wrap;
   }
 }
