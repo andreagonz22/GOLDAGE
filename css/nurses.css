@@ -151,59 +151,57 @@ ul {
 }
 
 .nurses-hero {
-  position: relative;
-  min-height: 460px;
+  min-height: 42vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(125deg, rgba(42, 111, 143, 0.82) 0%, rgba(168, 213, 186, 0.65) 45%, rgba(255, 248, 225, 0.2) 100%), url("https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=2000");
-  background-size: cover;
-  background-position: center 30%;
-  background-attachment: fixed;
+  text-align: center;
+  padding: 80px 24px;
+
+  background: linear-gradient(
+    135deg,
+    #d4ede0 0%,
+    #d0e8f5 100%
+  );
+
+  position: relative;
   overflow: hidden;
 }
 
-.nurses-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at 30% 50%, rgba(255, 255, 245, 0.2), transparent 70%);
-  pointer-events: none;
-}
-
-.nurses-hero::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;
-  background: linear-gradient(to top, var(--beige), transparent);
-}
-
 .page-hero-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  color: white;
-  max-width: 800px;
-  padding: 0 20px;
-  animation: fadeUp 0.9s ease;
+  max-width: 680px;
+  margin: 0 auto;
 }
 
 .page-hero-content h1 {
-  font-size: 54px;
+  font-size: clamp(32px, 5vw, 56px);
   font-weight: 800;
-  letter-spacing: -0.02em;
-  text-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
-  margin-bottom: 16px;
+  line-height: 1.15;
+  margin: 12px 0 16px;
+  color: var(--text);
+  text-shadow: none;
 }
 
 .page-hero-content p {
-  font-size: 20px;
-  font-weight: 500;
-  opacity: 0.95;
+  font-size: 16px;
+  color: var(--text-light);
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.7;
 }
+
+/* palabra resaltada */
+.page-hero-content h1 em {
+  font-style: normal;
+  color: var(--mint-dark);
+}
+
+#modalDescription{
+    text-align: justify;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
 
 @keyframes fadeUp {
   from {
@@ -276,7 +274,7 @@ ul {
 }
 
 .filter-btn.active {
-  background: linear-gradient(115deg, var(--mint-dark), var(--blue));
+  background: #80cbc4;
   color: white;
   box-shadow: 0 12px 20px -10px rgba(42, 111, 143, 0.5);
 }
@@ -351,7 +349,7 @@ ul {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: white;
-  background: linear-gradient(125deg, var(--blue), var(--mint-dark));
+  background: #80cbc4;
   padding: 6px 14px;
   border-radius: 40px;
   display: inline-flex;
@@ -410,7 +408,7 @@ ul {
   font-weight: 700;
   font-size: 15px;
   cursor: pointer;
-  background: linear-gradient(95deg, var(--mint-dark), var(--blue));
+  background: #80cbc4;
   color: white;
   transition: var(--transition);
   display: flex;
@@ -420,16 +418,13 @@ ul {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
+
 .nurse-btn i {
   font-size: 14px;
   transition: transform 0.2s;
 }
 
-.nurse-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 22px -8px rgba(42, 111, 143, 0.4);
-  background: linear-gradient(95deg, var(--blue), var(--mint-dark));
-}
+
 
 .nurse-btn:hover i {
   transform: translateX(5px);
@@ -651,7 +646,7 @@ ul {
 }
 
 .modal-header h2 i {
-  color: var(--blue);
+  color: #80cbc4;
   font-size: 26px;
 }
 
@@ -712,7 +707,7 @@ ul {
 .professional-icon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, var(--mint-dark), var(--blue));
+  background: #80cbc4;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -759,7 +754,7 @@ ul {
 
 .detail-item i {
   font-size: 22px;
-  color: var(--blue);
+  color: #80cbc4;
   margin-bottom: 8px;
   display: block;
 }
@@ -794,7 +789,7 @@ ul {
 }
 
 .availability-section h4 i {
-  color: var(--blue);
+  color: #80cbc4;
 }
 
 .availability-times {
@@ -836,31 +831,46 @@ ul {
   text-decoration: line-through;
 }
 
+
+
+
+
 .modal-action-btn {
   width: 100%;
-  padding: 16px;
-  border-radius: 50px;
   border: none;
+  border-radius: 16px;
+  padding: 16px 24px;
+  background: #80cbc4;
+  color: white;
   font-size: 16px;
   font-weight: 700;
+  font-family: var(--font);
   cursor: pointer;
-  background: linear-gradient(95deg, var(--mint-dark), var(--blue));
-  color: white;
+
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
+
   transition: all 0.3s ease;
-  margin-top: 16px;
+  box-shadow: 0 8px 20px rgba(128, 203, 196, 0.35);
 }
 
 .modal-action-btn:hover {
+  background: #6fb8b1;
   transform: translateY(-3px);
-  box-shadow: 0 12px 22px -8px rgba(42, 111, 143, 0.4);
-  background: linear-gradient(95deg, var(--blue), var(--mint-dark));
+  box-shadow: 0 12px 28px rgba(128, 203, 196, 0.45);
 }
 
-.modal-action-btn:hover i {
+.modal-action-btn:active {
+  transform: translateY(0);
+}
+
+.modal-action-btn i {
+  transition: transform 0.3s ease;
+}
+
+.modal-action-btn:hover i:last-child {
   transform: translateX(5px);
 }
 

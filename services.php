@@ -14,9 +14,6 @@ require_once __DIR__ . '/auth_check.php';
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/services.css" />
   <link rel="stylesheet" href="css/navbar_auth.css">
-
-  
-
 </head>
 
 <body>
@@ -38,7 +35,7 @@ require_once __DIR__ . '/auth_check.php';
   <section class="page-hero services-hero">
 
     <div class="page-hero-content fade-in">
-
+     
       <h1>
         Professional Care<br />
         <em>At Your Home</em>
@@ -60,136 +57,104 @@ require_once __DIR__ . '/auth_check.php';
   <section class="services-list section">
     <div class="container">
 
-      <!-- HOME CARE -->
       <div class="service-row scroll-reveal">
-
         <div class="service-row-img">
           <img
             src="https://tusangeles.com.mx/wp-content/uploads/2024/01/enfermera-feliz-sosteniendo-mano-anciano-silla-ruedas-jardin-hogar-ancianos-2048x1365.jpg"
             alt="24/7 home care"
           />
         </div>
-
-        <!-- CORREGIDO -->
-        <div id="home-care" class="service-row-content">
-
-          <span class="service-tag">24/7 Care</span>
+        <div class="service-row-content">
           <h2>24/7 Home Care</h2>
-
           <p>
             Our nurses and doctors are available day and night
             to give medical care and support in your home whenever you need it.
           </p>
-
           <ul class="service-detail-list">
             <li>Emergency care at home</li>
             <li>Vital signs check</li>
             <li>Medicine administration</li>
             <li>Daily health reports</li>
           </ul>
-
           <div class="service-cta-row">
             <a href="./citas/agendar.php" class="btn btn-primary">
               Schedule Appointment
             </a>
-
-            <button class="btn btn-primary btn-price" onclick="togglePrices(this)">
-  Prices
-  <ul class="price-dropdown">
-    <li>$54 <span>8 hrs</span></li>
-    <li>$79 <span>12 hrs</span></li>
-    <li>$172 <span>24 hrs</span></li>
-  </ul>
-</button>
+            <button class="btn-price" onclick="togglePrices(this)">
+              Prices
+              <ul class="price-dropdown">
+              <li>$45 <span>8 hrs</span></li>
+              <li>$90 <span>12 hrs</span></li>
+              <li>$100 <span>24 hrs</span></li>
+              </ul>
+            </button>
           </div>
-
         </div>
       </div>
 
-      <!-- SPECIAL CARE -->
       <div class="service-row service-row-reverse scroll-reveal">
-
         <div class="service-row-img">
           <img
             src="https://media.istockphoto.com/id/1650853784/photo/doctor-senior-patient-and-blood-pressure-check-with-consultation-talking-and-help-health-in.jpg?s=612x612&w=0&k=20&c=ODv-wA2E7-FNv527tZ6GuKJ9LnFP2GMSebF56GEox3o="
             alt="Palliative care"
           />
         </div>
-
-        <div id="especial" class="service-row-content">
-
-          <span class="service-tag">Special Care</span>
-
+        <div class="service-row-content">
           <h2>Palliative Care at Home</h2>
-
           <p>
-           We help patients and families feel more comfortable by providing compassionate care and personalized attention at home.
+            We help patients and families feel more comfortable
+            by giving physical, emotional, and personal support at home.
           </p>
-
           <ul class="service-detail-list">
             <li>Pain and symptom control</li>
-            <li>Special attention for their families</li>
+            <li>Support for the family</li>
             <li>Help from medical specialists</li>
             <li>Emotional and personal care</li>
           </ul>
-
           <a href="./citas/agendar.php" class="btn btn-primary">
             Schedule Appointment
           </a>
-
-            <button class="btn btn-primary btn-price" onclick="togglePrices(this)">
+            <button class="btn-price" onclick="togglePrices(this)">
               Prices
               <ul class="price-dropdown">
-                <li>$44<span>8 hrs</span></li>
-                <li>$64<span>12 hrs</span></li>
-                <li>$142<span>24 hrs</span></li>
+              <li>$45 <span>8 hrs</span></li>
+              <li>$90 <span>12 hrs</span></li>
+              <li>$100 <span>24 hrs</span></li>
               </ul>
             </button>
-
         </div>
       </div>
 
-      <!-- MEDICAL VISITS -->
       <div class="service-row scroll-reveal">
-
         <div class="service-row-img">
           <img
             src="https://www.shutterstock.com/image-photo/senior-doctor-white-medical-gown-600nw-2152462045.jpg"
             alt="General consultations"
           />
         </div>
-
-        <div id="visits" class="service-row-content">
-
-          <span class="service-tag">General Care</span>
-
+        <div class="service-row-content">
           <h2>General Medical Consultations</h2>
-
           <p>
             Our doctors can visit your home to check your health,
             treat common illnesses, and give medical advice.
           </p>
-
           <ul class="service-detail-list">
             <li>Medical checkups and prescriptions</li>
             <li>Lab sample collection at home</li>
             <li>Follow-up after consultation</li>
             <li>Digital medical records</li>
           </ul>
-
           <a href="./citas/agendar.php" class="btn btn-primary">
             Schedule Appointment
           </a>
-
-         
-            <button class="btn btn-primary btn-price" onclick="togglePrices(this)">
-              Price
+            <button class="btn-price" onclick="togglePrices(this)">
+              Prices
               <ul class="price-dropdown">
-                <li>$35<span>medical consultation</span></li>
-                
+              <li>$45 <span>8 hrs</span></li>
+              <li>$90 <span>12 hrs</span></li>
+              <li>$100 <span>24 hrs</span></li>
               </ul>
             </button>
-
         </div>
       </div>
 
@@ -198,10 +163,9 @@ require_once __DIR__ . '/auth_check.php';
 
   <!-- FOOTER -->
   <?php include 'footer.php'; ?>
-
   <script src="js/main.js"></script>
   <script src="js/services.js"></script>
   <script src="js/navbar_auth.js"></script>
-
+  
 </body>
 </html>

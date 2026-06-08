@@ -2,7 +2,60 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
+
+include("login/conexion.php");
+
+$idUsuario = $_SESSION['idusuario'] ?? 0;
+
+$usuario = [];
+$paciente = [];
+$citas = [];
+
+$sqlUsuario = "SELECT * FROM usuario WHERE IDUSUARIO = ?";
+$stmt = $conn->prepare($sqlUsuario);
+$stmt->bind_param("i", $idUsuario);
+$stmt->execute();
+$resultado = $stmt->get_result();
+
+if($resultado->num_rows > 0){
+    $usuario = $resultado->fetch_assoc();
+}
+
+$sqlPaciente = "SELECT * FROM paciente WHERE IDUSUARIO = ?";
+$stmt = $conn->prepare($sqlPaciente);
+$stmt->bind_param("i", $idUsuario);
+$stmt->execute();
+$resultado = $stmt->get_result();
+
+if($resultado->num_rows > 0){
+    $paciente = $resultado->fetch_assoc();
+}
+
+$sqlCitas = "SELECT * FROM citas WHERE IDUSUARIO = ?";
+$stmt = $conn->prepare($sqlCitas);
+$stmt->bind_param("i", $idUsuario);
+$stmt->execute();
+$resultado = $stmt->get_result();
+
+while($fila = $resultado->fetch_assoc()){
+
+    $estado = strtolower($fila['ESTADOCITA']);
+
+    if($estado == 'confirmada'){
+        $estado = 'completed';
+    }else{
+        $estado = 'pending';
+    }
+
+    $citas[] = [
+        "date" => $fila["FECHA"],
+        "time" => $fila["HORA"],
+        "reason" => $fila["DIRECCION"],
+        "status" => $estado
+    ];
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -133,6 +186,26 @@ if (session_status() === PHP_SESSION_NONE) {
             <strong id="pCondition"></strong>
         </div>
 
+        <div class="patient-box">
+    <span>Address</span>
+    <strong id="pAddress"></strong>
+</div>
+
+<div class="patient-box">
+    <span>Allergies</span>
+    <strong id="pAllergies"></strong>
+</div>
+
+<div class="patient-box">
+    <span>Medications</span>
+    <strong id="pMedications"></strong>
+</div>
+
+<div class="patient-box">
+    <span>Mobility</span>
+    <strong id="pMobility"></strong>
+</div>
+
     </div>
 </div>
 
@@ -191,107 +264,28 @@ if (session_status() === PHP_SESSION_NONE) {
 <?php include 'footer.php'; ?>
 
 <script>
+const user = <?php echo json_encode([
+    "name" => ($usuario['NOMBRE'] ?? '') . ' ' . ($usuario['APELLIDO'] ?? ''),
+    "email" => $usuario['CORREO_USU'] ?? '',
+    "phone" => $usuario['CONTACTO_USUA'] ?? '',
+    "location" => ''
+]); ?>;
 
-/* DATA */
-const user = {
-    name: "Juan Esteban",
-    email: "juanesteban19@gmail.com",
-    phone: "+503 4568 3190",
-    location: "San Martín"
-};
+const patient = <?php echo json_encode([
+    "name" => ($paciente['NOMBRE_PAC'] ?? '') . ' ' . ($paciente['APELLIDO_PAC'] ?? ''),
+    "age" => $paciente['EDAD_PAC'] ?? '',
+    "gender" => $paciente['GENERO'] ?? '',
+    "condition" => $paciente['ENFERMEDADES'] ?? '',
+    "address" => $paciente['DIRECCION'] ?? '',
+    "allergies" => $paciente['ALERGIAS'] ?? '',
+    "medications" => $paciente['MEDICAMENTOS_ACTIVOS'] ?? '',
+    "mobility" => $paciente['NIVELDEMOVILIDAD'] ?? ''
+]); ?>;
 
-const patient = {
-    name: "Ricardo Esteban",
-    age: 57,
-  gender: "Male",
-    relation: "Father",
-    condition: "General Checkup"
-};
-
-const appointments = [
-    { date:"2026-05-01", time:"10:00 AM", reason:"General Consultation", status:"pending" },
-    { date:"2026-04-20", time:"09:00 AM", reason:"The caregiver's arrival", status:"completed" },
-    { date:"2026-05-03", time:"02:00 PM", reason:"General Checkup", status:"pending" }
-];
-
-/* ELEMENTOS */
-const $ = id => document.getElementById(id);
-
-/* USER */
-$("name").textContent = user.name;
-$("email").textContent = user.email;
-$("phone").textContent = user.phone;
-$("location").textContent = user.location;
-
-/* PATIENT */
-$("pName").textContent = patient.name;
-$("pAge").textContent = patient.age + " years";
-$("pGender").textContent = patient.gender;
-$("pRelation").textContent = patient.relation;
-$("pCondition").textContent = patient.condition;
-
-/* RENDER */
-function render(){
-
-    $("pending").innerHTML = "";
-    $("completed").innerHTML = "";
-
-    let pendingCount = 0;
-    let doneCount = 0;
-    let next = null;
-
-    appointments.forEach(a => {
-
-        if(a.status === "pending"){
-            pendingCount++;
-            if(!next) next = a.date;
-        } else {
-            doneCount++;
-        }
-
-        const item = document.createElement("div");
-        item.className = "appointment " + a.status;
-
-        item.innerHTML = `
-            <div class="appointment-info">
-                <h4>${a.reason}</h4>
-                <p>${a.date} | ${a.time}</p>
-            </div>
-        `;
-
-        if(a.status === "pending"){
-
-            const btn = document.createElement("button");
-            btn.textContent = "Complete";
-
-            btn.onclick = () => {
-                a.status = "completed";
-                render();
-            };
-
-            item.appendChild(btn);
-            $("pending").appendChild(item);
-
-        } else {
-
-            const done = document.createElement("span");
-            done.className = "done-status";
-            done.textContent = "Completed";
-
-            item.appendChild(done);
-            $("completed").appendChild(item);
-        }
-
-    });
-
-    $("countPending").textContent = pendingCount;
-    $("countDone").textContent = doneCount;
-    $("nextDate").textContent = next || "--";
-}
-
-render();
-
+const appointments = <?php echo json_encode($citas); ?>;
 </script>
+
+<script src="js/perfil_usuario.js"></script>
 
 </body>
 </html>
