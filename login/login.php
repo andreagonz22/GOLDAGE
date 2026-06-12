@@ -10,8 +10,8 @@
 <div class="login-wrapper">
   <div class="login-card">
 
-    <a class="login-logo">
-    <img src="logo.png"></a>
+
+  
     <h2>Welcome Back</h2>
     <p class="subtitle">Sign in to continue</p>
 

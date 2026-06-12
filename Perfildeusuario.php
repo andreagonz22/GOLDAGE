@@ -90,7 +90,7 @@ while($fila = $resultado->fetch_assoc()){
 <section class="page-hero services-hero">
   <div class="page-hero-content fade-in">
     <h1>
-      Welcome Juan<br />
+      Welcome<br />
       <em>Here is yor summary</em>
     </h1>
     <p>
