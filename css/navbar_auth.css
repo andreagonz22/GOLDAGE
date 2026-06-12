@@ -1,0 +1,212 @@
+/* ---- Wrapper del perfil en nav ---- */
+.nav-profile-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* ---- Botón perfil ---- */
+.nav-profile-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: #80cbc41f;
+  border: 1.5px solid rgba(128, 203, 196, 0.35);
+  border-radius: 50px;
+  padding: 6px 14px 6px 8px;
+  cursor: pointer;
+  font-family: var(--font, 'Poppins', sans-serif);
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text, #2d3748);
+  transition: 0.25s ease;
+  white-space: nowrap;
+}
+.nav-profile-btn:hover,
+.nav-profile-btn[aria-expanded="true"] {
+  background: var(--mint-dark, #80cbc4);
+  color: #fff;
+  border-color: var(--mint-dark, #80cbc4);
+}
+
+/* Avatar icon */
+.nav-avatar {
+  font-size: 22px;
+  color: var(--mint-dark, #80cbc4);
+  transition: 0.25s ease;
+  line-height: 1;
+}
+.nav-profile-btn:hover .nav-avatar,
+.nav-profile-btn[aria-expanded="true"] .nav-avatar {
+  color: #fff;
+}
+
+/* Nombre de usuario */
+.nav-username {
+  max-width: 110px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Chevron animado */
+.nav-chevron {
+  font-size: 10px;
+  transition: transform 0.25s ease;
+}
+.nav-profile-btn[aria-expanded="true"] .nav-chevron {
+  transform: rotate(180deg);
+}
+
+/* ---- DROPDOWN ---- */
+.nav-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  min-width: 210px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.13);
+  border: 1px solid rgba(0,0,0,0.06);
+  overflow: hidden;
+  z-index: 1000;
+
+  /* Estado oculto por defecto */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s;
+  pointer-events: none;
+}
+.nav-dropdown.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Header del dropdown */
+.nav-dropdown-header {
+  padding: 14px 16px 10px;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.nav-dd-role {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--mint-dark, #80cbc4);
+}
+.nav-dd-name {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text, #2d3748);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Body del dropdown */
+.nav-dropdown-body {
+  padding: 6px 0;
+}
+
+/* Footer del dropdown */
+.nav-dropdown-footer {
+  border-top: 1px solid #f0f0f0;
+  padding: 6px 0;
+}
+
+/* Items del dropdown */
+.nav-dd-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--text-light, #718096);
+  text-decoration: none;
+  transition: background 0.18s ease, color 0.18s ease;
+  cursor: pointer;
+}
+.nav-dd-item i {
+  width: 16px;
+  font-size: 14px;
+  color: var(--mint-dark, #80cbc4);
+  transition: color 0.18s ease;
+}
+.nav-dd-item:hover {
+  background: rgba(128, 203, 196, 0.09);
+  color: var(--text, #2d3748);
+}
+.nav-dd-item:hover i {
+  color: var(--mint-dark, #80cbc4);
+}
+
+/* Logout — color especial */
+.nav-dd-logout {
+  color: #e53e3e;
+}
+.nav-dd-logout i {
+  color: #e53e3e;
+}
+.nav-dd-logout:hover {
+  background: rgba(229, 62, 62, 0.07);
+  color: #c53030;
+}
+.nav-dd-logout:hover i {
+  color: #c53030;
+}
+
+/* ---- BOTÓN INICIAR SESIÓN (sin sesión) ---- */
+.nav-btn-login {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 7px;
+  background: var(--mint-dark, #80cbc4) !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  padding: 8px 18px !important;
+  border-radius: 50px !important;
+  border: none;
+  transition: 0.25s ease !important;
+  white-space: nowrap;
+}
+.nav-btn-login:hover {
+  background: #4adfd2 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(76,231,218,0.35);
+  color: #fff !important;
+}
+
+/* ---- Responsive: en móvil el dropdown va abajo del todo ---- */
+@media (max-width: 768px) {
+  .nav-dropdown {
+    position: static;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    background: rgba(128, 203, 196, 0.06);
+    border-top: 1px solid rgba(128, 203, 196, 0.2);
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: none;
+  }
+  .nav-dropdown.open {
+    display: block;
+  }
+  .nav-profile-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .nav-profile-btn {
+    width: 100%;
+    justify-content: flex-start;
+    border-radius: 8px;
+  }
+}
