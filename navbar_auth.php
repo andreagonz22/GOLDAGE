@@ -37,34 +37,46 @@ $__prefix   = str_repeat('../', max(0, $__depth - 1));
 
             <div class="nav-dropdown" id="gaDropdown" role="menu">
               <div class="nav-dropdown-header">
-                <span class="nav-dd-role"><?= ucfirst($ga_rol_nav) ?></span>
+                <span class="nav-dd-role">
+                      <?php
+                        if ($ga_rol_nav == 'usuario') {
+                          echo 'USER';
+                        } elseif ($ga_rol_nav == 'empleado') {
+                          echo 'EMPLOYEE';
+                        } else {
+                          echo ucfirst($ga_rol_nav);
+                        }
+                      ?>
+                </span>
                 <span class="nav-dd-name"><?= htmlspecialchars($ga_nombre) ?></span>
               </div>
               <div class="nav-dropdown-body">
                 <?php if ($ga_rol_nav === 'usuario'): ?>
                   <a href="<?= $__prefix ?>perfildeusuario.php" class="nav-dd-item" role="menuitem">
-                    <i class="fa-solid fa-user"></i> Mi perfil
+                    <i class="fa-solid fa-user"></i> Profile
                   </a>
                   <a href="<?= $__prefix ?>citas/mis_citas.php" class="nav-dd-item" role="menuitem">
-                    <i class="fa-solid fa-calendar-check"></i> Mis citas
+                    <i class="fa-solid fa-calendar-check"></i> My Appointments
                   </a>
                   <a href="<?= $__prefix ?>citas/agendar.php" class="nav-dd-item" role="menuitem">
-                    <i class="fa-solid fa-calendar-plus"></i> Agendar cita
+                    <i class="fa-solid fa-calendar-plus"></i> Book Appointment
                   </a>
                 <?php elseif ($ga_rol_nav === 'empleado'): ?>
-                  <a href="<?= $__prefix ?>citas/panel_empleado.php" class="nav-dd-item" role="menuitem">
-                    <i class="fa-solid fa-briefcase-medical"></i> Panel de citas
+                  <a href="<?= $__prefix ?>pantalladoctor.php" class="nav-dd-item" role="menuitem">
+                    <i class="fa-solid fa-briefcase-medical"></i> Profile
                   </a>
-                <?php elseif ($ga_rol_nav === 'admin'): ?>
+                  <a href="<?= $__prefix ?>citas/panel_empleado.php" class="nav-dd-item" role="menuitem">
+                    <i class="fa-solid fa-briefcase-medical"></i> Appointment Management
+                  </a>
                   <a href="<?= $__prefix ?>admin/admin.php" class="nav-dd-item" role="menuitem">
-                    <i class="fa-solid fa-shield-halved"></i> Panel admin
+                    <i class="fa-solid fa-shield-halved"></i> Admin Dashboard
                   </a>
                 <?php endif; ?>
               </div>
               <div class="nav-dropdown-footer">
                 <a href="<?= $__prefix ?><?= ($ga_rol_nav === 'empleado') ? 'empleados/logout.php' : 'login/logout.php' ?>"
                    class="nav-dd-item nav-dd-logout" role="menuitem">
-                  <i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión
+                  <i class="fa-solid fa-right-from-bracket"></i> Log Out
                 </a>
               </div>
             </div>

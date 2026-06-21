@@ -1,41 +1,41 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Registrar Paciente</title>
+  <title>Register Patient</title>
 </head>
 <body>
 
-<h2>Registro de Paciente</h2>
+<h2>Patient Registration</h2>
 
 <form action="guardar_paciente.php" method="POST">
 
-  <input type="text" name="nombre" placeholder="Nombre" required><br><br>
-  <input type="text" name="apellido" placeholder="Apellido" required><br><br>
-  <input type="number" name="edad" placeholder="Edad" required><br><br>
+  <input type="text" name="nombre" placeholder="First Name" required><br><br>
+  <input type="text" name="apellido" placeholder="Last Name" required><br><br>
+  <input type="number" name="edad" placeholder="Age" required><br><br>
 
   <select name="genero" required>
-    <option value="">Seleccione género</option>
-    <option value="Hombre">Hombre</option>
-    <option value="Mujer">Mujer</option>
+    <option value="">Select Gender</option>
+    <option value="Hombre">Male</option>
+    <option value="Mujer">Female</option>
   </select><br><br>
 
-  <input type="text" name="direccion" placeholder="Dirección"><br><br>
-  <input type="text" name="enfermedades" placeholder="Enfermedades"><br><br>
-  <input type="text" name="alergias" placeholder="Alergias"><br><br>
-  <input type="text" name="medicamentos" placeholder="Medicamentos activos"><br><br>
+  <input type="text" name="direccion" placeholder="Address"><br><br>
+  <input type="text" name="enfermedades" placeholder="Medical Conditions"><br><br>
+  <input type="text" name="alergias" placeholder="Allergies"><br><br>
+  <input type="text" name="medicamentos" placeholder="Current Medications"><br><br>
 
   <select name="movilidad" required>
-    <option value="">Nivel de movilidad</option>
-    <option value="INDEPENDIENTE">Independiente</option>
-    <option value="CON AYUDA">Con ayuda</option>
-    <option value="POSTRADOS">Postrados</option>
+    <option value="">Mobility Level</option>
+    <option value="INDEPENDIENTE">Independent</option>
+    <option value="CON AYUDA">With Assistance</option>
+    <option value="POSTRADOS">Bedridden</option>
   </select><br><br>
 
-  <!-- Este IDUSUARIO normalmente vendría de la sesión -->
-  <input type="number" name="idusuario" placeholder="ID Usuario" required><br><br>
+  <!-- This IDUSUARIO would normally come from the session -->
+  <input type="number" name="idusuario" placeholder="User ID" required><br><br>
 
-  <button type="submit">Registrar</button>
+  <button type="submit">Register</button>
 
 </form>
 

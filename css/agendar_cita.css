@@ -94,3 +94,18 @@ input:focus, select:focus {
 
 .footer-link { text-align: center; font-size: 13px; color: #888; margin-top: 18px; }
 .footer-link a { color: #5aab8a; font-weight: 600; text-decoration: none; }
+
+.flecha-volver{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: #caa43b;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.flecha-volver:hover{
+    color: #a8862f;
+    transform: translateX(-5px);
+}

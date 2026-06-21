@@ -31,8 +31,8 @@ require_once __DIR__ . '/auth_check.php';
 
 <section class="page-hero nurses-hero">
     <div class="page-hero-content">
-        <h1>Choose your professional</h1>
-        <p>Select the best care for your family in seconds quality & empathy</p>
+        <h1>Choose your <em>professional</em></h1>
+        <p>Select the best care for your family in seconds</p>
     </div>
 </section>
 
@@ -56,58 +56,55 @@ require_once __DIR__ . '/auth_check.php';
 <div class="modal-overlay" id="hireModal">
     <div class="modal-container">
         <div class="modal-header">
-            <h2><i class="fas fa-calendar-check"></i> Contratar Servicio</h2>
+            <h2><i class="fas fa-calendar-check"></i> Hire Service</h2>
             <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
         </div>
         <div class="modal-body">
             <div class="status-badge available">
                 <span class="status-dot"></span>
-                <span>Disponible ahora</span>
+                <span>Available now</span>
             </div>
             <div class="professional-info">
-                <div class="professional-icon">
-                    <i class="fas fa-user-md"></i>
-                </div>
+                <div class="professional-icon" id="modalIcon">
+    <i class="fas fa-user-md"></i>
+</div>
                 <h3 id="modalProfessionalName">Dra. Elena Méndez</h3>
                 <div class="professional-specialty" id="modalSpecialty">
-                    <i class="fas fa-stethoscope"></i> Geriatría & Cuidados Paliativos
+                    <i class="fas fa-stethoscope"></i> Geriatrics
                 </div>
             </div>
             <div class="details-grid">
                 <div class="detail-item">
                     <i class="fas fa-briefcase"></i>
-                    <div class="detail-label">Experiencia</div>
-                    <div class="detail-value">12+ años</div>
+                    <div class="detail-label">Experience</div>
+                    <div class="detail-value" id="modalExperience">12+ years</div>
                 </div>
                 <div class="detail-item">
                     <i class="fas fa-graduation-cap"></i>
-                    <div class="detail-label">Especialidad</div>
-                    <div class="detail-value">Geriatría Clínica</div>
+                    <div class="detail-label">Specialty</div>
+                    <div class="detail-value">Clinical Geriatrics</div>
                 </div>
             </div>
-            <p style="text-align: center; margin-bottom: 24px; color: #4B5F6C; line-height: 1.5;">
-                Atención especializada para adultos mayores en la comodidad de su hogar.
-                Evaluación integral, manejo de enfermedades crónicas y cuidado con calidez humana.
+            <p id="modalDescription" style="text-align: center; margin-bottom: 24px; color: #4B5F6C; line-height: 1.5;">
+                We care for you in the comfort of your own home.
+
+We check your health fully, help you manage your everyday medical conditions, and support you with kindness and respect.
             </p>
             <div class="availability-section">
-                <h4><i class="fas fa-clock"></i> Horarios Disponibles</h4>
-                <div class="availability-times">
-                    <span class="time-badge"><i class="fas fa-sun"></i> 8:00 am - 12:00 pm</span>
-                    <span class="time-badge"><i class="fas fa-moon"></i> 2:00 pm - 5:00 pm</span>
-                </div>
-                <h4><i class="fas fa-calendar-week"></i> Días disponibles</h4>
+                
+                <h4><i class="fas fa-calendar-week"></i> Available days</h4>
                 <div class="days-available">
-                    <span class="day-badge">Lunes</span>
-                    <span class="day-badge">Martes</span>
-                    <span class="day-badge">Miércoles</span>
-                    <span class="day-badge">Jueves</span>
-                    <span class="day-badge">Viernes</span>
-                    <span class="day-badge unavailable-day">Sábado</span>
-                    <span class="day-badge unavailable-day">Domingo</span>
+                    <span class="day-badge">Monday</span>
+                    <span class="day-badge">Tuesday</span>
+                    <span class="day-badge">Wednesday</span>
+                    <span class="day-badge">Thursday</span>
+                    <span class="day-badge">Friday</span>
+                    <span class="day-badge unavailable-day">Saturday</span>
+                    <span class="day-badge unavailable-day">Sunday</span>
                 </div>
             </div>
             <button class="modal-action-btn" id="hireNowBtn">
-                <i class="fas fa-calendar-alt"></i> Agendar cita <i class="fas fa-arrow-right"></i>
+                <i class="fas fa-calendar-alt"></i> Hire now<i class="fas fa-arrow-right"></i>
             </button>
         </div>
     </div>
@@ -216,14 +213,32 @@ require_once __DIR__ . '/auth_check.php';
     }
 
     function handleHireClick(e) {
-        const btn = e.currentTarget;
-        const name = btn.getAttribute('data-name');
-        const specialty = btn.getAttribute('data-specialty');
-        if (modalName) modalName.textContent = name;
-        if (modalSpecialtySpan) modalSpecialtySpan.innerHTML = `<i class="fas fa-stethoscope"></i> ${specialty}`;
-        if (modal) modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
+
+    const btn = e.currentTarget;
+
+    const name = btn.getAttribute('data-name');
+    const specialty = btn.getAttribute('data-specialty');
+
+    const info = specialtyInfo[specialty];
+
+    modalName.textContent = name;
+
+    modalSpecialtySpan.innerHTML =
+        `<i class="fas fa-stethoscope"></i> ${specialty}`;
+
+    document.getElementById("modalExperience").textContent =
+        info ? info.experience : "10+ years";
+
+    document.getElementById("modalDescription").textContent =
+        info ? info.description : "Professional healthcare services tailored to older adults.";
+
+    document.getElementById("modalIcon").innerHTML =
+        `<i class="fas ${info ? info.icon : 'fa-user-doctor'}"></i>`;
+
+    modal.classList.add("active");
+
+    document.body.style.overflow = "hidden";
+}
 
     function closeModal() {
         if (modal) modal.classList.remove('active');
