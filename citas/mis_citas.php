@@ -16,19 +16,24 @@ $citas = $res->fetch_all(MYSQLI_ASSOC);
   <title>Mis Citas</title>
   <link rel="stylesheet" href="../css/registro.css">
   <link rel="stylesheet" href="../css/citas.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
 <div class="citas-wrapper">
   <div class="citas-header">
-    <a href="../index.php" class="register-logo">Gold<em>Age</em></a>
+    <a href="../index.php" class="register-logo" class="flecha-volver"><i class="fas fa-arrow-left"></i>GoldAge</a>
+    
+</a>
     <h2>Mis Citas</h2>
     <p class="subtitle">Historial y estado de tus consultas agendadas</p>
   </div>
 
   <?php if (empty($citas)): ?>
     <div class="citas-empty">
-      <div style="font-size:48px">📋</div>
+      <div class="empty-icon">
+        <i class="fas fa-calendar-xmark"></i>
+      </div>
       <p>No tienes citas registradas aún.</p>
     </div>
 
@@ -43,12 +48,20 @@ $citas = $res->fetch_all(MYSQLI_ASSOC);
       $cancelable = $estado !== 'cancelada';
     ?>
     <div class="cita-card">
-      <div class="cita-icon">🩺</div>
+      <div class="cita-icon">
+        <i class="fas fa-user-doctor"></i>
+      </div>
       <div class="cita-info">
         <div class="cita-empleado"><?= htmlspecialchars($row['NOMBRE_COMPLETO']) ?></div>
         <div class="cita-datetime">
-          <span>📅 <?= htmlspecialchars($row['FECHA']) ?></span>
-          <span>🕐 <?= htmlspecialchars($row['HORA']) ?></span>
+          <span>
+    <i class="fas fa-calendar-days"></i>
+    <?= htmlspecialchars($row['FECHA']) ?>
+          </span>
+          <span>
+    <i class="fas fa-clock"></i>
+    <?= htmlspecialchars($row['HORA']) ?>
+          </span>
         </div>
       </div>
       <span class="cita-estado <?= $claseEstado ?>">

@@ -1,3 +1,6 @@
+
+<!DOCTYPE html>
+<html>
 <head>
     <title>Login</title>
     <link rel="stylesheet" href="../css/login.css" />
@@ -42,6 +45,16 @@
       <button type="submit">Login</button>
 
     </form>
+
+    <p class="login-footer">
+      Don't have an account?
+      <a href="registro.php">Create Account</a>
+    </p>
+
+    <p class="login-footer">
+      Are you an employee?
+      <a href="../empleados/login_empleado.php">Sign In</a>
+    </p>
 
     <p class="login-footer">
       Don't have an account?

@@ -2,13 +2,13 @@
 session_start();
 include(__DIR__ . "/../login/conexion.php");
 
-// Validar método
+// Validate request method
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     header("Location: registro_paciente.php");
     exit();
 }
 
-// Sanitizar
+// Sanitize input
 $nombre   = trim($_POST['nombre'] ?? '');
 $apellido = trim($_POST['apellido'] ?? '');
 $edad     = intval($_POST['edad'] ?? 0);
@@ -20,20 +20,20 @@ $meds     = trim($_POST['medicamentos'] ?? '');
 $mov      = $_POST['movilidad'] ?? '';
 $idusuario= intval($_POST['idusuario'] ?? 0);
 
-// Validaciones
+// Validations
 if (!$nombre || !$apellido || $edad <= 0 || !$genero || !$mov || $idusuario <= 0) {
-    die("Datos obligatorios incompletos");
+    die("Required data is incomplete");
 }
 
 $generos_validos = ['Hombre','Mujer'];
 $mov_validos = ['INDEPENDIENTE','CON AYUDA','POSTRADOS'];
 
 if (!in_array($genero, $generos_validos) || !in_array($mov, $mov_validos)) {
-    die("Valores inválidos");
+    die("Invalid values");
 }
 
-// Insert seguro
-$stmt = $conn->prepare("INSERT INTO PACIENTE 
+// Secure insert
+$stmt = $conn->prepare("INSERT INTO PACIENTE
 (NOMBRE_PAC, APELLIDO_PAC, EDAD_PAC, GENERO, DIRECCION, ENFERMEDADES, ALERGIAS, MEDICAMENTOS_ACTIVOS, NIVELDEMOVILIDAD, IDUSUARIO)
 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
@@ -52,7 +52,7 @@ $stmt->bind_param(
 );
 
 if ($stmt->execute()) {
-    echo "Paciente registrado correctamente";
+    echo "Patient registered successfully";
 } else {
     echo "Error: " . $conn->error;
 }

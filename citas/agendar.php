@@ -23,11 +23,12 @@ $empleados = $conn->query("
   <link rel="stylesheet" href="../css/registro.css">
   <link rel="stylesheet" href="../css/agendar_cita.css">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
 <div class="card">
-  <h2>Agendar cita</h2>
+  <h2 class="flecha-volver><i class="fas fa-arrow-left></i>Agendar cita</h2>
 
   <!-- FIX: action apunta a guardar_cita.php (antes apuntaba a formpago.php) -->
   <form action="guardar_cita.php" method="POST">

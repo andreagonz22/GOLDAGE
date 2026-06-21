@@ -95,3 +95,11 @@ function toggleFAQ(btn) {
 
   }
 }
+
+const hiddenRating = document.getElementById("calificacion");
+
+stars.forEach(star => {
+    star.addEventListener("click", () => {
+        hiddenRating.value = star.dataset.value;
+    });
+});
