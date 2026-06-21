@@ -32,11 +32,20 @@ body {
 }
  
 /* ---- LOGO ---- */
-.login-logo img {
-    width: 120px;
-    height: auto;
-    display: block;
-    margin: 0 auto 20px;
+.login-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 32px;
+  font-size: 20px;
+  font-weight: 800;
+  color: #2d3748;
+  text-decoration: none;
+}
+ 
+.login-logo em {
+  font-style: normal;
+  color: #4adfd2;
 }
  
 /* ---- TÍTULOS ---- */

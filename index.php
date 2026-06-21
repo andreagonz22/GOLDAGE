@@ -11,9 +11,10 @@ if (session_status() === PHP_SESSION_NONE) {
   <title>GOLDAGE</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/navbar_auth.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
@@ -74,7 +75,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
       <!-- Medical -->
       <div class="feature-card scroll-reveal">
-        <div class="feature-icon" style="--icon-color: #a8d5ba;">
+        <div class="feature-icon" style="--icon-color: #4adfd380;">
           <i class="fas fa-user-nurse"></i>
         </div>
         <h3>Medical Services</h3>
@@ -84,7 +85,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
       <!-- Reminders -->
       <div class="feature-card scroll-reveal" style="--delay: 0.15s">
-        <div class="feature-icon" style="--icon-color: #b3cfe8;">
+        <div class="feature-icon" style="--icon-color: #54779281;">
           <i class="fas fa-bell"></i>
         </div>
         <h3>Reminders</h3>
@@ -93,7 +94,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
       <!-- Home Care -->
       <div class="feature-card scroll-reveal" style="--delay: 0.3s">
-        <div class="feature-icon" style="--icon-color: #f5e6c8;">
+        <div class="feature-icon" style="--icon-color: #efc00477;">
           <i class="fas fa-house-medical"></i>
         </div>
         <h3>Care</h3>
@@ -219,44 +220,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
   <br><br><br>
   <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.php" class="logo"><span class="logo-icon">🌿</span><span class="logo-text">Gold<span class="logo-accent">Age</span></span></a>
-          <p>Home health care with heart. We care for those you love most with professionalism and warmth.</p>
-        </div>
-        <div class="footer-links">
-          <h5>Navegación</h5>
-          <ul>
-            <li><a href="index.php">Home</a></li>
-            <li><a href="services.php">Services</a></li>
-            <li><a href="nurses.php">Nurses</a></li>
-            <li><a href="about.php">About Us</a></li>
-            <li><a href="contact.php">Contact Us</a></li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <h5>Servicios</h5>
-          <ul>
-            <li><a href="services.php">24/7 Attention</a></li>
-            <li><a href="services.php">General Consultations</a></li>
-            <li><a href="services.php">Geriatrics</a></li>
-          </ul>
-        </div>
-        <div class="footer-contact">
-          <h5>Contacto</h5>
-          <p>hola@goldage.com</p>
-          <p>+503 7000-0000</p>
-          <p>San Salvador, El Salvador</p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2025 GoldAge. All rights reserved.</p>
-      </div>
-    </div>
-</footer>
-
+  <?php include 'footer.php'; ?>
   <!-- ===== SCRIPTS ===== -->
   <script src="js/main.js"></script>
   <!-- Script del menú de autenticación (NUEVO) -->

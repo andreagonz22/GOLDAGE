@@ -149,57 +149,50 @@ ul {
   transition: var(--transition);
   display: block;
 }
+/* SCROLL SUAVE */
+html {
+  scroll-behavior: smooth;
+}
 
-.nurses-hero {
-  min-height: 42vh;
+/* Page Hero */
+.page-hero {
+  min-height: 40vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 80px 24px;
-
-  background: linear-gradient(
-    135deg,
-    #d4ede0 0%,
-    #d0e8f5 100%
-  );
-
+  padding: 100px 24px 60px;
   position: relative;
   overflow: hidden;
 }
 
-.page-hero-content {
-  max-width: 680px;
-  margin: 0 auto;
+.nurses-hero {
+  background: linear-gradient(135deg, #d4ede0 0%, #d0e8f5 100%);
 }
 
-.page-hero-content h1 {
+.page-hero-content {
+  max-width: 680px;
+}
+
+.page-hero em {
+  font-style: normal;
+  color: var(--mint-dark);
+}
+
+.page-hero h1 {
   font-size: clamp(32px, 5vw, 56px);
   font-weight: 800;
   line-height: 1.15;
   margin: 12px 0 16px;
-  color: var(--text);
-  text-shadow: none;
 }
 
-.page-hero-content p {
+.page-hero p {
   font-size: 16px;
   color: var(--text-light);
   max-width: 480px;
   margin: 0 auto;
   line-height: 1.7;
-}
-
-/* palabra resaltada */
-.page-hero-content h1 em {
-  font-style: normal;
-  color: var(--mint-dark);
-}
-
-#modalDescription{
-    text-align: justify;
-    line-height: 1.8;
-    font-size: 15px;
 }
 
 
@@ -274,7 +267,6 @@ ul {
 }
 
 .filter-btn.active {
-  background: #80cbc4;
   background: #80cbc4;
   color: white;
   box-shadow: 0 12px 20px -10px rgba(42, 111, 143, 0.5);
@@ -351,7 +343,6 @@ ul {
   letter-spacing: 1px;
   color: white;
   background: #80cbc4;
-  background: #80cbc4;
   padding: 6px 14px;
   border-radius: 40px;
   display: inline-flex;
@@ -411,7 +402,6 @@ ul {
   font-size: 15px;
   cursor: pointer;
   background: #80cbc4;
-  background: #80cbc4;
   color: white;
   transition: var(--transition);
   display: flex;
@@ -422,12 +412,10 @@ ul {
 }
 
 
-
 .nurse-btn i {
   font-size: 14px;
   transition: transform 0.2s;
 }
-
 
 
 
@@ -840,9 +828,40 @@ ul {
 
 
 
+.modal-action-btn {
+  width: 100%;
+  border: none;
+  border-radius: 16px;
+  padding: 16px 24px;
+  background: #80cbc4;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: var(--font);
+  cursor: pointer;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
 
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(128, 203, 196, 0.35);
+}
 
+.modal-action-btn:hover {
+  background: #6fb8b1;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(128, 203, 196, 0.45);
+}
+
+.modal-action-btn:active {
+  transform: translateY(0);
+}
+
+.modal-action-btn i {
+  transition: transform 0.3s ease;
+}
 
 .modal-action-btn:hover i:last-child {
   transform: translateX(5px);

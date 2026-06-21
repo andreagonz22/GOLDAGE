@@ -3,194 +3,282 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
-<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Doctor Dashboard | GoldAge</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GOLDAGE</title>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="css/navbar_auth.css" />
-  <link rel="stylesheet" href="css/pantalladoctor.css" />
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/navbar_auth.css">
+<link rel="stylesheet" href="css/pantalladoctor.css">
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
-<!-- =========================================
-                NAVBAR
-========================================= -->
+<!-- NAVBAR -->
 <nav class="navbar" id="navbar">
-
   <div class="nav-container">
-
-    <!-- Logo -->
     <a href="index.php" class="logo">
       <img src="img/logo.png" alt="GoldAge Logo" class="logo-img">
-
-      <span class="logo-text">
-        Gold<span class="logo-accent">Age</span>
-      </span>
+      <span class="logo-text">Gold<span class="logo-accent">Age</span></span>
     </a>
-
-    <!-- Auth Menu -->
     <?php include __DIR__ . '/navbar_auth.php'; ?>
-
-    <!-- Hamburger -->
-    <button class="hamburger" id="hamburger" aria-label="Menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
   </div>
-
 </nav>
 
+<!-- HERO PRINCIPAL -->
+<section class="page-hero services-hero">
+  <div class="page-hero-content fade-in">
 
-<!-- =========================================
-                HERO SECTION
-========================================= -->
-<section class="hero">
-
-  <div class="hero-text">
-
-    <h1>Welcome back, Dr. Perez</h1>
+   <h1>
+    Welcome back <span class="doctor-part">Dr. Pérez</span>
+</h1>
 
     <p>
-      Manage your appointments, check your schedule,
-      and stay connected with your patients.
+Manage your appointments, check your schedule, and stay connected with your patients.
     </p>
-
   </div>
 
+  <div class="hero-wave">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#f8faf7"/>
+    </svg>
+  </div>
 </section>
 
+<!-- DASHBOARD -->
+<div class="container">
 
-<!-- =========================================
-              MAIN CONTAINER
-========================================= -->
-<main class="main-container">
+<div class="dashboard-grid">
 
-  <div class="content">
+<!-- LEFT -->
+<div class="left-column">
 
+<div class="card profile-card">
+    <img class="profile-image"
+    src="https://th.bing.com/th/id/R.329d02c6f5ce304623cd70570179aafe?rik=QaKFKND1ABJm7Q&riu=http%3a%2f%2fclipart-library.com%2fimages_k%2ftransparent-doctor%2ftransparent-doctor-13.png&ehk=MSVQnrDPfOP%2fBumrnoy73QlkSGfbuZoXgO3nu3QKhQc%3d&risl=&pid=ImgRaw&r=0">
 
-    <!-- =========================================
-                    STATS
-    ========================================= -->
-    <section class="stats">
+    <h2 id="name"></h2>
 
-      <div class="stat-box">
-        <h3>12</h3>
-        <p>Pending Appointments</p>
-      </div>
+    <div class="info-list">
 
-      <div class="stat-box">
-        <h3>48</h3>
-        <p>Completed Appointments</p>
-      </div>
-
-      <div class="stat-box">
-        <h3>5</h3>
-        <p>Appointments Today</p>
-      </div>
-
-    </section>
-
-
-    <!-- =========================================
-                  APPOINTMENT CARDS
-    ========================================= -->
-
-    <section class="cards-container">
-
-      <!-- Pending -->
-      <div class="card">
-
-        <div class="card-icon">
-          <i class="fa-solid fa-clock"></i>
+        <div class="info-item">
+            <div class="icon-box">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="info-text">
+                <p id="email"></p>
+            </div>
         </div>
 
-        <h2>Pending Appointments</h2>
-
-        <p>
-          Review upcoming appointments and confirm patient visits.
-        </p>
-
-        <a href="#">
-          View Details
-        </a>
-
-      </div>
-
-
-      <!-- Completed -->
-      <div class="card">
-
-        <div class="card-icon">
-          <i class="fa-solid fa-circle-check"></i>
+        <div class="info-item">
+            <div class="icon-box">
+                <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="info-text">
+                <p id="phone"></p>
+            </div>
         </div>
 
-        <h2>Completed Appointments</h2>
-
-        <p>
-          Check consultations that have already been completed.
-        </p>
-
-        <a href="#">
-          View Details
-        </a>
-
-      </div>
-
-
-      <!-- Scheduled -->
-      <div class="card">
-
-        <div class="card-icon">
-          <i class="fa-solid fa-calendar-days"></i>
+        <div class="info-item">
+            <div class="icon-box">
+                <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="info-text">
+                <p id="location"></p>
+            </div>
         </div>
 
-        <h2>Scheduled Appointments</h2>
+    </div>
+</div>
 
-        <p>
-          Organize your calendar and manage future appointments.
-        </p>
+<div class="card">
+    <div class="card-header">
+        <h3>
+            <i class="fa-solid fa-user"></i>
+            Doctor Information
+        </h3>
+    </div>
+<div class="patient-grid">
 
-        <a href="#">
-          View Details
-        </a>
+    <div class="patient-box">
+        <span>Name</span>
+        <strong id="pName"></strong>
+    </div>
 
-      </div>
+    <div class="patient-box">
+        <span>Age</span>
+        <strong id="pAge"></strong>
+    </div>
 
-    </section>
+    <div class="patient-box">
+        <span>Gender</span>
+        <strong id="pGender"></strong>
+    </div>
 
-  </div>
+</div>
+</div>
 
-</main>
+</div>
 
+<!-- RIGHT -->
+<div class="right-column">
 
-<!-- =========================================
-                  FOOTER
-========================================= -->
+<div class="summary-cards">
+
+    <div class="summary-card">
+        <i class="fa-regular fa-calendar"></i>
+        <div>
+            <h2 id="countPending">0</h2>
+            <p>Pending</p>
+        </div>
+    </div>
+
+    <div class="summary-card">
+        <i class="fa-solid fa-check"></i>
+        <div>
+            <h2 id="countDone">0</h2>
+            <p>Completed</p>
+        </div>
+    </div>
+
+    <div class="summary-card">
+        <i class="fa-regular fa-clock"></i>
+        <div>
+            <h2 id="nextDate">--</h2>
+            <p>Next appointment</p>
+        </div>
+    </div>
+
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h3>Pending Appointments</h3>
+    </div>
+    <div id="pending"></div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h3>Completed Appointments</h3>
+    </div>
+    <div id="completed"></div>
+</div>
+
+</div>
+
+</div>
+</div>
+
 <?php include 'footer.php'; ?>
 
+<script>
 
-<!-- =========================================
-                  JAVASCRIPT
-========================================= -->
-<script src="js/main.js"></script>
+/* DATA */
+const user = {
+    name: "Eduardo Peréz",
+    email: "eduardoperéz41@gmail.com",
+    phone: "+503 7020 3567",
+    location: "San Marcos"
+};
+
+const patient = {
+    name: "Eduardo Peréz",
+    age: 52,
+  gender: "Male",
+  
+};
+
+const appointments = [
+    { date:"2026-05-01", time:"10:00 AM", reason:"General Consultation", status:"pending" },
+    { date:"2026-04-20", time:"09:00 AM", reason:"The caregiver's arrival", status:"completed" },
+    { date:"2026-05-03", time:"02:00 PM", reason:"General Checkup", status:"pending" }
+];
+
+/* ELEMENTOS */
+const $ = id => document.getElementById(id);
+
+/* USER */
+$("name").textContent = user.name;
+$("email").textContent = user.email;
+$("phone").textContent = user.phone;
+$("location").textContent = user.location;
+
+/* PATIENT */
+$("pName").textContent = patient.name;
+$("pAge").textContent = patient.age + " years";
+$("pGender").textContent = patient.gender;
+
+/* RENDER */
+function render(){
+
+    $("pending").innerHTML = "";
+    $("completed").innerHTML = "";
+
+    let pendingCount = 0;
+    let doneCount = 0;
+    let next = null;
+
+    appointments.forEach(a => {
+
+        if(a.status === "pending"){
+            pendingCount++;
+            if(!next) next = a.date;
+        } else {
+            doneCount++;
+        }
+
+        const item = document.createElement("div");
+        item.className = "appointment " + a.status;
+
+        item.innerHTML = `
+            <div class="appointment-info">
+                <h4>${a.reason}</h4>
+                <p>${a.date} | ${a.time}</p>
+            </div>
+        `;
+
+        if(a.status === "pending"){
+
+            const btn = document.createElement("button");
+            btn.textContent = "Complete";
+
+            btn.onclick = () => {
+                a.status = "completed";
+                render();
+            };
+
+            item.appendChild(btn);
+            $("pending").appendChild(item);
+
+        } else {
+
+            const done = document.createElement("span");
+            done.className = "done-status";
+            done.textContent = "Completed";
+
+            item.appendChild(done);
+            $("completed").appendChild(item);
+        }
+
+    });
+
+    $("countPending").textContent = pendingCount;
+    $("countDone").textContent = doneCount;
+    $("nextDate").textContent = next || "--";
+}
+
+render();
+
+</script>
 
 </body>
 </html>

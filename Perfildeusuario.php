@@ -242,16 +242,6 @@ while($fila = $resultado->fetch_assoc()){
 
 </div>
 
-
-
-<!-- ===== FOOTER ===== -->
-
-
-  <!-- ===== FOOTER ===== -->
-
-  <?php include 'footer.php'; ?>
-
-<!-- PENDING -->
 <div class="card">
     <div class="card-header">
         <h3>Pending Appointments</h3>
@@ -265,7 +255,6 @@ while($fila = $resultado->fetch_assoc()){
     </div>
     <div id="completed"></div>
 </div>
-
 
 </div>
 
