@@ -19,16 +19,18 @@ $empleados = $conn->query("
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Agendar Cita - GoldAge</title>
+  <title>Schedule Appointment - GoldAge</title>
   <link rel="stylesheet" href="../css/registro.css">
   <link rel="stylesheet" href="../css/agendar_cita.css">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
 </head>
 <body>
 
 <div class="card">
-  <h2 class="flecha-volver><i class="fas fa-arrow-left></i>Agendar cita</h2>
+  <a href="../index.php" class="flecha-volver"><h2><i class="fas fa-arrow-left"></a></i> Schedule Appointment</h2>
 
   <!-- FIX: action apunta a guardar_cita.php (antes apuntaba a formpago.php) -->
   <form action="guardar_cita.php" method="POST">
@@ -36,12 +38,12 @@ $empleados = $conn->query("
     <!-- FECHA Y HORA -->
     <div class="row">
       <div class="field">
-        <label>Fecha</label>
+        <label>Date</label>
         <input type="date" name="fecha" required
                min="<?= date('Y-m-d') ?>">
       </div>
       <div class="field">
-        <label>Hora</label>
+        <label>Time</label>
         <input type="time" name="hora" required>
       </div>
     </div>
@@ -50,10 +52,10 @@ $empleados = $conn->query("
     <!-- FIX: el select ahora usa name="idservicio" que guardar_cita.php espera -->
     <!-- FIX: campo "duracion" eliminado — guardar_cita.php lo lee directo de la BD -->
     <div class="field">
-      <label>Servicio</label>
+      <label>Service</label>
       <div class="select-wrap">
         <select name="idservicio" required>
-          <option value="" disabled selected>Selecciona un servicio</option>
+          <option value="" disabled selected>Select a service</option>
           <?php while ($servicio = $servicios->fetch_assoc()): ?>
             <option value="<?= (int)$servicio['IDSERVICIOS'] ?>">
               <?= htmlspecialchars($servicio['NOMBRE_SERVICIO']) ?>
@@ -66,7 +68,7 @@ $empleados = $conn->query("
 
     <!-- DIRECCIÓN -->
     <div class="field">
-      <label>Dirección del servicio</label>
+      <label>Service Address</label>
       <input
         type="text"
         name="direccion"
@@ -77,10 +79,10 @@ $empleados = $conn->query("
 
     <!-- EMPLEADO -->
     <div class="field">
-      <label>Profesional</label>
+      <label>Professional</label>
       <div class="select-wrap">
         <select name="idempleado" required>
-          <option value="" disabled selected>Selecciona un profesional</option>
+          <option value="" disabled selected>Select a professional</option>
           <?php while ($row = $empleados->fetch_assoc()): ?>
             <option value="<?= (int)$row['IDEMPLEADO'] ?>">
               <?= htmlspecialchars($row['NOMBRE_COMPLETO']) ?>
@@ -92,12 +94,12 @@ $empleados = $conn->query("
     </div>
 
     <!-- BOTÓN -->
-    <button type="submit" class="btn">Continuar al pago</button>
+    <button type="submit" class="btn">Continue to Payment</button>
 
   </form>
 
   <p class="footer-link">
-    ¿Ya tienes una cita? <a href="mis_citas.php">Ver mis citas</a>
+    Already have an appointment? <a href="mis_citas.php">View My Appointments</a>
   </p>
 </div>
 

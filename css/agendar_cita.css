@@ -1,16 +1,17 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  background: #e8f0ef;
+  font-family: 'Poppins', sans-serif;
   min-height: 100vh;
+  background: linear-gradient(135deg, #eaf7f0 0%, #e8f4fb 50%, #f8faf7 100%) ;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 24px;
+  padding: 40px 16px;
 }
 
 .card {
-  background: #f8faf7;
+  background: #fbf8ef;
   border-radius: 20px;
   padding: 40px 36px;
   width: 100%;
@@ -21,9 +22,8 @@ body {
 h2 { 
   font-size: 26px; 
   font-weight: 800; 
-  color: #1a1a1a; 
+  color: #2d3748; 
   margin-bottom: 6px;
-  
 }
 
 .field { margin-bottom: 18px; }
@@ -56,7 +56,7 @@ input, select {
 input::placeholder { color: #bbb; }
 
 input:focus, select:focus {
-  border-color: #5aab8a;
+  border-color: #80cbc4;
   box-shadow: 0 0 0 3px rgba(90,171,138,0.13);
   background: #fff;
 }
@@ -70,7 +70,7 @@ input:focus, select:focus {
   right: 16px;
   top: 50%;
   transform: translateY(-50%);
-  color: #5aab8a;
+  color: #80cbc4;
   pointer-events: none;
   font-size: 14px;
 }
@@ -93,19 +93,18 @@ input:focus, select:focus {
 .btn:active { transform: scale(0.98); }
 
 .footer-link { text-align: center; font-size: 13px; color: #888; margin-top: 18px; }
-.footer-link a { color: #5aab8a; font-weight: 600; text-decoration: none; }
+.footer-link a { color: #80cbc4; font-weight: 600; text-decoration: none; }
 
 .flecha-volver{
-    position: absolute;
     top: 20px;
     left: 20px;
     font-size: 24px;
-    color: #caa43b;
+    color: #80cbc4;
     text-decoration: none;
     transition: 0.3s;
 }
 
 .flecha-volver:hover{
-    color: #a8862f;
+    color: #4adfd2;
     transform: translateX(-5px);
 }
