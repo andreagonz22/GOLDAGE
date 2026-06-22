@@ -166,3 +166,24 @@ h2 { font-size: 26px; font-weight: 800; color: #1a1a1a; margin-bottom: 6px; }
 .cita-acciones form {
   display: inline;
 }
+
+.cita-icon i{
+    font-size: 30px;
+    color: #caa43b;
+}
+
+.cita-info i{
+    width: 18px;
+    margin-right: 6px;
+    color: #caa43b;
+}
+
+.btn-accion i,
+.btn i{
+    margin-right: 6px;
+}
+
+.empty-icon{
+    font-size: 50px;
+    color: #caa43b;
+}

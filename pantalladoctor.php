@@ -38,7 +38,7 @@ if (session_status() === PHP_SESSION_NONE) {
   <div class="page-hero-content fade-in">
 
    <h1>
-    Welcome back <span class="doctor-part">Dr. Pérez</span>
+    Welcome <span class="doctor-part">back</span>
 </h1>
 
     <p>
@@ -63,7 +63,7 @@ Manage your appointments, check your schedule, and stay connected with your pati
 
 <div class="card profile-card">
     <img class="profile-image"
-    src="https://th.bing.com/th/id/R.329d02c6f5ce304623cd70570179aafe?rik=QaKFKND1ABJm7Q&riu=http%3a%2f%2fclipart-library.com%2fimages_k%2ftransparent-doctor%2ftransparent-doctor-13.png&ehk=MSVQnrDPfOP%2fBumrnoy73QlkSGfbuZoXgO3nu3QKhQc%3d&risl=&pid=ImgRaw&r=0">
+    src="img/image.png">
 
     <h2 id="name"></h2>
 
@@ -184,14 +184,14 @@ Manage your appointments, check your schedule, and stay connected with your pati
 
 /* DATA */
 const user = {
-    name: "Eduardo Peréz",
-    email: "eduardoperéz41@gmail.com",
+    name: "Hernandez Perez",
+    email: "hernandez@gmail.com",
     phone: "+503 7020 3567",
     location: "San Marcos"
 };
 
 const patient = {
-    name: "Eduardo Peréz",
+    name: "Hernandez Peréz",
     age: 52,
   gender: "Male",
   
@@ -279,6 +279,7 @@ function render(){
 render();
 
 </script>
+<script src="js/navbar_auth.js"></script>
 
 </body>
 </html>
