@@ -60,9 +60,9 @@
 
                 <h4>Contact</h4>
 
-                <p><i class="fas fa-envelope"></i> hello@goldage.com</p>
+                <p><i class="fas fa-envelope"></i> goldage.sv@gmail.com</p>
                 <p><i class="fas fa-phone"></i> +503 7000-0000</p>
-                <p><i class="fas fa-location-dot"></i> San Salvador, El Salvador</p>
+                <p><i class="fas fa-location-dot"></i> El Salvador</p>
 
             </div>
 

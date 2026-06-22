@@ -62,7 +62,7 @@ ul { list-style: none; }
   box-shadow: 0 4px 16px rgba(107,184,142,0.35);
 }
 .btn-primary:hover {
-  background: #5aa87e;
+  background: #4adfd2;
   box-shadow: 0 6px 22px rgba(107,184,142,0.5);
   transform: translateY(-2px);
 }
@@ -381,7 +381,7 @@ ul{
 }
 
 .btn-primary:hover{
-  background:#68b89b;
+  background:#4adfd2;
   transform:translateY(-2px);
 }
 

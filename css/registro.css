@@ -25,7 +25,7 @@ body {
 }
 
 .register-card {
-  background: #ffffff;
+  background: #fbf8ef;
   border-radius: 28px;
   padding: 48px 44px;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.10);
@@ -45,7 +45,7 @@ body {
 
 .register-logo em {
   font-style: normal;
-  color: #6bb88e;
+  color: #80cbc4;
 }
 
 /* ---- TÍTULOS ---- */
@@ -93,7 +93,7 @@ body {
 }
 
 .form-group input:focus {
-  border-color: #6bb88e;
+  border-color: #80cbc4;
   background: #ffffff;
   box-shadow: 0 0 0 4px rgba(107, 184, 142, 0.15);
 }
@@ -109,7 +109,7 @@ button[type="submit"] {
   padding: 15px;
   border-radius: 50px;
   border: none;
-  background: #6bb88e;
+  background: #80cbc4;
   color: #ffffff;
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
@@ -123,7 +123,7 @@ button[type="submit"] {
 
 .btn-submit:hover,
 button[type="submit"]:hover {
-  background: #5aa87e;
+  background: #4adfd2;
   transform: translateY(-2px);
   box-shadow: 0 6px 22px rgba(107, 184, 142, 0.50);
 }
@@ -144,7 +144,7 @@ button[type="submit"]:active {
 /* Aplica también al <a> suelto en el HTML original */
 .register-card a,
 .register-footer a {
-  color: #6bb88e;
+  color: #80cbc4;
   font-weight: 700;
   text-decoration: none;
   transition: color 0.2s;
@@ -152,7 +152,7 @@ button[type="submit"]:active {
 
 .register-card a:hover,
 .register-footer a:hover {
-  color: #5aa87e;
+  color: #4adfd2;
   text-decoration: underline;
 }
 
@@ -187,7 +187,7 @@ button[type="submit"]:active {
 }
 
 .form-group select:focus {
-  border-color: #6bb88e;
+  border-color: #80cbc4;
   background-color: #ffffff;
   box-shadow: 0 0 0 4px rgba(107, 184, 142, 0.15);
 }
@@ -221,12 +221,26 @@ button[type="submit"]:active {
 }
 
 .file-label:hover {
-  border-color: #6bb88e;
+  border-color: #4adfd2;
   background: #ffffff;
-  color: #6bb88e;
+  color: #80cbc4;
 }
 
 /* ---- EMPLEADO: card más ancha por más campos ---- */
 .register-wrapper.empleado {
   max-width: 560px;
+}
+
+.flecha-volver{
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: #80cbc4;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.flecha-volver:hover{
+    color: #4adfd2;
+    transform: translateX(-5px);
 }

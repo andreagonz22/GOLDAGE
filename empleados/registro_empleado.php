@@ -4,34 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Employee Registration</title>
-
   <!-- Poppins Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="../css/registro.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <style>
-    *{
-      font-family: 'Poppins', sans-serif;
-    }
-  </style>
 </head>
 <body>
 
 <div class="register-wrapper empleado">
   <div class="register-card">
 
-    <a href="../index.html" class="register-logo">Gold<em>Age</em></a>
-
-    <h2>Employee Registration</h2>
+    <a href="../index.php" class="flecha-volver"><h2><i class="fas fa-arrow-left"></a></i> Register as an Employee</h2>
     <p class="subtitle">
       Complete your professional profile to join the team
     </p>
 
-    <form action="guardar_empleado.php" method="POST" enctype="multipart/form-data">
-
+<form action="/Gold/GOLDAGE/empleados/guardar_empleado.php" method="POST" enctype="multipart/form-data">
       <div class="form-group">
         <label for="nombre">Full Name</label>
         <input
@@ -71,7 +63,7 @@
           type="text"
           id="telefono"
           name="telefono"
-          placeholder="+503 0000-0000"
+          placeholder="0000-0000"
           required
         >
       </div>
@@ -135,14 +127,10 @@
         >
       </div>
 
-      <button type="submit">Register</button>
-
+      <button type="submit">Sign Up</button>
     </form>
 
-    <p class="register-footer">
-      Already have an account?\
-      <a href="../empleados/login_empleado.php">Go to login</a>
-    </p>
+    <p class="register-footer">Already have an account? <a href="../empleados/login_empleado.php">Go to login</a></p>
 
   </div>
 </div>
