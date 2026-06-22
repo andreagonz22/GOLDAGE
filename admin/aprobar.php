@@ -1,15 +1,13 @@
 <?php
-session_start();
+require_once __DIR__ . '/../auth_check.php';
 
-// 🔐 Protección básica (admin)
-if (!isset($_SESSION['admin'])) {
-    header("Location: ../login/login.php");
+if ($ga_rol !== 'admin') {
+    header("Location: ../index.php");
     exit();
 }
 
 include(__DIR__ . "/../login/conexion.php");
 
-// Validar ID
 if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
     die("ID inválido");
 }

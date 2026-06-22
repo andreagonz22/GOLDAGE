@@ -18,7 +18,7 @@ $result = $conn->query("SELECT * FROM EMPLEADOS ORDER BY IDEMPLEADO DESC");
 <body>
 
 <div class="admin-wrapper">
-  <a href="../index.html" class="register-logo">🌿 Gold<em>Age</em></a>
+  <a href="../index.html" class="register-logo"> GoldAge</a>
   <div class="admin-header">
     <h2>Panel de Administración</h2>
     <p class="subtitle">Gestión y verificación de empleados registrados</p>
