@@ -286,6 +286,8 @@ const appointments = <?php echo json_encode($citas); ?>;
 </script>
 
 <script src="js/perfil_usuario.js"></script>
+    <script src="js/navbar_auth.js"></script>
+
 
 </body>
 </html>

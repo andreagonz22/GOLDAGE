@@ -100,7 +100,6 @@
   max-width: 450px;
   border-radius: 20px;
   object-fit: cover;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 /* TEXTO */
@@ -121,229 +120,135 @@
   color: #555;
 }
 
-/* ==================================
-   TEAM CAROUSEL
-================================== */
+/* ===== TEAM CAROUSEL ===== */
 
-.team-carousel-section{
-    padding: 100px 0;
+.team-carousel-section {
+    padding: 80px 20px;
     text-align: center;
 }
 
-.team-carousel-section .section-label{
-    color: #6bc8bf;
-    font-weight: 700;
-    font-size: 40px;
-    margin-bottom: 20px;
-    text-transform: sans-serif;
-    letter-spacing: 3px;
-}
-
-.team-carousel-section .section-label i{
-    font-size: 3.5rem;
-    margin-right: 18px;
-    vertical-align: middle;
-}
-
-
-
-/* CONTENEDOR */
-
-#carouselExampleDark{
-    max-width: 700px;
-    margin: auto;
-    overflow: visible;
-}
-
-/* SLIDE */
-
-#carouselExampleDark .carousel-item{
-    position: relative;
-    height: 400px;
-}
-/* IMAGEN */
-
-#carouselExampleDark img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 25px;
-    box-shadow: 0 15px 35px rgba(0,0,0,.08);
-}
-
-/* INFORMACIÓN */
-
-.team-info{
-    position: absolute;
-    left: 50px;
-    bottom: 50px;
-    text-align: left;
-    max-width: 450px;
-}
-
-.team-info h3{
+#label-team {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #80cbc4;
     color: white;
-    font-size: 58px;
-    font-weight: 800;
-    margin-bottom: 8px;
-}
-
-.team-info .position{
-    color: #6bc8bf;
-    font-size: 28px;
+    padding: 10px 20px;
+    border-radius: 50px;
     font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.carousel {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.carousel-item {
+    display: none;
+    text-align: center;
+}
+
+.carousel-item.active {
     display: block;
-    margin-bottom: 15px;
 }
 
-.team-info p{
-    color: white;
-    font-size: 18px;
-    line-height: 1.7;
+.carousel-item img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
 }
 
-/* FLECHAS */
+.team-info {
+    margin-top: 20px;
+}
 
-/* ==================================
-   FLECHAS DEL CARRUSEL
-================================== */
+/* Flechas */
 
 .carousel-control-prev,
-.carousel-control-next{
-    width: 45px;
-    height: 45px;
-
-    background: rgba(255,255,255,.15);
-    backdrop-filter: blur(6px);
-
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 55px;
+    height: 55px;
     border: none;
     border-radius: 50%;
-
-    opacity: .25;
-
-    transition: all .3s ease;
+    background: #80cbc4;
+    color: white;
+    cursor: pointer;
+    z-index: 10;
+    transition: .3s;
 }
-
-.carousel-control-prev{
-    left: -35px;
-}
-
-.carousel-control-next{
-    right: -35px;
-}
-
-/* ÍCONOS */
-
-.carousel-control-prev i,
-.carousel-control-next i{
-    color: #6bc8bf;
-    font-size: 26px;
-    line-height: 1;
-    pointer-events: none;
-}
-
-/* HOVER */
 
 .carousel-control-prev:hover,
-.carousel-control-next:hover{
-    background: #6bc8bf;
-    transform: translateY(-50%) scale(1.08);
-    box-shadow: 0 15px 35px rgba(107,200,191,.35);
+.carousel-control-next:hover {
+    background: #5fb5ad;
 }
 
-.carousel-control-prev:hover i,
-.carousel-control-next:hover i{
-    color: #fff;
-}
-.carousel-control-prev-icon,
-.carousel-control-next-icon{
-    display: none !important;
-}
-/* ==========================
-   INDICADORES MODERNOS
-========================== */
-
-/* ==========================
-   INDICADORES SOBRE LA IMAGEN
-========================== */
-
-.carousel-indicators{
-    bottom: 15px;
-    gap: 8px;
-    margin-bottom: 0;
+.carousel-control-prev {
+    left: -20px;
 }
 
-.carousel-indicators button{
-    width: 30px !important;
-    height: 5px !important;
-
-    border: none !important;
-    border-radius: 20px !important;
-
-    background: rgba(255,255,255,.45) !important;
-    opacity: 1 !important;
-
-    transition: all .35s ease;
+.carousel-control-next {
+    right: -20px;
 }
 
-.carousel-indicators .active{
-    width: 55px !important;
-    background: #6bc8bf !important;
-    box-shadow: 0 0 10px rgba(107,200,191,.4);
-}
-.carousel-indicators button{
-    width: 22px !important;
-    height: 4px !important;
-    background: rgba(255,255,255,.30) !important;
+.carousel-control-prev i,
+.carousel-control-next i {
+    font-size: 20px;
 }
 
-.carousel-indicators .active{
-    width: 40px !important;
-    background: #6bc8bf !important;
+/* Indicadores */
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 0px;
 }
 
-/* RESPONSIVE */
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border: none;
+    border-radius: 50%;
+    background: #cfcfcf;
+    cursor: pointer;
+    transition: .3s;
+}
 
-@media(max-width:768px){
+.carousel-indicators button.active {
+    background: #80cbc4;
+    transform: scale(1.2);
+}
 
-    .team-title{
-        font-size: 38px;
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    .carousel-control-prev {
+        left: 5px;
     }
 
-    #carouselExampleDark .carousel-item{
-        height: 400px;
-    }
-
-    .team-info{
-        left: 25px;
-        bottom: 25px;
-        max-width: 80%;
-    }
-
-    .team-info h3{
-        font-size: 34px;
-    }
-
-    .team-info .position{
-        font-size: 18px;
-    }
-
-    .team-info p{
-        display: none;
+    .carousel-control-next {
+        right: 5px;
     }
 
     .carousel-control-prev,
-    .carousel-control-next{
-        width: 50px;
-        height: 50px;
-    }
-
-    .carousel-control-prev{
-        left: -10px;
-    }
-
-    .carousel-control-next{
-        right: -10px;
+    .carousel-control-next {
+        width: 45px;
+        height: 45px;
     }
 }
 

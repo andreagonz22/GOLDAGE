@@ -25,8 +25,8 @@ require_once __DIR__ . '/auth_check.php';
         <img src="img/logo.png" alt="GoldAge Logo" class="logo-img">
         <span class="logo-text">Gold<span class="logo-accent">Age</span></span>
       </a>
+
       <?php
-        $__caller_dir = __DIR__;
         include __DIR__ . '/navbar_auth.php';
       ?>
     </div>
@@ -34,21 +34,13 @@ require_once __DIR__ . '/auth_check.php';
 
 <!-- ===== HERO ===== -->
 <section class="page-hero contact-hero">
-
   <div class="page-hero-content fade-in">
-
     <h1>
       We are here <br/>
       <em>for you</em>
     </h1>
-
-    <p>
-      Schedule an appointment, resolve your doubts,
-      or join the team.
-    </p>
-
+    <p>Schedule an appointment, resolve your doubts,or join the team. </p>
   </div>
-
 </section>
 
 <!-- ===== CONTACT ===== -->
@@ -56,75 +48,76 @@ require_once __DIR__ . '/auth_check.php';
 
   <div class="container">
 
-    <div class="contact-grid">
+    <div class="modern-contact-layout">
 
-      <div class="contact-info-box scroll-reveal">
+      <!-- LEFT -->
+      <div class="modern-contact-left">
 
-  <div class="contact-info">
-
-    <h2>Let's Talk</h2>
-
-    <div class="contact-cards">
-
-      <!-- CARD -->
-      <div class="contact-card">
-
-        <div class="cc-icon">📞</div>
-
-        <div>
-          <strong>Phone Number</strong>
-          <span>+503 7000-0000</span>
-        </div>
-
-      </div>
-
-      <!-- CARD -->
-      <div class="contact-card">
-
-        <div class="cc-icon">📧</div>
-
-        <div>
-          <strong>Email</strong>
-          <span>hola@goldage.com</span>
-        </div>
-
-      </div>
-
-      <!-- CARD -->
-      <div class="contact-card">
-
-        <div class="cc-icon">💬</div>
-
-        <div>
-          <strong>WhatsApp</strong>
-          <span>+503 7000-0001</span>
-        </div>
-
-      </div>
-
-      <!-- CARD -->
-      <div class="contact-card">
-
-        <div class="cc-icon">📍</div>
-
-        <div>
-          <strong>Office</strong>
-          <span>Col. Escalón, Av. Principal, San Salvador</span>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
+        <!-- IMAGE -->
+       <div class="modern-contact-image">
+    <img src="https://vivie.org/hs-fs/hubfs/iStock-1719538609-min.jpg?width=2000&height=1333&name=iStock-1719538609-min.jpg" alt="Contacto">
 </div>
+
+        <!-- INFO -->
+        <div class="modern-contact-info">
+
+          <h3>Let's Talk</h3>
+
+
+          <div class="modern-info-cards">
+
+      <!-- CARD -->
+            <div class="modern-info-card">
+
+              <div class="modern-icon">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+
+              <div>
+                <strong>Call Us</strong>
+                <span>+503 7000-0000</span>
+              </div>
+            </div>
+
+            <!-- CARD -->
+            <div class="modern-info-card">
+
+              <div class="modern-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+
+              <div>
+                <strong>Our Email</strong>
+                <span>goldage.sv@gmail.com</span>
+              </div>
+            </div>
+
+            <!-- CARD -->
+            <div class="modern-info-card">
+
+              <div class="modern-icon whatsapp">
+                <i class="fa-brands fa-whatsapp"></i>
+              </div>
+
+              <div>
+                <strong>WhatsApp</strong>
+                <span>+503 6860-7484</span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
       <!-- ===== FORM ===== -->
       <div class="contact-form-wrap scroll-reveal">
 
         <div class="form-header">
 
-          <h3>Leave a review</h3>
+          <h1>Leave a review</h1>
 
           <p>
             Share your experience with GoldAge.
@@ -245,30 +238,21 @@ require_once __DIR__ . '/auth_check.php';
         <div class="faq-answer">
 
           <p>
-            You can schedule through this form,
-            via WhatsApp, or by calling directly.
-          </p>
+You can schedule an appointment through our contact numbers. You can also schedule an appointment by following these steps:
 
-        </div>
+1- Go to the services section.
 
-      </div>
+2- Click on "Schedule an Appointment."
 
-      <!-- FAQ 2 -->
-      <div class="faq-item scroll-reveal">
+3- Schedule an appointment by filling out the required fields.
 
-        <button
-          class="faq-question"
-          onclick="toggleFAQ(this)"
-        >
-          How long does it take for a professional to arrive?
-          <span class="faq-arrow">▼</span>
-        </button>
+4- Click on "Continue Payment."
 
-        <div class="faq-answer">
+5- Enter your card details.
 
-          <p>
-            Usually between 30 and 60 minutes
-            depending on the location.
+6- Click on "Book."
+
+7- Your appointment is now booked.
           </p>
 
         </div>
@@ -314,7 +298,7 @@ require_once __DIR__ . '/auth_check.php';
 
           <p>
             Yes. We provide 24/7 emergency care services
-            for urgent medical assistance at home.
+            for urgent medical assistance at home. You can call us and we are a service in which you can call us whenever you need and we will be available, whether for medical attention, emergencies, or different types of circumstances
           </p>
 
         </div>
@@ -338,9 +322,7 @@ require_once __DIR__ . '/auth_check.php';
             Absolutely. You may request a preferred nurse
             depending on availability and your care needs.
           </p>
-
         </div>
-
       </div>
 
       <!-- FAQ 8 -->
@@ -357,12 +339,9 @@ require_once __DIR__ . '/auth_check.php';
         <div class="faq-answer">
 
           <p>
-            Yes. We maintain communication with authorized
-            family members to provide updates and peace of mind.
+            Yes. We maintain communication with authorized family members to provide them with up-to-date information and peace of mind. In addition, family members can monitor their relatives' accounts and stay informed about every detail of our work in providing medical assistance to seniors. We can also provide more detailed information through the patient's medical record.
           </p>
-
         </div>
-
       </div>
 
       <!-- FAQ 10 -->
@@ -380,26 +359,22 @@ require_once __DIR__ . '/auth_check.php';
 
           <p>
             Yes. GoldAge operates every day,
-            including weekends and holidays.
+            including weekends and holidays. Our services are 24/7, to attend to our elderly in the best way. Remembering that we look after the well-being of our elderly, and we are 100% available whenever you need us, that is why we provide services 7 days a week and 24 hours a day.
           </p>
 
         </div>
-
       </div>
-
     </div>
-
   </div>
-
 </section>
 
+         
  <!-- ===== FOOTER ===== -->
   <?php include 'footer.php'; ?>
 
 <!-- JS -->
 <script src="js/main.js"></script>
 <script src="js/contact.js"></script>
-<script src="js/navbar_auth.js"></script> 
+<script src="js/navbar_auth.js"></script>
 </body>
 </html>
-      
